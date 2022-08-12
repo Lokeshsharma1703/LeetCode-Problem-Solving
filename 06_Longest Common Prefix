@@ -1,3 +1,5 @@
+//Longest common prefix
+
 class Solution {
     public String longestCommonPrefix(String[] strs) {
         int len = strs.length;
