@@ -8,3 +8,5 @@
 2. https://leetcode.com/problems/median-of-two-sorted-arrays/
 3. https://leetcode.com/problems/search-in-rotated-sorted-array/
 4. https://leetcode.com/problems/search-insert-position/
+5. https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/
+6. https://leetcode.com/problems/longest-common-prefix/
