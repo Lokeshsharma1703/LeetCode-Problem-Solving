@@ -1,7 +1,7 @@
 # LeetCode-Problem-Solving
 
-## Google Spreadsheet
-  https://docs.google.com/spreadsheets/d/16gNTrNyPSJQJXKLZ8yZfuLEq7hjclUULmqRGsqFDLpE/edit#gid=0<br><br>
+<!-- ## Google Spreadsheet
+  https://docs.google.com/spreadsheets/d/16gNTrNyPSJQJXKLZ8yZfuLEq7hjclUULmqRGsqFDLpE/edit#gid=0<br><br> -->
 ## Problem Links
 
 1. https://leetcode.com/problems/two-sum/
