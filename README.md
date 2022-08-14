@@ -12,3 +12,4 @@
 6. https://leetcode.com/problems/longest-common-prefix/
 7. https://leetcode.com/problems/container-with-most-water/
 8. https://leetcode.com/problems/merge-sorted-array/
+9. https://leetcode.com/problems/remove-element/
