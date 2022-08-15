@@ -13,3 +13,5 @@
 7. https://leetcode.com/problems/container-with-most-water/
 8. https://leetcode.com/problems/merge-sorted-array/
 9. https://leetcode.com/problems/remove-element/
+10. https://leetcode.com/problems/remove-duplicates-from-sorted-array/
+11. https://leetcode.com/problems/plus-one/
