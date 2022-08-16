@@ -15,3 +15,6 @@
 9. https://leetcode.com/problems/remove-element/
 10. https://leetcode.com/problems/remove-duplicates-from-sorted-array/
 11. https://leetcode.com/problems/plus-one/
+12. https://leetcode.com/problems/powx-n/
+13. https://leetcode.com/problems/pascals-triangle/
+14. https://leetcode.com/problems/pascals-triangle-ii/
