@@ -19,3 +19,4 @@
 13. https://leetcode.com/problems/pascals-triangle/
 14. https://leetcode.com/problems/pascals-triangle-ii/
 15. https://leetcode.com/problems/factorial-trailing-zeroes/
+16. https://leetcode.com/problems/single-number/
