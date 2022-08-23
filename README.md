@@ -23,3 +23,4 @@
 17. https://leetcode.com/problems/contains-duplicate/
 18. https://leetcode.com/problems/contains-duplicate-ii/
 19. https://leetcode.com/problems/missing-number/
+20. https://leetcode.com/problems/check-if-it-is-a-straight-line/
