@@ -1,0 +1,15 @@
+// (x1-x2)/(x3-x2) = (y1-y2)/(y3-y2)
+
+class Solution {
+    public boolean checkStraightLine(int[][] coordinates) {
+        for(int i=2;i<coordinates.length;i++){
+            if(!check(coordinates[0], coordinates[1], coordinates[i]))
+                return false;
+        }
+        return true;
+    }
+    
+    private boolean check(int[] a, int[] b, int[] c){
+        return ((a[0]-b[0])*(c[1]-b[1])==(a[1]-b[1])*(c[0]-b[0]));
+    }
+}
