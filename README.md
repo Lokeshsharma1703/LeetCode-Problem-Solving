@@ -25,3 +25,4 @@
 19. https://leetcode.com/problems/missing-number/
 20. https://leetcode.com/problems/check-if-it-is-a-straight-line/
 21. https://leetcode.com/problems/rotate-array/
+22. https://leetcode.com/problems/ransom-note/
