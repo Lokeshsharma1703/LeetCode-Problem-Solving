@@ -27,3 +27,4 @@
 21. https://leetcode.com/problems/rotate-array/
 22. https://leetcode.com/problems/ransom-note/
 23. https://leetcode.com/problems/count-odd-numbers-in-an-interval-range/
+24. https://leetcode.com/problems/count-primes/
