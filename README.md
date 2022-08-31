@@ -30,4 +30,8 @@
 24. https://leetcode.com/problems/sort-colors/
 25. https://leetcode.com/problems/length-of-last-word/
 26. https://leetcode.com/problems/add-binary/
-27. https://leetcode.com/problems/valid-palindrome/
+27. https://leetcode.com/problems/gas-station/
+28. https://leetcode.com/problems/trapping-rain-water/
+29. https://leetcode.com/problems/product-of-array-except-self/
+30. https://leetcode.com/problems/next-permutation/
+31. https://leetcode.com/problems/valid-palindrome/
