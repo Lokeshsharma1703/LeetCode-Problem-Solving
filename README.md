@@ -36,4 +36,5 @@
 30. https://leetcode.com/problems/next-permutation/
 31. https://leetcode.com/problems/first-bad-version/
 32. https://leetcode.com/problems/rotate-image/
-32. https://leetcode.com/problems/valid-palindrome/
+33. https://leetcode.com/problems/search-a-2d-matrix/
+34. https://leetcode.com/problems/valid-palindrome/
