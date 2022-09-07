@@ -35,4 +35,5 @@
 29. https://leetcode.com/problems/product-of-array-except-self/
 30. https://leetcode.com/problems/next-permutation/
 31. https://leetcode.com/problems/first-bad-version/
+32. https://leetcode.com/problems/rotate-image/
 32. https://leetcode.com/problems/valid-palindrome/
