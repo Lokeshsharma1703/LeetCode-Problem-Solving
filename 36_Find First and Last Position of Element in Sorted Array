@@ -1,0 +1,32 @@
+class Solution {
+    public int[] searchRange(int[] nums, int target) {
+        int[] res = new int[2];
+        res[0] = findIndex(nums, target, 0);
+        res[1] = findIndex(nums, target, 1);
+        return res;
+    }
+    private static int findIndex(int[] arr, int target, int val){
+        int ans = -1;
+        int low = 0;
+        int high = arr.length-1;
+        while(low<=high){
+            int mid = low+(high-low)/2;
+            if(arr[mid]>target){
+                high = mid-1;
+            }
+            else if(arr[mid]<target){
+                low = mid+1;
+            }
+            else{
+                ans = mid;
+                if(val==0){
+                    high = mid-1;
+                }
+                else{
+                    low = mid+1;
+                }
+            }
+        }
+        return ans;
+    }
+}
