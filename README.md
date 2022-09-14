@@ -41,4 +41,5 @@
 35. https://leetcode.com/problems/valid-palindrome/
 36. https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/
 37. https://leetcode.com/problems/integer-to-roman/
-38. 
+38. https://leetcode.com/problems/subarray-product-less-than-k/
+39. https://leetcode.com/problems/maximum-subarray/
