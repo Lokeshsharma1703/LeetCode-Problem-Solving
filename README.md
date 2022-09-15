@@ -44,3 +44,6 @@
 38. https://leetcode.com/problems/subarray-product-less-than-k/
 39. https://leetcode.com/problems/maximum-subarray/
 40. https://leetcode.com/problems/diagonal-traverse/
+41. https://leetcode.com/problems/power-of-three/
+42. https://leetcode.com/problems/power-of-two/
+43. https://leetcode.com/problems/power-of-four/
