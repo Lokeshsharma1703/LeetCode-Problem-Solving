@@ -48,3 +48,4 @@
 42. https://leetcode.com/problems/power-of-two/
 43. https://leetcode.com/problems/power-of-four/
 44. https://leetcode.com/problems/reverse-vowels-of-a-string/
+45. https://leetcode.com/problems/number-of-good-pairs/
