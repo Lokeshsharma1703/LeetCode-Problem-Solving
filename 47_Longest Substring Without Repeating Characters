@@ -1,0 +1,27 @@
+class Solution {
+    public int lengthOfLongestSubstring(String s) {
+        int si = 0;
+        int ei = 1;
+        int res = 0;
+        while(ei<=s.length()){
+            if(isValid(s.substring(si,ei))){
+                res = s.substring(si,ei).length();
+            }
+            else{
+                si++;
+            }
+            ei++;
+        }
+        return res;
+    }
+    private static boolean isValid(String s){
+        for(int i=0;i<s.length();i++){
+            for(int j=i+1;j<s.length();j++){
+                if(s.charAt(i)==s.charAt(j)){
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+}
