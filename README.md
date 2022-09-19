@@ -50,3 +50,4 @@
 44. https://leetcode.com/problems/reverse-vowels-of-a-string/
 45. https://leetcode.com/problems/number-of-good-pairs/
 46. https://leetcode.com/problems/palindromic-substrings/
+47. https://leetcode.com/problems/longest-substring-without-repeating-characters/
