@@ -1,0 +1,28 @@
+/*
+ * @lc app=leetcode id=985 lang=java
+ *
+ * [985] Sum of Even Numbers After Queries
+ */
+
+// @lc code=start
+class Solution {
+    public int[] sumEvenAfterQueries(int[] nums, int[][] queries) {
+        int[] res = new int[nums.length];
+        int sum = 0;
+        for (int i : nums) {
+            if (i % 2 == 0)
+                sum += i;
+        }
+        int i = 0;
+        for (int[] j : queries) {
+            if (nums[j[1]] % 2 == 0)
+                sum -= nums[j[1]];
+            nums[j[1]] += j[0];
+            if (nums[j[1]] % 2 == 0)
+                sum += nums[j[1]];
+            res[i++] = sum;
+        }
+        return res;
+    }
+}
+// @lc code=end
