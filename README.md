@@ -55,3 +55,4 @@
 49. https://leetcode.com/problems/longest-palindromic-substring/
 50. https://leetcode.com/problems/sum-of-even-numbers-after-queries/
 51. https://leetcode.com/problems/reverse-words-in-a-string-iii/
+52. https://leetcode.com/problems/concatenation-of-consecutive-binary-numbers/
