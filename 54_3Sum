@@ -1,0 +1,41 @@
+import java.util.Arrays;
+
+import javax.lang.model.element.Element;
+
+/*
+ * @lc app=leetcode id=15 lang=java
+ *
+ * [15] 3Sum
+ */
+
+// @lc code=start
+class Solution {
+    public List<List<Integer>> threeSum(int[] nums) {
+        List<List<Integer>> res = new ArrayList<>();
+        Arrays.sort(nums);
+        for (int i = 0; i < nums.length; i++) {
+            int si = i + 1;
+            int ei = nums.length - 1;
+            if (i > 0 && nums[i] == nums[i - 1]) {
+                continue;
+            }
+            while (si < ei) {
+                int temp = nums[si] + nums[ei];
+                if (nums[i] + temp == 0) {
+                    res.add(Arrays.asList(nums[i], nums[si], nums[ei]));
+                    si++;
+                    while (si < ei && nums[si] == nums[si - 1]) {
+                        si++;
+                    }
+                    ei--;
+                } else if (temp + nums[i] < 0) {
+                    si++;
+                } else {
+                    ei--;
+                }
+            }
+        }
+        return res;
+    }
+}
+// @lc code=end
