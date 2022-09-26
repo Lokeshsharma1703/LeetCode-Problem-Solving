@@ -1,0 +1,70 @@
+import java.util.ArrayList;
+
+import javax.swing.tree.TreeNode;
+
+/*
+ * @lc app=leetcode id=637 lang=java
+ *
+ * [637] Average of Levels in Binary Tree
+ */
+
+// @lc code=start
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ * int val;
+ * TreeNode left;
+ * TreeNode right;
+ * TreeNode() {}
+ * TreeNode(int val) { this.val = val; }
+ * TreeNode(int val, TreeNode left, TreeNode right) {
+ * this.val = val;
+ * this.left = left;
+ * this.right = right;
+ * }
+ * }
+ */
+class Solution {
+    static long sum = 0;
+    static int elements = 0;
+
+    public List<Double> averageOfLevels(TreeNode root) {
+        ArrayList<Double> res = new ArrayList<>();
+        int h = height(root);
+        for (int i = 1; i <= h; i++) {
+            currentLevel(root, i);
+            res.add((double) sum / elements);
+            sum = 0;
+            elements = 0;
+        }
+        return res;
+    }
+
+    private static int height(TreeNode root) {
+        if (root == null) {
+            return 0;
+        } else {
+            int lheight = height(root.left);
+            int rheight = height(root.right);
+            if (lheight > rheight) {
+                return lheight + 1;
+            } else {
+                return rheight + 1;
+            }
+        }
+    }
+
+    private static void currentLevel(TreeNode root, int level) {
+        if (root == null) {
+            return;
+        }
+        if (level == 1) {
+            sum += root.val;
+            elements++;
+        } else if (level > 1) {
+            currentLevel(root.left, level - 1);
+            currentLevel(root.right, level - 1);
+        }
+    }
+}
+// @lc code=end
