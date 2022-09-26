@@ -58,3 +58,4 @@
 52. https://leetcode.com/problems/concatenation-of-consecutive-binary-numbers/
 53. https://leetcode.com/problems/regular-expression-matching/
 54. https://leetcode.com/problems/3sum/
+55. https://leetcode.com/problems/satisfiability-of-equality-equations/
