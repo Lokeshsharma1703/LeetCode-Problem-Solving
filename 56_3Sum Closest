@@ -1,0 +1,35 @@
+import java.util.Arrays;
+
+/*
+ * @lc app=leetcode id=16 lang=java
+ *
+ * [16] 3Sum Closest
+ */
+
+// @lc code=start
+class Solution {
+    public int threeSumClosest(int[] nums, int target) {
+        Arrays.sort(nums);
+        int sum = nums[0] + nums[1] + nums[2];
+        for (int i = 0; i < nums.length; i++) {
+            int si = i + 1;
+            int ei = nums.length - 1;
+            while (si < ei) {
+                int temp = nums[i] + nums[si] + nums[ei];
+                if (temp > target) {
+                    ei--;
+                } else {
+                    si++;
+                }
+                if (temp == target) {
+                    return temp;
+                }
+                if (Math.abs(temp - target) < Math.abs(sum - target)) {
+                    sum = temp;
+                }
+            }
+        }
+        return sum;
+    }
+}
+// @lc code=end
