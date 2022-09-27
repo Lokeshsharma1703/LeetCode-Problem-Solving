@@ -1,0 +1,43 @@
+import java.util.HashMap;
+import java.util.List;
+
+/*
+ * @lc app=leetcode id=17 lang=java
+ *
+ * [17] Letter Combinations of a Phone Number
+ */
+
+// @lc code=start
+class Solution {
+    public List<String> letterCombinations(String digits) {
+        List<String> res = new ArrayList<>();
+        HashMap<Character, String> st = new HashMap();
+        st.put('2', "abc");
+        st.put('3', "def");
+        st.put('4', "ghi");
+        st.put('5', "jkl");
+        st.put('6', "mno");
+        st.put('7', "pqrs");
+        st.put('8', "tuv");
+        st.put('9', "wxyz");
+        if (digits.length() == 0)
+            return res;
+        String temp = "";
+        helper(0, temp, digits, st, res);
+        return res;
+    }
+
+    private static void helper(int i, String temp, String digits, HashMap<Character, String> st, List<String> res) {
+        if (digits.length() == i) {
+            res.add(temp);
+            return;
+        }
+        char ch = digits.charAt(i);
+        String str = st.get(ch);
+        for (int index = 0; index < str.length(); index++) {
+            char c = str.charAt(index);
+            helper(i + 1, temp + c, digits, st, res);
+        }
+    }
+}
+// @lc code=end
