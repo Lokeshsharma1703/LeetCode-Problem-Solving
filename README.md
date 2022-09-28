@@ -62,3 +62,4 @@
 56. https://leetcode.com/problems/3sum-closest/
 57. https://leetcode.com/problems/average-of-levels-in-binary-tree/
 58. https://leetcode.com/problems/letter-combinations-of-a-phone-number/
+59. https://leetcode.com/problems/remove-nth-node-from-end-of-list/
