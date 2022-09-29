@@ -64,3 +64,4 @@
 58. https://leetcode.com/problems/letter-combinations-of-a-phone-number/
 59. https://leetcode.com/problems/remove-nth-node-from-end-of-list/
 60. https://leetcode.com/problems/generate-parentheses/
+61. https://leetcode.com/problems/lexicographical-numbers/
