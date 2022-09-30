@@ -1,0 +1,14 @@
+class Solution {
+    public int strStr(String haystack, String needle) {
+        int low = 0;
+        int high = needle.length();
+        while (high <= haystack.length()) {
+            if (haystack.substring(low, high).equals(needle)) {
+                return low;
+            }
+            low++;
+            high++;
+        }
+        return -1;
+    }
+}
