@@ -65,3 +65,4 @@
 59. https://leetcode.com/problems/remove-nth-node-from-end-of-list/
 60. https://leetcode.com/problems/generate-parentheses/
 61. https://leetcode.com/problems/lexicographical-numbers/
+62. https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/
