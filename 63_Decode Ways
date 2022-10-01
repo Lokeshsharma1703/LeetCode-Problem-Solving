@@ -1,0 +1,34 @@
+/*
+ * @lc app=leetcode id=91 lang=java
+ *
+ * [91] Decode Ways
+ */
+
+// @lc code=start
+class Solution {
+    public int numDecodings(String s) {
+        if (s.charAt(0) == '0') {
+            return 0;
+        }
+        if (s.length() == 1) {
+            return 1;
+        }
+        int a = 1;
+        int b = 1;
+        for (int i = 1; i < s.length(); i++) {
+            int count = 0;
+            int single = s.charAt(i) - '0';
+            int doubles = (s.charAt(i - 1) - '0') * 10 + single;
+            if (single > 0) {
+                count += b;
+            }
+            if (doubles >= 10 && doubles <= 26) {
+                count += a;
+            }
+            a = b;
+            b = count;
+        }
+        return b;
+    }
+}
+// @lc code=end
