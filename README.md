@@ -72,3 +72,4 @@
 66. https://leetcode.com/problems/climbing-stairs/
 67. https://leetcode.com/problems/subsets/
 68. https://leetcode.com/problems/minimum-window-substring/
+69. https://leetcode.com/problems/binary-tree-preorder-traversal/
