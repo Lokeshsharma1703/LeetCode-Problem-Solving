@@ -74,3 +74,4 @@
 68. https://leetcode.com/problems/minimum-window-substring/
 69. https://leetcode.com/problems/binary-tree-preorder-traversal/
 70. https://leetcode.com/problems/binary-tree-postorder-traversal/
+71. https://leetcode.com/problems/binary-tree-level-order-traversal/
