@@ -76,3 +76,4 @@
 70. https://leetcode.com/problems/binary-tree-postorder-traversal/
 71. https://leetcode.com/problems/binary-tree-level-order-traversal/
 72. https://leetcode.com/problems/maximum-depth-of-binary-tree/
+73. https://leetcode.com/problems/increasing-triplet-subsequence/
