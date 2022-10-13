@@ -79,3 +79,4 @@
 73. https://leetcode.com/problems/increasing-triplet-subsequence/
 74. https://leetcode.com/problems/maximum-product-subarray/
 75. https://leetcode.com/problems/letter-tile-possibilities/
+76. https://leetcode.com/problems/palindrome-partitioning/
