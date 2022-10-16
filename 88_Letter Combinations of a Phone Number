@@ -1,0 +1,22 @@
+class Solution {
+    public List<String> letterCombinations(String digits) {
+        List<String> res = new ArrayList<>();
+        String[] values = {"abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
+        printCodes(values, digits, "", res);
+        return res;
+    }
+    private static void printCodes(String[] values, String s, String res, List<String> ans){
+        if(s.length()==0){
+            if(res.length()==0){
+                return;
+            }
+            else{
+                ans.add(res);
+            }
+            return;
+        }
+        for(int i=0;i<values[(int)(s.charAt(0)-'2')].length();i++){
+            printCodes(values, s.substring(1),res+values[(int)(s.charAt(0)-'2')].charAt(i), ans);
+        }
+    }
+}
