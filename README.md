@@ -99,3 +99,4 @@
 93. https://leetcode.com/problems/word-search/
 94. https://leetcode.com/problems/n-queens/
 95. https://leetcode.com/problems/n-queens-ii/
+96. https://leetcode.com/problems/sudoku-solver/
