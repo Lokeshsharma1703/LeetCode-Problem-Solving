@@ -1,0 +1,36 @@
+class Solution {
+    public boolean makesquare(int[] matchsticks) {
+        int sum = 0;
+        for (int i = 0; i < matchsticks.length; i++) {
+            sum += matchsticks[i];
+        }
+        if (sum % 4 != 0) {
+            return false;
+        }
+        Arrays.sort(matchsticks);
+        return isSquare(matchsticks, 0, 0, 0, 0, matchsticks.length - 1, sum / 4);
+    }
+
+    private static boolean isSquare(int[] matchsticks, int top, int right, int bottom, int left, int index,
+            int target) {
+        if (top == target && right == target && bottom == target && left == target) {
+            return true;
+        }
+        if (top > target || right > target || bottom > target || left > target) {
+            return false;
+        }
+        if (isSquare(matchsticks, top + matchsticks[index], right, bottom, left, index - 1, target)) {
+            return true;
+        }
+        if (isSquare(matchsticks, top, right + matchsticks[index], bottom, left, index - 1, target)) {
+            return true;
+        }
+        if (isSquare(matchsticks, top, right, bottom + matchsticks[index], left, index - 1, target)) {
+            return true;
+        }
+        if (isSquare(matchsticks, top, right, bottom, left + matchsticks[index], index - 1, target)) {
+            return true;
+        }
+        return false;
+    }
+}
