@@ -103,3 +103,4 @@
 97. https://leetcode.com/problems/shuffle-the-array/
 98. https://leetcode.com/problems/matchsticks-to-square/
 99. https://leetcode.com/problems/set-mismatch/
+100. https://leetcode.com/problems/gray-code/
