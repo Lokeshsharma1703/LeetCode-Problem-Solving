@@ -1,0 +1,32 @@
+import javax.swing.plaf.nimbus.NimbusLookAndFeel;
+
+/*
+ * @lc app=leetcode id=645 lang=java
+ *
+ * [645] Set Mismatch
+ */
+
+// @lc code=start
+class Solution {
+    public int[] findErrorNums(int[] nums) {
+        int[] res = new int[2];
+        for (int i = 0; i < nums.length; i++) {
+            int index = nums[i] - 1;
+            if (nums[i] != nums[index]) {
+                int temp = nums[i];
+                nums[i] = nums[index];
+                nums[index] = temp;
+                i--;
+            }
+        }
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] != i + 1) {
+                res[0] = nums[i];
+                res[1] = i + 1;
+                break;
+            }
+        }
+        return res;
+    }
+}
+// @lc code=end
