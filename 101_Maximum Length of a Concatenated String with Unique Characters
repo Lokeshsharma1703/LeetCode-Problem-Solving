@@ -1,0 +1,43 @@
+import java.lang.annotation.Retention;
+import java.util.List;
+import java.util.zip.CheckedInputStream;
+
+/*
+ * @lc app=leetcode id=1239 lang=java
+ *
+ * [1239] Maximum Length of a Concatenated String with Unique Characters
+ */
+
+// @lc code=start
+class Solution {
+    int max = 0;
+
+    public int maxLength(List<String> arr) {
+        checkConcatination(arr, "", 0);
+        return max;
+    }
+
+    private void checkConcatination(List<String> arr, String res, int index) {
+        if (max < res.length()) {
+            max = res.length();
+        }
+        for (int i = index; i < arr.size(); i++) {
+            if (!isValid(res, arr.get(i))) {
+                continue;
+            }
+            checkConcatination(arr, res + arr.get(i), i + 1);
+        }
+    }
+
+    private boolean isValid(String current, String newString) {
+        int[] temp = new int[26];
+        for (int i = 0; i < newString.length(); i++) {
+            if (++temp[newString.charAt(i) - 'a'] == 2)
+                return false;
+            if (current.contains(newString.charAt(i) + ""))
+                return false;
+        }
+        return true;
+    }
+}
+// @lc code=end
