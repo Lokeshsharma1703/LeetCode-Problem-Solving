@@ -1,0 +1,73 @@
+import java.util.List;
+
+/*
+ * @lc app=leetcode id=103 lang=java
+ *
+ * [103] Binary Tree Zigzag Level Order Traversal
+ */
+
+// @lc code=start
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ * int val;
+ * TreeNode left;
+ * TreeNode right;
+ * TreeNode() {}
+ * TreeNode(int val) { this.val = val; }
+ * TreeNode(int val, TreeNode left, TreeNode right) {
+ * this.val = val;
+ * this.left = left;
+ * this.right = right;
+ * }
+ * }
+ */
+class Solution {
+    public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
+        int h = height(root);
+        List<List<Integer>> res = new ArrayList<>();
+        for (int i = 1; i <= h; i++) {
+            List<Integer> abc = printZigZag(root, i);
+            if (i % 2 == 1) {
+                res.add(abc);
+            } else {
+                List<Integer> temp = new ArrayList<>();
+                for (int j = abc.size() - 1; j >= 0; j--) {
+                    temp.add(abc.get(j));
+                }
+                res.add(temp);
+            }
+        }
+        return res;
+    }
+
+    private static List<Integer> printZigZag(TreeNode root, int level) {
+        List<Integer> temp = new ArrayList<>();
+        if (root == null) {
+            return new ArrayList();
+        }
+        if (level == 1) {
+            temp.add(root.val);
+            return temp;
+        } else if (level > 1) {
+            temp.addAll(printZigZag(root.left, level - 1));
+            temp.addAll(printZigZag(root.right, level - 1));
+        }
+        return temp;
+    }
+
+    private static int height(TreeNode root) {
+        if (root == null) {
+            return 0;
+        } else {
+            int lheight = height(root.left);
+            int rheight = height(root.right);
+            if (lheight > rheight) {
+                return lheight + 1;
+            } else {
+                return rheight + 1;
+            }
+        }
+    }
+}
+// @lc code=end
