@@ -1,0 +1,48 @@
+import javax.tools.Diagnostic;
+
+/*
+ * @lc app=leetcode id=8 lang=java
+ *
+ * [8] String to Integer (atoi)
+ */
+
+// @lc code=start
+class Solution {
+    public int myAtoi(String s) {
+        int len = s.length();
+        int index = 0;
+        if (len == 0) {
+            return 0;
+        }
+        while (index < len && s.charAt(index) == ' ') {
+            index++;
+        }
+        boolean negative = false;
+        if (index < len) {
+            if (s.charAt(index) == '-') {
+                negative = true;
+                index++;
+            } else if (s.charAt(index) == '+') {
+                index++;
+            }
+        }
+        int res = 0;
+        while (index < len && isDigit(s.charAt(index))) {
+            int d = s.charAt(index) - '0';
+            if (res > (Integer.MAX_VALUE / 10) || (res == (Integer.MAX_VALUE / 10) && d > 7)) {
+                return negative ? Integer.MIN_VALUE : Integer.MAX_VALUE;
+            }
+            res = res * 10 + d;
+            index++;
+        }
+        return negative ? res * (-1) : res;
+    }
+
+    private static boolean isDigit(char ch) {
+        if (ch >= '0' && ch <= '9') {
+            return true;
+        }
+        return false;
+    }
+}
+// @lc code=end
