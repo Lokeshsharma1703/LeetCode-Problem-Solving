@@ -1,0 +1,24 @@
+/*
+ * @lc app=leetcode id=80 lang=java
+ *
+ * [80] Remove Duplicates from Sorted Array II
+ */
+
+// @lc code=start
+class Solution {
+    public int removeDuplicates(int[] nums) {
+        if (nums.length < 3) {
+            return nums.length;
+        }
+        int low = 2;
+        int high = low;
+        while (high < nums.length) {
+            if (nums[high] != nums[low - 2]) {
+                nums[low++] = nums[high];
+            }
+            high++;
+        }
+        return low;
+    }
+}
+// @lc code=end
