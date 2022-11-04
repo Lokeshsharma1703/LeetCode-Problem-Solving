@@ -1,0 +1,38 @@
+import java.lang.reflect.Array;
+import java.util.Arrays;
+import java.util.Stack;
+
+/*
+ * @lc app=leetcode id=345 lang=java
+ *
+ * [345] Reverse Vowels of a String
+ */
+
+// @lc code=start
+class Solution {
+    public String reverseVowels(String s) {
+        char[] st = s.toCharArray();
+        int si = 0;
+        int ei = s.length() - 1;
+        while (si < ei) {
+            while (si < ei && !isChar(st[si])) {
+                si++;
+            }
+            while (si < ei && !isChar(st[ei])) {
+                ei--;
+            }
+            if (si < ei) {
+                char ch = st[si];
+                st[si++] = st[ei];
+                st[ei--] = ch;
+            }
+        }
+        return new String(st);
+    }
+
+    private static boolean isChar(char c) {
+        return (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u' || c == 'A' || c == 'E' || c == 'I' || c == 'O'
+                || c == 'U');
+    }
+}
+// @lc code=end
