@@ -131,4 +131,3 @@
 125. https://leetcode.com/problems/sort-an-array/
 126. https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string/
 127. https://leetcode.com/problems/valid-anagram/
-127.5 GFG-Primes sum - https://practice.geeksforgeeks.org/problems/primes-sum5827/1
