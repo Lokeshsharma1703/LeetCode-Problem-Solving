@@ -130,3 +130,4 @@
 124. https://leetcode.com/problems/make-the-string-great/
 125. https://leetcode.com/problems/sort-an-array/
 126. https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string/
+127. https://leetcode.com/problems/valid-anagram/
