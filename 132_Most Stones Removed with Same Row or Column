@@ -1,0 +1,55 @@
+import java.util.ArrayList;
+
+/*
+ * @lc app=leetcode id=947 lang=java
+ *
+ * [947] Most Stones Removed with Same Row or Column
+ */
+
+// @lc code=start
+class Solution {
+    public int removeStones(int[][] stones) {
+        int n = stones.length;
+        if (n <= 1) {
+            return 0;
+        }
+        List<Integer>[] graph = new List[n];
+        for (int i = 0; i < graph.length; i++) {
+            graph[i] = new ArrayList<>();
+        }
+        for (int i = 0; i < graph.length; i++) {
+            int[] u = stones[i];
+            for (int j = 0; j < n; j++) {
+                if (i == j) {
+                    continue;
+                }
+                int[] v = stones[j];
+                if (u[0] == v[0] || u[1] == v[1]) {
+                    graph[i].add(j);
+                }
+            }
+        }
+        boolean[] visited = new boolean[n];
+        int res = 0;
+        for (int i = 0; i < n; i++) {
+            if (visited[i]) {
+                continue;
+            }
+            dfs(graph, visited, i);
+            res++;
+        }
+        return n - res;
+    }
+
+    private static void dfs(List<Integer>[] graph, boolean[] visited, int index) {
+        visited[index] = true;
+        List<Integer> list = graph[index];
+        for (int i : list) {
+            if (visited[i]) {
+                continue;
+            }
+            dfs(graph, visited, i);
+        }
+    }
+}
+// @lc code=end
