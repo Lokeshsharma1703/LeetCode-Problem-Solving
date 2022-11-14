@@ -135,3 +135,4 @@
 129. https://leetcode.com/problems/wildcard-matching/
 130. https://leetcode.com/problems/find-median-from-data-stream/
 131. https://leetcode.com/problems/excel-sheet-column-title/
+132. https://leetcode.com/problems/most-stones-removed-with-same-row-or-column/
