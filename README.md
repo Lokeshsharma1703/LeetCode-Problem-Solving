@@ -141,3 +141,4 @@
 135. https://leetcode.com/problems/find-the-highest-altitude/
 136. https://leetcode.com/problems/count-complete-tree-nodes/
 137. https://leetcode.com/problems/max-consecutive-ones/
+138. https://leetcode.com/problems/guess-number-higher-or-lower/
