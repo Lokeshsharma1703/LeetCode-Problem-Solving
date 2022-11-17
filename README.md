@@ -146,3 +146,4 @@
 140. https://leetcode.com/problems/search-in-rotated-sorted-array-ii/
 141. https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/
 142. https://leetcode.com/problems/find-minimum-in-rotated-sorted-array-ii/
+143. https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/
