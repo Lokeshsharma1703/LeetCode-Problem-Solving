@@ -1,0 +1,36 @@
+class Solution {
+    public boolean search(int[] nums, int target) {
+        int k = 1;
+        while(k<nums.length && nums[k]>=nums[k-1]){
+            k++;
+        }
+        reverse(nums,0,k-1);
+        reverse(nums,k, nums.length-1);
+        reverse(nums, 0 , nums.length-1);
+        
+        int low = 0;
+        int high = nums.length-1;
+        while(low<=high){
+            int mid = (low+high)/2;
+            if(nums[mid]==target){
+                return true;
+            }
+            else if(nums[mid]<target){
+                low = mid+1;
+            }
+            else{
+                high = mid-1;
+            }
+        }
+        return false;
+    }
+    private static void reverse(int[] arr, int i, int j){
+        while(i<j){
+            int temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
+            i++;
+            j--;
+        }
+    }
+}
