@@ -1,0 +1,22 @@
+class MyCalendar {
+    TreeMap<Integer,Integer> map;
+    public MyCalendar() {
+        map = new TreeMap<>();
+        map.put(Integer.MAX_VALUE, Integer.MAX_VALUE);
+    }
+    
+    public boolean book(int start, int end) {
+        Map.Entry<Integer,Integer> temp = map.higherEntry(start);
+        boolean res = end<=temp.getValue();
+        if(res){
+            map.put(end,start);
+        }
+        return res;
+    }
+}
+
+/**
+ * Your MyCalendar object will be instantiated and called as such:
+ * MyCalendar obj = new MyCalendar();
+ * boolean param_1 = obj.book(start,end);
+ */
