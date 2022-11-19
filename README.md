@@ -154,3 +154,4 @@
 148. https://leetcode.com/problems/intersection-of-two-arrays-ii/
 149. https://leetcode.com/problems/valid-perfect-square/
 150. https://leetcode.com/problems/arranging-coins/
+151. https://leetcode.com/problems/erect-the-fence/
