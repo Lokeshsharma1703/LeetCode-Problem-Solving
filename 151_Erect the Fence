@@ -1,0 +1,36 @@
+import java.util.Arrays;
+import java.util.Set;
+import java.util.Stack;
+
+/*
+ * @lc app=leetcode id=587 lang=java
+ *
+ * [587] Erect the Fence
+ */
+
+// @lc code=start
+class Solution {
+    public int[][] outerTrees(int[][] trees) {
+        Stack<int[]> ub = new Stack<>();
+        Stack<int[]> lb = new Stack<>();
+        Arrays.sort(trees, (p, q) -> q[0] - p[0] == 0 ? q[1] - p[1] : q[0] - p[0]);
+        for (int i = 0; i < trees.length; i++) {
+            while (lb.size() >= 2 && helper(lb.get(lb.size() - 2), lb.get(lb.size() - 1), trees[i]) > 0) {
+                lb.pop();
+            }
+            while (ub.size() >= 2 && helper(ub.get(ub.size() - 2), ub.get(ub.size() - 1), trees[i]) < 0) {
+                ub.pop();
+            }
+            lb.push(trees[i]);
+            ub.push(trees[i]);
+        }
+        Set<int[]> res = new HashSet<>(lb);
+        res.addAll(ub);
+        return res.toArray(new int[res.size()][]);
+    }
+
+    private static int helper(int[] a, int[] b, int[] c) {
+        return (c[1] - b[1]) * (b[0] - a[0]) - ((b[1] - a[1]) * (c[0] - b[0]));
+    }
+}
+// @lc code=end
