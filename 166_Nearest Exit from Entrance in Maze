@@ -1,0 +1,36 @@
+class Solution {
+    public int nearestExit(char[][] maze, int[] entrance) {
+        int n = maze.length;
+        int m = maze[0].length;
+        Queue<int[]> q = new LinkedList<>();
+        q.offer(entrance);
+        maze[entrance[0]][entrance[1]] = '+';
+        int[][] directions = new int[][] { { 0, 1 }, { 0, -1 }, { 1, 0 }, { -1, 0 } };
+        int st = 0;
+        int x, y;
+        while (!q.isEmpty()) {
+            st++;
+            int size = q.size();
+            for (int i = 0; i < size; i++) {
+                int[] curr = q.poll();
+                for (int[] direction : directions) {
+                    x = curr[0] + direction[0];
+                    y = curr[1] + direction[1];
+
+                    if (x < 0 || x >= n || y < 0 || y >= m) {
+                        continue;
+                    }
+                    if (maze[x][y] == '+') {
+                        continue;
+                    }
+                    if (x == 0 || x == n - 1 || y == 0 || y == m - 1) {
+                        return st;
+                    }
+                    maze[x][y] = '+';
+                    q.offer(new int[] { x, y });
+                }
+            }
+        }
+        return -1;
+    }
+}
