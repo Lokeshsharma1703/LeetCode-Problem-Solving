@@ -169,3 +169,4 @@
 163. https://leetcode.com/problems/special-array-with-x-elements-greater-than-or-equal-x/
 164. https://leetcode.com/problems/find-target-indices-after-sorting-array/
 165. https://leetcode.com/problems/evaluate-boolean-binary-tree/
+166. https://leetcode.com/problems/nearest-exit-from-entrance-in-maze/
