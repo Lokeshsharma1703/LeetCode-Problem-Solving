@@ -172,3 +172,4 @@
 166. https://leetcode.com/problems/nearest-exit-from-entrance-in-maze/
 167. https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
 168. https://leetcode.com/problems/summary-ranges/
+169 .https://leetcode.com/problems/majority-element/
