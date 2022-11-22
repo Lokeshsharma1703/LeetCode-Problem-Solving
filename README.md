@@ -174,3 +174,4 @@
 168. https://leetcode.com/problems/summary-ranges/
 169 .https://leetcode.com/problems/majority-element/
 170. https://leetcode.com/problems/move-zeroes/
+171. https://leetcode.com/problems/perfect-squares/
