@@ -175,3 +175,4 @@
 169 .https://leetcode.com/problems/majority-element/
 170. https://leetcode.com/problems/move-zeroes/
 171. https://leetcode.com/problems/perfect-squares/
+172. https://leetcode.com/problems/valid-sudoku/
