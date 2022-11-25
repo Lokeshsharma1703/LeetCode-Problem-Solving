@@ -1,0 +1,31 @@
+import java.util.Stack;
+
+/*
+ * @lc app=leetcode id=907 lang=java
+ *
+ * [907] Sum of Subarray Minimums
+ */
+
+// @lc code=start
+class Solution {
+    public int sumSubarrayMins(int[] arr) {
+        int res = 0;
+        Stack<Integer> st = new Stack<>();
+        st.push(-1);
+        for (int i = 0; i < arr.length + 1; i++) {
+            int currVal = (i <= arr.length - 1) ? arr[i] : 0;
+            while (st.peek() != -1 && currVal < arr[st.peek()]) {
+                int index = st.pop();
+                int j = st.peek();
+                int left = index - j;
+                int right = i - index;
+                long add = (left * right * (long) arr[index]) % 1000000007;
+                res += add;
+                res %= 1000000007;
+            }
+            st.push(i);
+        }
+        return res;
+    }
+}
+// @lc code=end
