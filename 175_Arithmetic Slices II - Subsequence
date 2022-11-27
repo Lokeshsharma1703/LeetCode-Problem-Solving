@@ -1,0 +1,41 @@
+import java.util.HashMap;
+
+/*
+ * @lc app=leetcode id=446 lang=java
+ *
+ * [446] Arithmetic Slices II - Subsequence
+ */
+
+// @lc code=start
+class Solution {
+    HashMap<Pair<Integer, Long>, Integer> memo = new HashMap<>();
+
+    public int numberOfArithmeticSlices(int[] nums) {
+        int res = 0;
+        for (int i = 0; i < nums.length; i++) {
+            for (int j = i + 1; j < nums.length; j++) {
+                res += dfs(j + 1, j, (long) nums[j] - nums[i], nums);
+            }
+        }
+        return res;
+    }
+
+    private int dfs(int index, int last, long diff, int[] nums) {
+        if (index == nums.length) {
+            return 0;
+        }
+        Pair<Integer, Long> hash = new Pair(last, diff);
+        if (memo.get(hash) != null) {
+            return memo.get(hash);
+        }
+        int temp = 0;
+        for (int i = index; i < nums.length; i++) {
+            if ((long) nums[i] - nums[last] == diff) {
+                temp += dfs(i + 1, i, diff, nums) + 1;
+            }
+        }
+        memo.put(hash, temp);
+        return temp;
+    }
+}
+// @lc code=end
