@@ -1,0 +1,71 @@
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.swing.tree.TreeNode;
+
+/*
+ * @lc app=leetcode id=101 lang=java
+ *
+ * [101] Symmetric Tree
+ */
+
+// @lc code=start
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ * int val;
+ * TreeNode left;
+ * TreeNode right;
+ * TreeNode() {}
+ * TreeNode(int val) { this.val = val; }
+ * TreeNode(int val, TreeNode left, TreeNode right) {
+ * this.val = val;
+ * this.left = left;
+ * this.right = right;
+ * }
+ * }
+ */
+class Solution {
+    public boolean isSymmetric(TreeNode root) {
+        List<Integer> left = new ArrayList<>();
+        List<Integer> right = new ArrayList<>();
+        leftTree(root, left);
+        rightTree(root, right);
+        if (left.size() != right.size()) {
+            return false;
+        }
+        for (int i = 0; i < left.size(); i++) {
+            if (left.get(i) != right.get(i)) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    private static void leftTree(TreeNode root, List<Integer> left) {
+        if (root == null) {
+            left.add(101);
+            return;
+        }
+        left.add(root.val);
+        if (root.left == null && root.right == null) {
+            return;
+        }
+        leftTree(root.left, left);
+        leftTree(root.right, left);
+    }
+
+    private static void rightTree(TreeNode root, List<Integer> right) {
+        if (root == null) {
+            right.add(101);
+            return;
+        }
+        right.add(root.val);
+        if (root.left == null && root.right == null) {
+            return;
+        }
+        rightTree(root.right, right);
+        rightTree(root.left, right);
+    }
+}
+// @lc code=end
