@@ -1,0 +1,26 @@
+import java.util.Map;
+
+/*
+ * @lc app=leetcode id=1207 lang=java
+ *
+ * [1207] Unique Number of Occurrences
+ */
+
+// @lc code=start
+class Solution {
+    public boolean uniqueOccurrences(int[] arr) {
+        Map<Integer, Integer> mp = new HashMap<Integer, Integer>();
+        for (int i = 0; i < arr.length; i++) {
+            mp.put(arr[i], mp.getOrDefault(arr[i], 0) + 1);
+        }
+        int[] freq = new int[1000];
+        for (int i : mp.values()) {
+            freq[i]++;
+            if (freq[i] > 1) {
+                return false;
+            }
+        }
+        return true;
+    }
+}
+// @lc code=end
