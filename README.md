@@ -190,3 +190,4 @@
 184. https://leetcode.com/problems/construct-smallest-number-from-di-string/
 185. https://leetcode.com/problems/maximal-rectangle/
 186. https://leetcode.com/problems/largest-rectangle-in-histogram/
+187. https://leetcode.com/problems/maximum-score-of-a-good-subarray/
