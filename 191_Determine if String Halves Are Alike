@@ -1,0 +1,32 @@
+/*
+ * @lc app=leetcode id=1704 lang=java
+ *
+ * [1704] Determine if String Halves Are Alike
+ */
+
+// @lc code=start
+class Solution {
+    public boolean halvesAreAlike(String s) {
+        if (s.length() % 2 != 0) {
+            return false;
+        }
+        int mid = s.length() / 2;
+        if (vowels(s.substring(0, mid)) == vowels(s.substring(mid, s.length()))) {
+            return true;
+        }
+        return false;
+    }
+
+    private static int vowels(String s) {
+        int count = 0;
+        for (int i = 0; i < s.length(); i++) {
+            if (s.charAt(i) == 'a' || s.charAt(i) == 'e' || s.charAt(i) == 'i' || s.charAt(i) == 'o'
+                    || s.charAt(i) == 'u' || s.charAt(i) == 'A' || s.charAt(i) == 'E' || s.charAt(i) == 'I'
+                    || s.charAt(i) == 'O' || s.charAt(i) == 'U') {
+                count++;
+            }
+        }
+        return count;
+    }
+}
+// @lc code=end
