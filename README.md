@@ -195,3 +195,4 @@
 189. https://leetcode.com/problems/132-pattern/
 190. https://leetcode.com/problems/sliding-window-maximum/
 191. https://leetcode.com/problems/determine-if-string-halves-are-alike/
+192. https://leetcode.com/problems/palindrome-linked-list/
