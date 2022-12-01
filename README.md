@@ -199,3 +199,4 @@
 193. https://leetcode.com/problems/next-greater-element-i/
 194. https://leetcode.com/problems/baseball-game/
 195. https://leetcode.com/problems/n-ary-tree-preorder-traversal/
+196. https://leetcode.com/problems/n-ary-tree-postorder-traversal/
