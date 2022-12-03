@@ -204,3 +204,4 @@
 198. https://leetcode.com/problems/increasing-order-search-tree/
 199. https://leetcode.com/problems/determine-if-two-strings-are-close/
 200. https://leetcode.com/problems/remove-outermost-parentheses/
+201. https://leetcode.com/problems/final-prices-with-a-special-discount-in-a-shop/
