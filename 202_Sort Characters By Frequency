@@ -1,0 +1,31 @@
+class node{
+    char ch;
+    int freq;
+    node(char ch){
+        this.ch = ch;
+        this.freq = 0;
+    }
+    node(char ch, int freq){
+        this.ch = ch;
+        this.freq = freq;
+    }
+}
+class Solution {
+    public String frequencySort(String s) {
+        node[] arr = new node[256];
+        for(int i=0;i<arr.length;i++){
+            arr[i] = new node((char)i);
+        }
+        for(int i=0;i<s.length();i++){
+            arr[s.charAt(i)].freq++;
+        }
+        Arrays.sort(arr, (p1,p2)->p2.freq-p1.freq);
+        StringBuilder res = new StringBuilder();
+        for(int i=0;i<arr.length;i++){
+            for(int j=0;j<arr[i].freq;j++){
+                res.append(arr[i].ch);
+            }
+        }
+        return res.toString();
+    }
+}
