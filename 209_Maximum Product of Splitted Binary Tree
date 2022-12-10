@@ -1,0 +1,43 @@
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode() {}
+ *     TreeNode(int val) { this.val = val; }
+ *     TreeNode(int val, TreeNode left, TreeNode right) {
+ *         this.val = val;
+ *         this.left = left;
+ *         this.right = right;
+ *     }
+ * }
+ */
+class Solution {
+    static long sum;
+    static long res;
+    public int maxProduct(TreeNode root) {
+        sum = 0;
+        res = 0;
+        findSum(root);
+        long product = findMaxProd(root);
+        return (int)(res%(int)(1000000007));
+    }
+    public static void findSum(TreeNode root){
+        if(root==null){
+            return;
+        }
+        sum = sum+root.val;
+        findSum(root.left);
+        findSum(root.right);
+    }
+    public static long findMaxProd(TreeNode root){
+        if(root==null){
+            return 0;
+        }
+        long left = findMaxProd(root.left);
+        long right = findMaxProd(root.right);
+        res = Math.max(res, (left+right+root.val)*(sum-left-right-root.val));
+        return left+right+root.val;
+    }
+}
