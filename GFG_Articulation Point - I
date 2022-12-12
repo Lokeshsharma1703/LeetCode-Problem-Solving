@@ -1,0 +1,89 @@
+Given an undirected connected graph with V vertices and adjacency list adj. You are required to find all the vertices removing which (and edges through it) disconnects the graph into 2 or more components.
+Note: Indexing is zero-based i.e nodes numbering from (0 to V-1). There might be loops present in the graph.
+
+Example 1:
+
+Input:
+
+Output:{1,4}
+Explanation: Removing the vertex 1 will
+discconect the graph as-
+
+Removing the vertex 4 will disconnect the
+graph as-
+
+ 
+
+Your Task:
+You don't need to read or print anything. Your task is to complete the function articulationPoints() which takes V and adj as input parameters and returns a list containing all the vertices removing which turn the graph into two or more disconnected components in sorted order. If there are no such vertices then returns a list containing -1.
+ 
+
+Expected Time Complexity: O(V + E)
+Expected Auxiliary Space: O(V)
+ 
+
+Constraints:
+1 ≤ V ≤ 105
+
+
+link - https://practice.geeksforgeeks.org/problems/articulation-point-1/1
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+class Solution
+{
+    private int time = 0;
+    public ArrayList<Integer> articulationPoints(int V,ArrayList<ArrayList<Integer>> adj)
+    {
+        int disc[] = new int[V];
+        int low[] = new int[V];
+        boolean vis[] = new boolean[V];
+        int parent[] = new int[V];
+        boolean ap[] = new boolean[V];
+        ArrayList<Integer> list = new ArrayList<>();
+        Arrays.fill(parent, -1);
+        
+        for(int i=0; i<V; i++){
+            if(vis[i] == false){
+                ArticulationPoint(i, adj, disc, low, vis, parent, ap);
+            }
+        }
+        for(int i=0; i<V; i++){
+            if(ap[i] == true){
+                list.add(i);
+            }
+        }
+        if(list.size() == 0){
+            list.add(-1);
+            return list;
+        }
+        Collections.sort(list);
+        return list;
+    }
+    
+    private void ArticulationPoint(int u, ArrayList<ArrayList<Integer>> adj, int disc[], int low[],
+        boolean []vis, int parent[], boolean []ap){
+        vis[u] = true;
+        disc[u] = low[u] = time++;
+        int children = 0;
+        for(int v : adj.get(u)){
+            if(vis[v] == false){
+                children++;
+                parent[v] = u;
+                
+                ArticulationPoint(v, adj, disc, low, vis, parent, ap);
+                low[u] = Math.min(low[u], low[v]);
+                if(parent[u] == -1 && children > 1){
+                    ap[u] = true;
+                }
+                else if(parent[u] != -1 && low[v] >= disc[u]){
+                    ap[u] = true;
+                }
+            }
+            else{
+                low[u] = Math.min(low[u], disc[v]);
+            }
+        }
+    }
+}
