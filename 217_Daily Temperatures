@@ -1,0 +1,16 @@
+class Solution {
+    public int[] dailyTemperatures(int[] temperatures) {
+        return nextGreater(temperatures);
+    }
+    private static int[] nextGreater(int[] temperature){
+        int[] res = new int[temperature.length];
+        Stack<Integer> st = new Stack<>();
+        for(int i=0;i<temperature.length;i++){
+            while (!st.isEmpty() && temperature[i]>temperature[st.peek()]){
+                res[st.peek()] = i-st.pop();
+            }
+            st.push(i);
+        }
+        return res;
+    }
+}
