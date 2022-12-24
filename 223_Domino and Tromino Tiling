@@ -1,0 +1,15 @@
+class Solution {
+    public int numTilings(int n) {
+        int a = 0;
+        int b = 1;
+        int c = 1;
+        int mod = 1000000007;
+        while(--n>0){
+            int temp = (c*2 % mod + a)%mod;
+            a = b;
+            b = c;
+            c = temp;
+        }
+        return c;
+    }
+}
