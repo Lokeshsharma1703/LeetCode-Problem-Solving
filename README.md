@@ -228,3 +228,4 @@
 222. https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/description/
 223. https://leetcode.com/problems/domino-and-tromino-tiling/description/
 224. https://leetcode.com/problems/make-two-arrays-equal-by-reversing-subarrays/description/
+225. https://leetcode.com/problems/jump-game/description/
