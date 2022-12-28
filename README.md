@@ -230,3 +230,4 @@
 224. https://leetcode.com/problems/make-two-arrays-equal-by-reversing-subarrays/description/
 225. https://leetcode.com/problems/jump-game/description/
 226. https://leetcode.com/problems/maximum-bags-with-full-capacity-of-rocks/description/
+227. https://leetcode.com/problems/remove-stones-to-minimize-the-total/description/
