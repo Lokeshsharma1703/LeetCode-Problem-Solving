@@ -1,0 +1,18 @@
+class Solution {
+    public int minStoneSum(int[] piles, int k) {
+        PriorityQueue<Integer> q = new PriorityQueue(Collections.reverseOrder());
+        for(int i:piles){
+            q.add(i);
+        }
+        while(!q.isEmpty() && k-->0){
+            int ele = q.poll();
+            int temp = ele - (int)Math.floor(ele/2);
+            q.add(temp);
+        }
+        int res = 0;
+        while(!q.isEmpty()){
+            res+=q.poll();
+        }
+        return res;
+    }
+}
