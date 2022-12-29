@@ -1,0 +1,40 @@
+class Solution {
+    public int[] getOrder(int[][] tasks) {
+        int[][] board = new int[tasks.length][3];
+        for(int i = 0;i<tasks.length;i++){
+            board[i][0] = tasks[i][0];
+            board[i][1] = tasks[i][1];
+            board[i][2] = i;
+        }
+        Arrays.sort(board, (a,b) -> (a[0]==b[0]) ? a[1]-b[1] : a[0]-b[0]);
+        int[] res = new int[tasks.length];
+        res[0] = board[0][2];
+        int pt = board[0][0] + board[0][1];
+        int st = 1;
+        int idx = 1;
+        TreeMap<Integer, TreeSet<Integer>> tm = new TreeMap();
+        while(idx<tasks.length){
+            while(st<tasks.length && board[st][0]<=pt){
+                TreeSet<Integer> ts = tm.getOrDefault(board[st][1], new TreeSet());
+                ts.add(board[st][2]);
+                tm.put(board[st++][1], ts);
+            }
+            if(tm.size()==0){
+                res[idx] = board[st++][2];
+            }
+            else{
+                int first = tm.firstKey();
+                TreeSet<Integer> ts = tm.get(first);
+                int f = ts.first();
+                res[idx] = f;
+                ts.remove(f);
+                if(ts.size()==0){
+                    tm.remove(first);
+                }
+            }
+            pt = Math.max(tasks[res[idx]][0], pt)+tasks[res[idx]][1];
+            idx++;
+        }
+        return res;
+    }
+}
