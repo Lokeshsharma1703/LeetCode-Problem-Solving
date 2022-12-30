@@ -232,3 +232,4 @@
 226. https://leetcode.com/problems/maximum-bags-with-full-capacity-of-rocks/description/
 227. https://leetcode.com/problems/remove-stones-to-minimize-the-total/description/
 228. https://leetcode.com/problems/single-threaded-cpu/description/
+229. https://leetcode.com/problems/all-paths-from-source-to-target/description/
