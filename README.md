@@ -233,3 +233,4 @@
 227. https://leetcode.com/problems/remove-stones-to-minimize-the-total/description/
 228. https://leetcode.com/problems/single-threaded-cpu/description/
 229. https://leetcode.com/problems/all-paths-from-source-to-target/description/
+230. https://leetcode.com/problems/word-pattern/description/
