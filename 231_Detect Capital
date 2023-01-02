@@ -1,0 +1,25 @@
+class Solution {
+    public boolean detectCapitalUse(String word) {
+        String tmp = word.toUpperCase();
+        if(word.equals(tmp)){
+            return true;
+        }
+        tmp = word.toLowerCase();
+        if(word.equals(tmp)){
+            return true;
+        }
+        boolean flag = true;
+        if(word.charAt(0)>='A' && word.charAt(0)<='Z'){
+            for(int i=1;i<word.length();i++){
+                if(word.charAt(i)>='A' && word.charAt(i)<='Z'){
+                    flag = false;
+                    break;
+                }
+            }
+            if(flag){
+                return true;
+            }
+        }
+        return false;
+    }
+}
