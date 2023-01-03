@@ -236,3 +236,4 @@
 230. https://leetcode.com/problems/word-pattern/description/
 231. https://leetcode.com/problems/detect-capital/description/
 232. https://leetcode.com/problems/squares-of-a-sorted-array/description/?envType=study-plan&id=algorithm-i
+233. https://leetcode.com/problems/delete-columns-to-make-sorted/description/
