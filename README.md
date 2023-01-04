@@ -238,3 +238,4 @@
 232. https://leetcode.com/problems/squares-of-a-sorted-array/description/?envType=study-plan&id=algorithm-i
 233. https://leetcode.com/problems/delete-columns-to-make-sorted/description/
 234. https://leetcode.com/problems/minimum-rounds-to-complete-all-tasks/description/
+235. https://leetcode.com/problems/reverse-string/description/?envType=study-plan&id=algorithm-i
