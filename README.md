@@ -243,3 +243,4 @@
 237. https://leetcode.com/problems/reverse-nodes-in-k-group/description/
 238. https://leetcode.com/problems/linked-list-cycle/description/
 239. https://leetcode.com/problems/middle-of-the-linked-list/description/
+240. https://leetcode.com/problems/reverse-linked-list/description/
