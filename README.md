@@ -241,3 +241,4 @@
 235. https://leetcode.com/problems/reverse-string/description/?envType=study-plan&id=algorithm-i
 236. https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/description/
 237. https://leetcode.com/problems/reverse-nodes-in-k-group/description/
+238. https://leetcode.com/problems/linked-list-cycle/description/
