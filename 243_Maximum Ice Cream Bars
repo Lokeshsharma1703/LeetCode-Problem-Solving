@@ -1,0 +1,17 @@
+class Solution {
+    public int maxIceCream(int[] costs, int coins) {
+        Arrays.sort(costs);
+        int count = 0;
+        long price = 0;
+        for(int i=0;i<costs.length; i++){
+            price+=costs[i];
+            if(price<=coins){
+                count++;
+            }
+            else{
+                break;
+            }
+        }
+        return count;
+    }
+}
