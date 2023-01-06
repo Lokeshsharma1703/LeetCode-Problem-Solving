@@ -245,3 +245,4 @@
 239. https://leetcode.com/problems/middle-of-the-linked-list/description/
 240. https://leetcode.com/problems/reverse-linked-list/description/
 241. https://leetcode.com/problems/remove-nth-node-from-end-of-list/description/?envType=study-plan&id=algorithm-i
+242. https://leetcode.com/problems/intersection-of-two-linked-lists/description/
