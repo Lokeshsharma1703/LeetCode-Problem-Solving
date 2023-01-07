@@ -249,3 +249,4 @@
 243. https://leetcode.com/problems/maximum-ice-cream-bars/description/
 244. https://leetcode.com/problems/permutation-in-string/description/?envType=study-plan&id=algorithm-i
 245. https://leetcode.com/problems/flood-fill/description/?envType=study-plan&id=algorithm-i
+246. https://leetcode.com/problems/max-area-of-island/description/?envType=study-plan&id=algorithm-i
