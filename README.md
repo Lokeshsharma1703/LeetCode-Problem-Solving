@@ -251,3 +251,4 @@
 245. https://leetcode.com/problems/flood-fill/description/?envType=study-plan&id=algorithm-i
 246. https://leetcode.com/problems/max-area-of-island/description/?envType=study-plan&id=algorithm-i
 247. https://leetcode.com/problems/merge-two-binary-trees/description/?envType=study-plan&id=algorithm-i
+248. https://leetcode.com/problems/populating-next-right-pointers-in-each-node/description/?envType=study-plan&id=algorithm-i
