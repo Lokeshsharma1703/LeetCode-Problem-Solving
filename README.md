@@ -254,3 +254,4 @@
 248. https://leetcode.com/problems/populating-next-right-pointers-in-each-node/description/?envType=study-plan&id=algorithm-i\
 249. https://leetcode.com/problems/01-matrix/description/?envType=study-plan&id=algorithm-i
 250. https://leetcode.com/problems/rotting-oranges/description/?envType=study-plan&id=algorithm-i
+251. https://leetcode.com/problems/merge-two-sorted-lists/description/
