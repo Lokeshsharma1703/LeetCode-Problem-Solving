@@ -255,3 +255,4 @@
 249. https://leetcode.com/problems/01-matrix/description/?envType=study-plan&id=algorithm-i
 250. https://leetcode.com/problems/rotting-oranges/description/?envType=study-plan&id=algorithm-i
 251. https://leetcode.com/problems/merge-two-sorted-lists/description/
+252. https://leetcode.com/problems/minimum-time-to-collect-all-apples-in-a-tree/description/
