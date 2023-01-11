@@ -1,0 +1,25 @@
+class Solution {
+    public List<String> letterCasePermutation(String s) {
+        List<String> res = new ArrayList<>();
+        permutation(s, "", res);
+        return res;
+    }
+    private static void permutation(String s, String ans, List<String> res){
+        if(s.length()==0){
+            res.add(ans);
+            return;
+        }
+        char ch = s.charAt(0);
+        if(ch>='a' && ch<='z'){
+            permutation(s.substring(1), ans+ch, res);
+            permutation(s.substring(1), ans+(char)(ch-32), res);
+        }
+        else if(ch>='A' && ch<='Z'){
+            permutation(s.substring(1), ans+ch, res);
+            permutation(s.substring(1), ans+(char)(ch+32), res);
+        }
+        else{
+            permutation(s.substring(1), ans+ch, res);
+        }
+    }
+}
