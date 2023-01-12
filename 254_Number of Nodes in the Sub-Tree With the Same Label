@@ -1,0 +1,34 @@
+class Solution {
+    public int[] countSubTrees(int n, int[][] edges, String labels) {
+        int[] res = new int[n];
+
+        ArrayList<Integer>[] arr = new ArrayList[n];
+        for(int i=0;i<n;i++){
+            arr[i] = new ArrayList<>();
+        }
+
+        for(int[] e : edges){
+            arr[e[0]].add(e[1]);
+            arr[e[1]].add(e[0]);
+        }
+
+        dfs(-1, 0, arr, labels, res);
+        return res;
+    }
+    private static int[] dfs(int prev, int curr, ArrayList<Integer>[] arr, String labels, int[] res){
+        int[] freq = new int[26];
+
+        for(int i : arr[curr]){
+            if(prev!=i){
+                int[] temp = dfs(curr, i, arr, labels, res);
+
+                for(int j=0;j<temp.length;j++){
+                    freq[j] = freq[j]+temp[j];
+                }
+            }
+        }
+        freq[labels.charAt(curr)-'a']++;
+        res[curr] = freq[labels.charAt(curr)-'a'];
+        return freq;
+    }
+}
