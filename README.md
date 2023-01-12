@@ -257,3 +257,4 @@
 251. https://leetcode.com/problems/merge-two-sorted-lists/description/
 252. https://leetcode.com/problems/minimum-time-to-collect-all-apples-in-a-tree/description/
 253. https://leetcode.com/problems/letter-case-permutation/description/?envType=study-plan&id=algorithm-i
+254. https://leetcode.com/problems/number-of-nodes-in-the-sub-tree-with-the-same-label/
