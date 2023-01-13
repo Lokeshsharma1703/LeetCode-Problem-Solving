@@ -259,3 +259,4 @@
 253. https://leetcode.com/problems/letter-case-permutation/description/?envType=study-plan&id=algorithm-i
 254. https://leetcode.com/problems/number-of-nodes-in-the-sub-tree-with-the-same-label/
 255. https://leetcode.com/problems/triangle/description/?envType=study-plan&id=algorithm-i
+256. https://leetcode.com/problems/longest-path-with-different-adjacent-characters/
