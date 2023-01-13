@@ -260,3 +260,4 @@
 254. https://leetcode.com/problems/number-of-nodes-in-the-sub-tree-with-the-same-label/
 255. https://leetcode.com/problems/triangle/description/?envType=study-plan&id=algorithm-i
 256. https://leetcode.com/problems/longest-path-with-different-adjacent-characters/
+257. https://leetcode.com/problems/power-of-two/description/?envType=study-plan&id=algorithm-i
