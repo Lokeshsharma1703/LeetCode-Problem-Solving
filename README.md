@@ -261,3 +261,4 @@
 255. https://leetcode.com/problems/triangle/description/?envType=study-plan&id=algorithm-i
 256. https://leetcode.com/problems/longest-path-with-different-adjacent-characters/
 257. https://leetcode.com/problems/power-of-two/description/?envType=study-plan&id=algorithm-i
+258. https://leetcode.com/problems/lexicographically-smallest-equivalent-string/description/
