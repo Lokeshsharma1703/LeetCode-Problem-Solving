@@ -263,3 +263,4 @@
 257. https://leetcode.com/problems/power-of-two/description/?envType=study-plan&id=algorithm-i
 258. https://leetcode.com/problems/lexicographically-smallest-equivalent-string/description/
 259. https://leetcode.com/problems/reverse-bits/description/?envType=study-plan&id=algorithm-i
+260. https://leetcode.com/problems/number-of-good-paths/description/
