@@ -272,3 +272,4 @@
 266. https://leetcode.com/problems/subarray-sums-divisible-by-k/description/
 267. https://leetcode.com/problems/balanced-binary-tree/description/
 268. https://leetcode.com/problems/diameter-of-binary-tree/description/
+269. https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/description/
