@@ -276,3 +276,4 @@
 270. https://leetcode.com/problems/sum-root-to-leaf-numbers/description/
 271. https://leetcode.com/problems/binary-tree-level-order-traversal/description/
 272. https://leetcode.com/problems/flip-equivalent-binary-trees/
+273. https://leetcode.com/problems/invert-binary-tree/description/
