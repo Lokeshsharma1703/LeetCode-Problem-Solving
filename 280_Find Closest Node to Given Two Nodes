@@ -1,0 +1,29 @@
+class Solution {
+    public int closestMeetingNode(int[] edges, int node1, int node2) {
+        int res = -1;
+        int n = edges.length;
+        boolean[] visi1 = new boolean[n];
+        boolean[] visi2 = new boolean[n];
+        int[] d1 = new int[n];
+        int[] d2 = new int[n];
+        int min = Integer.MAX_VALUE;
+        search(node1, edges, visi1, d1);
+        search(node2, edges, visi2, d2);
+
+        for(int i=0;i<n;i++){
+            if(visi1[i] && visi2[i] && min > Math.max(d1[i], d2[i])){
+                min = Math.max(d1[i], d2[i]);
+                res = i;
+            }
+        }
+        return res;
+    }
+    private void search(int node, int[] edges, boolean[] visited, int[] dis){
+        visited[node] = true;
+        int n = edges[node];
+        if(n != -1 && !visited[n]){
+            dis[n] = dis[node]+1;
+            search(n, edges, visited, dis);
+        }
+    }
+}
