@@ -1,0 +1,71 @@
+Given a string S consisting of only uppercase and lowercase characters. The task is to sort uppercase and lowercase letters separately such that if the ith place in the original string had an Uppercase character then it should not have a lowercase character after being sorted and vice versa.
+
+Example 1:
+
+Input:
+N = 12
+S = defRTSersUXI
+Output: deeIRSfrsTUX
+Explanation: Sorted form of given string
+with the same case of character as that
+in original string is deeIRSfrsTUX
+Example 2:
+
+Input:
+N = 6
+S = srbDKi
+Output: birDKs
+Explanation: Sorted form of given string
+with the same case of character will
+result in output as birDKs.
+Your Task:
+You only need to complete the function caseSort that takes a string str and length of the string n and returns sorted string.
+
+Expected Time Complexity: O(Nlog(N)).
+Expected Auxiliary Space: O(N).
+
+Constraints:
+1 ≤ N ≤ 105
+
+
+link - https://practice.geeksforgeeks.org/problems/case-specific-sorting-of-strings4845/1
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+class Solution
+{
+    //Function to perform case-specific sorting of strings.
+    public static String caseSort(String str)
+    {
+        StringBuilder u = new StringBuilder();
+        StringBuilder l = new StringBuilder();
+        for(int i=0;i<str.length();i++){
+            if(str.charAt(i)>='A' && str.charAt(i)<='Z'){
+                u.append(str.charAt(i));
+            }
+            else{
+                l.append(str.charAt(i));
+            }
+        }
+        
+        char[] upper = u.toString().toCharArray();
+        char[] lower = l.toString().toCharArray();
+        Arrays.sort(upper);
+        Arrays.sort(lower);
+        
+        StringBuilder s = new StringBuilder();
+        int i = 0;
+        int j = 0;
+        for(int k=0;k<str.length();k++){
+            if(str.charAt(k)>='A' && str.charAt(k)<='Z'){
+                s.append(upper[i++]);
+            }
+            else{
+                s.append(lower[j++]);
+            }
+        }
+        return s.toString();
+    }
+}
