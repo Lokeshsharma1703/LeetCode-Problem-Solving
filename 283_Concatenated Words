@@ -1,0 +1,26 @@
+class Solution {
+    public List<String> findAllConcatenatedWordsInADict(String[] words) {
+        List<String> res = new ArrayList<>();
+        Set<String> st = new HashSet<>();
+        for(int i=0;i<words.length;i++){
+            st.add(words[i]);
+        }
+        for(int i=0;i<words.length;i++){
+            if(isValid(words[i], st)){
+                res.add(words[i]);
+            }
+        }
+        return res;
+    }
+
+    private boolean isValid(String s, Set<String> st){
+        for(int i=1;i<s.length();i++){
+            String low = s.substring(0,i);
+            String high = s.substring(i, s.length());
+            if(st.contains(low) && (st.contains(high) || isValid(high, st))){
+                return true;
+            }
+        }
+        return false;
+    }
+}
