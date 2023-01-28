@@ -1,0 +1,42 @@
+class SummaryRanges {
+    TreeMap<Integer, int[]> mp;
+    public SummaryRanges() {
+        mp = new TreeMap<>();
+    }
+    
+    public void addNum(int value) {
+        if(mp.containsKey(value)){
+            return;
+        }
+
+        Integer low = mp.lowerKey(value);
+        Integer high = mp.higherKey(value);
+
+        if(low!=null && high!=null && mp.get(low)[1]+1==value && value+1==high){
+            mp.get(low)[1] = mp.get(high)[1];
+            mp.remove(high);
+        }
+        else if(low!=null && mp.get(low)[1]+1>=value){
+            mp.get(low)[1] = Math.max(mp.get(low)[1], value);
+        }
+        else if(high!=null && value+1==high){
+            mp.put(value, new int[]{value, mp.get(high)[1]});
+            mp.remove(high);
+        }
+        else{
+            mp.put(value, new int[]{value,value});
+        }
+    }
+    
+    public int[][] getIntervals() {
+        List<int[]> arr = new ArrayList<>(mp.values());
+        return arr.toArray(new int[arr.size()][]);
+    }
+}
+
+/**
+ * Your SummaryRanges object will be instantiated and called as such:
+ * SummaryRanges obj = new SummaryRanges();
+ * obj.addNum(value);
+ * int[][] param_2 = obj.getIntervals();
+ */
