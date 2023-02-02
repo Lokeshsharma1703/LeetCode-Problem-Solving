@@ -295,3 +295,4 @@
 289. https://leetcode.com/problems/insert-into-a-binary-search-tree/
 290. https://leetcode.com/problems/delete-node-in-a-bst/
 291. https://leetcode.com/problems/binary-tree-cameras/
+292. https://leetcode.com/problems/validate-binary-search-tree/
