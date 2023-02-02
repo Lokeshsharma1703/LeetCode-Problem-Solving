@@ -292,3 +292,4 @@
 286. https://leetcode.com/problems/n-th-tribonacci-number/description/
 287. https://leetcode.com/problems/best-team-with-no-conflicts/description/
 288. https://leetcode.com/problems/greatest-common-divisor-of-strings/description/
+289. https://leetcode.com/problems/insert-into-a-binary-search-tree/
