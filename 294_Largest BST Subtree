@@ -1,0 +1,31 @@
+class Solution {
+    public int largestBSTinBT() {
+        return this.largestBSTinBT(this.root).size;
+    }
+        
+    private Pair largestBSTinBT(Node root) {
+        if(root==null){
+            return new Pair();
+        }
+        Pair lft = largestBSTinBT(root.left);
+        Pair rgt = largestBSTinBT(root.right);
+        Pair curr = new Pair();
+        curr.min = Math.min(lft.min, Math.min(root.data, rgt.min));
+        curr.max = Math.max(lft.max, Math.max(root.data, rgt.max));
+        if(lft.isBST && rgt.isBST && lft.max< root.data && rgt.min> root.data){
+            curr.isBST = true;
+            curr.size = lft.size+rgt.size+1;
+        }
+        else{
+            curr.isBST = false;
+            curr.size = Math.max(lft.size, rgt.size);
+        }
+        return curr;
+    }
+    private class Pair{
+        boolean isBST = true;
+        long min = Long.MAX_VALUE;
+        long max = Long.MIN_VALUE;
+        int size = 0;
+    }
+}
