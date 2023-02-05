@@ -299,3 +299,4 @@
 293. https://leetcode.com/problems/maximum-sum-bst-in-binary-tree/
 294. https://leetcode.ca/all/333.html#:~:text=A%20subtree%20must%20include%20all,subtree's%20size%2C%20which%20is%203.
 295. https://leetcode.com/problems/verifying-an-alien-dictionary/description/
+296. https://leetcode.com/problems/find-all-anagrams-in-a-string/description/
