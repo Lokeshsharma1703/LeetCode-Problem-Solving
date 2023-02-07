@@ -1,0 +1,30 @@
+class Solution {
+    public int totalFruit(int[] fruits) {
+        int[] freq = new int[fruits.length];
+        int res = 0;
+        int curr = 0;
+        int types = 0;
+        int si = 0;
+        int ei = 0;
+        while(ei < fruits.length){
+            if(freq[fruits[ei]]==0){
+                types++;
+            }
+            freq[fruits[ei]]++;
+            curr++;
+            
+            while(types>2 && si<ei){
+                freq[fruits[si]]--;
+                if(freq[fruits[si]]==0){
+                    types--;
+                }
+                si++;
+                curr--;
+            }
+
+            res = Math.max(res, curr);
+            ei++;
+        }
+        return res;
+    }
+}
