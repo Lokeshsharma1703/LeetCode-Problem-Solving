@@ -303,3 +303,4 @@
 297. https://leetcode.com/problems/fruit-into-baskets/
 298. https://leetcode.com/problems/jump-game-ii/description/
 299. https://leetcode.com/problems/binary-tree-right-side-view/description/
+300. https://leetcode.com/problems/naming-a-company/description/
