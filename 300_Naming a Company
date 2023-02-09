@@ -1,0 +1,30 @@
+class Solution {
+    public long distinctNames(String[] ideas) {
+        Set<String>[] st = new Set[26];
+        for (int i = 0; i < 26; i++) {
+            st[i] = new HashSet<>();
+        }
+        for (int i = 0; i < ideas.length; i++) {
+            st[ideas[i].charAt(0) - 'a'].add(ideas[i].substring(1));
+        }
+
+        int[][] dp = new int[26][26];
+        for (int i = 0; i < 26; i++) {
+            for (String s : st[i]) {
+                for (int j = i + 1; j < 26; j++) {
+                    if (st[j].contains(s)) {
+                        dp[i][j]++;
+                    }
+                }
+            }
+        }
+
+        long res = 0;
+        for (int i = 0; i < 26; i++) {
+            for (int j = i+1; j < 26; j++) {
+                res += (st[i].size() - dp[i][j]) * (st[j].size() - dp[i][j]) * 2;
+            }
+        }
+        return res;
+    }
+}
