@@ -306,3 +306,4 @@
 300. https://leetcode.com/problems/naming-a-company/description/
 301. https://leetcode.com/problems/as-far-from-land-as-possible/description/
 302. https://leetcode.com/problems/shortest-path-with-alternating-colors/description/
+303. https://leetcode.com/problems/minimum-fuel-cost-to-report-to-the-capital/description/
