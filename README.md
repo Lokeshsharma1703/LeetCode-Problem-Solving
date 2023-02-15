@@ -308,3 +308,4 @@
 302. https://leetcode.com/problems/shortest-path-with-alternating-colors/description/
 303. https://leetcode.com/problems/minimum-fuel-cost-to-report-to-the-capital/description/
 304. https://leetcode.com/problems/distribute-coins-in-binary-tree/description/
+305. https://leetcode.com/problems/add-to-array-form-of-integer/description/
