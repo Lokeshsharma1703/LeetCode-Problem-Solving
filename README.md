@@ -309,3 +309,4 @@
 303. https://leetcode.com/problems/minimum-fuel-cost-to-report-to-the-capital/description/
 304. https://leetcode.com/problems/distribute-coins-in-binary-tree/description/
 305. https://leetcode.com/problems/add-to-array-form-of-integer/description/
+306. https://leetcode.com/problems/merge-k-sorted-lists/description/
