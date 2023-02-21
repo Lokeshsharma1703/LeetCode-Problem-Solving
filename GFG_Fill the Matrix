@@ -1,0 +1,104 @@
+Given a matrix with dimensions N x M, entirely filled with zeroes except for one position at co-ordinates X and Y containing '1'. Find the minimum number of iterations in which the whole matrix can be filled with ones.
+Note: In one iteration, '1' can be filled in the 4 neighbouring elements of a cell containing '1'.
+
+
+Example 1:
+
+Input:
+N = 2, M = 3
+X = 2, Y = 3
+Output: 3 
+
+Explanation: 3 is the minimum possible 
+number of iterations in which the
+matrix can be filled.
+Example 2:
+
+Input:
+N = 1, M = 1
+X = 1, Y = 1 
+Output: 0
+
+Explanation: The whole matrix is 
+already filled with ones.
+
+Your Task:  
+You don't need to read input or print anything. Your task is to complete the function minIterations() which takes the dimensions of the matrix N and M and the co-ordinates of the initial position of '1' ie X and Y as input parameters and returns the minimum number of iterations required to fill the matrix.
+
+
+Expected Time Complexity: O(N*M)
+Expected Auxiliary Space: O(1)
+
+
+Constraints:
+1 ≤ N, M ≤ 103
+1 ≤ X ≤ N
+1 ≤ Y ≤ M 
+
+
+link - https://practice.geeksforgeeks.org/problems/2145720aebf8ea0b07f76b17217b3353a0fbea7f/1
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+class Pair<K, T>{
+    K x;
+    T y;
+    public Pair(K a, T b){
+        x = a;
+        y = b;
+    }
+    
+    public K getKey(){
+        return this.x;
+    }
+    
+    public T getValue(){
+        return this.y;
+    }
+}
+
+class Solution
+{
+	public static int minIteration(int N, int M, int x, int y){
+		int[][] arr = new int[N+1][M+1];
+		arr[x][y] = 1;
+		Queue<Pair<Integer, Integer>> q = new LinkedList<>();
+		q.add(new Pair(x,y));
+		
+		int count = 0;
+		while(!q.isEmpty()){
+		    int len = q.size();
+		    for(int i=0;i<len;i++){
+		        int a = q.peek().getKey();
+		        int b = q.peek().getValue();
+		        q.poll();
+		        
+		        if(a>1 && arr[a-1][b]==0){
+		            q.add(new Pair(a-1, b));
+		            arr[a-1][b] = 1;
+		        }
+		        
+		        if(b>1 && arr[a][b-1]==0){
+		            q.add(new Pair(a, b-1));
+		            arr[a][b-1] = 1;
+		        }
+		        
+		        if(a < N && arr[a+1][b]==0){
+		            q.add(new Pair(a+1, b));
+		            arr[a+1][b] = 1;
+		        }
+		        
+		        if(b < M && arr[a][b+1]==0){
+		            q.add(new Pair(a, b+1));
+		            arr[a][b+1] = 1;
+		        }
+		    }
+		    if(!q.isEmpty()){
+		        count++;
+		    }
+		}
+		
+		return count;
+	}
+}
