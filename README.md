@@ -315,3 +315,4 @@
 309. https://leetcode.com/problems/single-element-in-a-sorted-array/description/
 310. https://leetcode.com/problems/kth-smallest-element-in-a-bst/description/
 311. https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/description/
+312. https://leetcode.com/problems/ipo/description/
