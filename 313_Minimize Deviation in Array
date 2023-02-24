@@ -1,0 +1,27 @@
+class Solution {
+    public int minimumDeviation(int[] nums) {
+        PriorityQueue<Integer> pq = new PriorityQueue<>(Collections.reverseOrder());
+        int min = Integer.MAX_VALUE;
+
+        for(int i : nums){
+            if(i%2==1){
+                i *= 2;
+            }
+            pq.add(i);
+            min = Math.min(min, i);
+        }
+
+        int minDev = Integer.MAX_VALUE;
+        while(!pq.isEmpty()){
+            int curr = pq.poll();
+            minDev = Math.min(minDev, curr-min);
+            if(curr%2==1){
+                break;
+            }
+            curr /= 2;
+            min = Math.min(min, curr);
+            pq.add(curr);
+        }
+        return minDev;
+    }
+}
