@@ -1,0 +1,77 @@
+Given an undirected graph with V vertices(numbered from 1 to V) and E edges. Find the number of good components in the graph.
+A component of the graph is good if and only if the component is a fully connected component.
+Note: A fully connected component is a subgraph of a given graph such that there's an edge between every pair of vertices in a component, the given graph can be a disconnected graph. Consider the adjacency list from index 1.
+
+Example 1:
+
+Input: 
+
+Output: 1
+Explanation: We can see that there is only one 
+component in the graph and in this component 
+there is a edge between any two vertces.
+Example 2:
+
+Input:
+
+Output: 2
+Explanation: We can see that there are 3 components
+in the graph. For 1-2-7 there is no edge between
+1 to 7, so it is not a fully connected component.
+Rest 2 are individually fully connected component.
+Your Task:
+You don't need to read input or print anything. Your task is to complete the function
+findNumberOfGoodComponent() which takes an integer V and an adjacency list adj as input parameters and returns an integer denoting the number of good components.
+
+Expected Time Complexity: O(V+E)
+Expected Auxiliary Space: O(depth of the graph)
+
+Constraints:
+1 ≤ V, E ≤ 104
+
+
+
+link - https://practice.geeksforgeeks.org/problems/1a4b617b70f0142a5c2b454e6fbe1b9a69ce7861/1
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+class Solution {
+    boolean[] isVisited;
+    int edges=0;
+    int vertices=0;
+    
+    public int findNumberOfGoodComponent(int V, ArrayList<ArrayList<Integer>> adj) {
+        
+        isVisited=new boolean[V+1];
+        int full=0;
+        for(int i=1;i<=V;i++)
+        {
+            if(!isVisited[i])
+            {
+                edges=0;
+                vertices=1;
+                dfs(i,adj);
+                if((vertices*(vertices-1))/2==edges/2)
+                    full++;
+            }
+        }
+        return full; 
+        
+    }
+    
+    void dfs(int i,ArrayList<ArrayList<Integer>> adj)
+    {
+        isVisited[i]=true;
+        edges+=adj.get(i).size();
+        
+        for(int node:adj.get(i))
+        {
+            if(!isVisited[node])
+            {
+                vertices++;
+                dfs(node,adj);
+            }
+        }
+    }
+}
