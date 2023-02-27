@@ -319,3 +319,4 @@
 313. https://leetcode.com/problems/minimize-deviation-in-array/description/
 314. https://leetcode.com/problems/add-two-numbers-ii/description/
 315. https://leetcode.com/problems/edit-distance/description/
+316. https://leetcode.com/problems/construct-quad-tree/description/
