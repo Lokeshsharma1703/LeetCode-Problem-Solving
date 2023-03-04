@@ -1,0 +1,20 @@
+class Solution {
+    public long countSubarrays(int[] nums, int minK, int maxK) {
+        int n = nums.length;
+        int lastmin = -1;
+        int lastmax = -1;
+        int low = -1;
+        long count = 0;
+        for(int i=0;i<n;i++){
+            if(nums[i]>=minK && nums[i]<=maxK){
+                lastmin = (nums[i]==minK) ? i : lastmin;
+                lastmax = (nums[i]==maxK) ? i : lastmax;
+                count += Math.max(0, Math.min(lastmin, lastmax)-low);
+            }
+            else{
+                low = i;
+            }
+        }
+        return count;
+    }
+}
