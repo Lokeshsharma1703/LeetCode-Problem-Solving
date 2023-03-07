@@ -327,3 +327,4 @@
 321. https://leetcode.com/problems/count-subarrays-with-fixed-bounds/description/
 322. https://leetcode.com/problems/jump-game-iv/description/
 323. https://leetcode.com/problems/longest-consecutive-sequence/description/
+324. https://leetcode.com/problems/minimum-time-to-complete-trips/description/
