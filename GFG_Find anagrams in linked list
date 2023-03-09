@@ -1,0 +1,83 @@
+Given a linked list of characters and a string S.Return all the anagrams of the string present in the given linked list.In case of overlapping anagrams choose the first anagram from left.
+
+Example 1:
+
+Input: a -> b -> c -> a -> d -> b -> c -> a
+S = bac
+Output: [a -> b -> c, b -> c -> a]
+Explanation: In the given linked list,
+there are three anagrams: 
+1. a -> b -> c -> a -> d -> b -> c -> a
+2. a -> b -> c -> a -> d -> b -> c -> a
+3. a -> b -> c -> a -> d -> b -> c -> a
+But in 1 and 2, a -> b -> c and b -> c-> a
+are ovelapping.So we take a -> b -> c as it
+comes first from left.So the output is:
+[a->b->c,b->c->a]
+Example 2:
+
+Input: a -> b -> d -> c -> a
+S = bac
+Output: -1 
+Explanation: There is no anagrams, so output is -1
+Your Task:
+You don't need to read input or print anything. Your task is to complete the function findAnagrams() which takes head node of the linked list and a string S as input parameters and returns an array of linked list which only stores starting point of the Anagram. If there is no anagram in the linked list,return -1.
+
+
+Expected Time Complexity: O(N), where N is length of LinkedList
+Expected Auxiliary Space: O(1)
+
+
+Constraints:
+1 <= N <= 105
+1 <= |S| <= 105
+
+
+link - https://practice.geeksforgeeks.org/problems/de6f6a196aecdfb3e4939ba7729809a5a4bdfe90/1
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+class Solution {
+    public static ArrayList<Node> findAnagrams(Node head, String S) {
+        ArrayList<Node> ans = new ArrayList<>();
+        int j = 0;
+        Node prev = head, curr = head;
+        while (curr != null) {
+            int arr[] = new int[26];
+            for (int i = 0; i < S.length(); i++)
+                arr[S.charAt(i) - 'a']++;
+            while (j < S.length() && curr != null) {
+                if (--arr[curr.data - 'a'] >= 0) {
+                    j++;
+                    curr = curr.next;
+                } else {
+                    break;
+                }
+            }
+            if (j == S.length() && checkAllZeroes(arr)) {
+                Node temp = new Node('x');
+                Node ptr = temp;
+                while (j > 0) {
+                    temp.next = new Node(prev.data);
+                    prev = prev.next;
+                    temp = temp.next;
+                    j--;
+                }
+                ans.add(ptr.next);
+            } else {
+                prev = prev.next;
+                j = 0;
+            }
+            curr = prev;
+        }
+        return ans;
+    }
+
+    static boolean checkAllZeroes(int arr[]) {
+        for (int i : arr)
+            if (i != 0)
+                return false;
+        return true;
+    }
+}
