@@ -333,3 +333,4 @@
 327. https://leetcode.com/problems/linked-list-random-node/description/
 328. https://leetcode.com/problems/convert-sorted-list-to-binary-search-tree/description/
 329. https://leetcode.com/problems/patching-array/description/
+330. https://leetcode.com/problems/check-completeness-of-a-binary-tree/description/
