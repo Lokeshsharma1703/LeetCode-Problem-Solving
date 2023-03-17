@@ -1,0 +1,30 @@
+class Trie {
+    HashMap<String, Boolean> mp = new HashMap<>();
+    public Trie() {
+    }
+    
+    public void insert(String word) {
+        mp.put(word, true);        
+    }
+    
+    public boolean search(String word) {
+        return mp.containsKey(word);
+    }
+    
+    public boolean startsWith(String prefix) {
+        for(String key : mp.keySet()){
+            if(key.startsWith(prefix)){
+                return true;
+            }
+        }
+        return false;
+    }
+}
+
+/**
+ * Your Trie object will be instantiated and called as such:
+ * Trie obj = new Trie();
+ * obj.insert(word);
+ * boolean param_2 = obj.search(word);
+ * boolean param_3 = obj.startsWith(prefix);
+ */
