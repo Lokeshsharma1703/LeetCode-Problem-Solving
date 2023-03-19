@@ -1,0 +1,50 @@
+class WordDictionary {
+    Map<String, Boolean> mp;
+    public WordDictionary() {
+        this.mp = new HashMap<String, Boolean>();
+    }
+    
+    public void addWord(String word) {
+        mp.put(word, true);
+    }
+    
+    public boolean search(String word) {
+        if(mp.containsKey(word)){
+            return true;
+        }
+        else{
+            if(word.contains(".")){
+                boolean f = false;
+                for(String key : mp.keySet()){
+                    if(word.length()==key.length()){
+                        if(f==false && isSame(word, key)==true){
+                            f = true;
+                        }
+                    }
+                }
+                if(f){
+                    return true;
+                }
+            }
+            return false;
+        }
+    }
+
+    private boolean isSame(String a, String b){
+        for(int i=0;i<a.length();i++){
+            if(a.charAt(i)=='.'){
+            }
+            else if(a.charAt(i) != b.charAt(i)){
+                return false;
+            }
+        }
+        return true;
+    }
+}
+
+/**
+ * Your WordDictionary object will be instantiated and called as such:
+ * WordDictionary obj = new WordDictionary();
+ * obj.addWord(word);
+ * boolean param_2 = obj.search(word);
+ */
