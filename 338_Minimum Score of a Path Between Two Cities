@@ -1,0 +1,32 @@
+class Solution {
+    public int minScore(int n, int[][] roads) {
+        HashMap<Integer, HashMap<Integer, Integer>> mp = new HashMap<>();
+
+        for(int i=1;i<=n;i++){
+            mp.put(i, new HashMap<>());
+        }
+
+        for(int[] v : roads){
+            mp.get(v[0]).put(v[1], v[2]);
+            mp.get(v[1]).put(v[0], v[2]);
+        }
+
+        int res = Integer.MAX_VALUE;
+
+        HashSet<Integer> visited = new HashSet<>();
+        Queue<Integer> q = new LinkedList<>();
+        q.add(1);
+        while(!q.isEmpty()){
+            int curr = q.poll();
+            visited.add(curr);
+            for(int ngbr : mp.get(curr).keySet()){
+                res = Math.min(res, mp.get(curr).get(ngbr));
+                if(!visited.contains(ngbr)){
+                    q.add(ngbr);
+                }
+            }
+        }
+
+        return res;
+    }
+}
