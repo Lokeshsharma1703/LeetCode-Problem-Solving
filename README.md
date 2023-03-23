@@ -345,3 +345,4 @@
 339. https://leetcode.com/problems/course-schedule/
 340. https://leetcode.com/problems/course-schedule-ii/
 341. https://practice.geeksforgeeks.org/problems/alien-dictionary/1
+342. https://leetcode.com/problems/number-of-operations-to-make-network-connected/description/
