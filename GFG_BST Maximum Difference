@@ -1,0 +1,103 @@
+You are given a Binary Search Tree and a target value. You must find the maximum difference between the sum of node data from root to target and from target to a child leaf node (target exclusive). Initially, you are at the root node.
+Note: If the target node is not present in the tree then return -1.
+
+Example 1:
+
+Input:
+
+
+Target = 20
+Output: 10
+Explanation: From root to target the sum of node data is 25 and from target to the children leaf nodes the sums of the node data are 15 and 25. So, the maximum difference will be (25-15) = 10.
+Example 2:
+
+Input:
+
+Target = 50
+Output: -1
+Explanation: The target node is not present in the tree.
+
+Your Task:
+You don't need to read input or print anything. Your task is to complete the function maxDifferenceBST() which takes BST(you are given the root node of the BST ) and target as input, and returns an interger value as the required answer. If the target is not present in the BST then return -1.
+
+Expected Time Complexity: O(N)
+Expected Auxiliary Space: O(H), H - Height of the Tree.
+
+
+Constraints:
+1 <= n < 10^4
+1 <= node.data < 10^5
+1 <= target < 10^5
+
+
+link - https://practice.geeksforgeeks.org/problems/e841e10213ddf839d51c2909f1808632a19ae0bf/1
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+class Solution
+{
+    public static int maxDifferenceBST(Node root,int target)
+    {
+        
+        Node node = isPresent(root, target);
+        
+        if(node==null){
+            return -1;
+        }
+        
+        int rtt = rootToTarget(root, target) - target;
+        int ttl = targetToLeaf(node) - target;
+        
+        return rtt - ttl;
+        
+    }
+    
+    private static Node isPresent(Node root, int target){
+        if(root==null || root.data==target){
+            return root;
+        }
+        
+        if(root.data > target){
+            return isPresent(root.left, target);
+        }
+        else{
+            return isPresent(root.right, target);
+        }
+    }
+    
+    private static int rootToTarget(Node root, int target){
+        if(root==null){
+            return 0;
+        }
+        
+        if(root.data==target){
+            return root.data;
+        }
+        
+        if(root.data > target){
+            return root.data + rootToTarget(root.left, target);
+        }
+        else{
+            return root.data + rootToTarget(root.right, target);
+        }
+    }
+    
+    private static int targetToLeaf(Node root){
+        if(root==null){
+            return 0;
+        }
+        
+        if(root.left==null && root.right==null){
+            return root.data;
+        }
+        if(root.left==null){
+            return root.data + targetToLeaf(root.right);
+        }
+        if(root.right==null){
+            return root.data + targetToLeaf(root.left);
+        }
+        
+        return Math.min(root.data + targetToLeaf(root.right), root.data + targetToLeaf(root.left));
+    }
+}
