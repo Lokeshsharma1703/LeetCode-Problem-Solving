@@ -344,3 +344,4 @@
 338. https://leetcode.com/problems/minimum-score-of-a-path-between-two-cities/description/
 339. https://leetcode.com/problems/course-schedule/
 340. https://leetcode.com/problems/course-schedule-ii/
+341. https://practice.geeksforgeeks.org/problems/alien-dictionary/1
