@@ -1,0 +1,89 @@
+Given a string S which consists of only lowercase English alphabets, you have to perform the below operations:
+If the string S contains any repeating character, remove the first repeating character and reverse the string and again perform the above operation on the modified string, otherwise, you stop.
+You have to find the final string.
+
+Example 1:
+
+Input: S = "abab"
+Output: ba
+Explanation:
+In 1st operation: The first repeating 
+character is a. After Removing the first 
+character, S = "bab". After Reversing the 
+string, S = "bab".
+In 2nd operation: The first non repeating 
+character is b. After Removing the first 
+character, S = "ab". After Reversing the 
+string, S = "ba".
+Now the string S does not contain any 
+repeating character.
+Example 2:
+
+Input: S = "dddd"
+Output: d
+Your Task:  
+You don't need to read input or print anything. Your task is to complete the function removeReverse( ) which accepts a string S input parameter and returns the modified string.
+
+Expected Time Complexity: O(|S|)
+Expected Auxiliary Space: O(K), K <= 26.
+
+Constraints:
+The string contains only lowercase English alphabets.
+1 < |S| < 105
+|S| denotes the length of the string S.
+
+
+link - https://practice.geeksforgeeks.org/problems/1e2f365be6114b671b915e145ec7dbcfdc432910/1
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+class Solution 
+{ 
+    String removeReverse(String S) 
+    { 
+        int low = 0;
+        int high = S.length()-1;
+        
+        int[] freq = new int[26];
+        for(int i=0;i<=high; i++){
+            freq[S.charAt(i)-'a']++;
+        }
+        
+        boolean f = true;
+        int count = 0;
+        
+        String bgn = "";
+        String end = ""; 
+        
+        while(low<=high){
+            char ch;
+            if(f){
+                ch = S.charAt(low++);
+            }
+            else{
+                ch = S.charAt(high--);
+            }
+            
+            if(freq[ch-'a']>1){
+                freq[ch-'a']--;
+                count++;
+                f = !f;
+            }
+            else{
+                if(f){
+                    bgn += ch;
+                }
+                else{
+                    end = ch+end;
+                }
+            }
+        }
+        
+        StringBuilder res = new StringBuilder(bgn+end);
+        if(count%2==1){
+            res.reverse();
+        }
+        
+        return res.toString();
+    }
+}
