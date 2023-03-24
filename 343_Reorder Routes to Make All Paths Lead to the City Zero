@@ -1,0 +1,25 @@
+class Solution {
+    public int minReorder(int n, int[][] connections) {
+        List<List<Integer>> g = new ArrayList<>();
+        for(int i=0;i<n;i++){
+            g.add(new ArrayList<>());
+        }
+        for(int[] edge : connections){
+            g.get(edge[0]).add(edge[1]);
+            g.get(edge[1]).add(-edge[0]);
+        }
+
+        return dfs(0, g, new boolean[n]);
+    }
+
+    private static int dfs(int src, List<List<Integer>> g, boolean[] visited){
+        int count = 0;
+        visited[src] = true;
+        for(int ngbr : g.get(src)){
+            if(!visited[Math.abs(ngbr)]){
+                count += dfs(Math.abs(ngbr), g, visited) + (ngbr > 0 ? 1 : 0);
+            }
+        }
+        return count;
+    }
+}
