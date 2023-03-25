@@ -1,0 +1,45 @@
+class Solution {
+    public long countPairs(int n, int[][] edges) {
+        HashMap<Integer, HashSet<Integer>> map = new HashMap<>();
+        for (int i = 0; i < n; i++) {
+            map.put(i, new HashSet<>());
+        }
+        for(int[] edge : edges){
+            map.get(edge[0]).add(edge[1]);
+            map.get(edge[1]).add(edge[0]);
+        }
+
+        long count = 0;
+
+        boolean[] visited = new boolean[n];
+        List<Integer> temp = new ArrayList<>();
+        for(int i=0;i<n;i++){
+            if(!visited[i]){
+                int[] counter = {0};
+                dfs(map, i, visited, counter);
+                temp.add(counter[0]);
+            }
+        }
+
+        int total = 0;
+        for(int i=0;i<temp.size();i++){
+            count += (long)temp.get(i)*(long)(n-total-temp.get(i));
+            total += temp.get(i);
+        }
+
+        return count;
+    }
+
+    private static void dfs(HashMap<Integer, HashSet<Integer>> map, int src, boolean[] visited, int[] counter){
+        if(visited[src]){
+            return;
+        }
+        visited[src] = true;
+        counter[0]++;
+        for(int ngbr : map.get(src)){
+            if(!visited[ngbr]){
+                dfs(map, ngbr, visited, counter);
+            }
+        }
+    }
+}
