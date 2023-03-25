@@ -347,3 +347,4 @@
 341. https://practice.geeksforgeeks.org/problems/alien-dictionary/1
 342. https://leetcode.com/problems/number-of-operations-to-make-network-connected/description/
 343. https://leetcode.com/problems/reorder-routes-to-make-all-paths-lead-to-the-city-zero/description/
+344. https://leetcode.com/problems/count-unreachable-pairs-of-nodes-in-an-undirected-graph/description/
