@@ -1,0 +1,31 @@
+class Solution {
+
+    int res = -1;
+
+    public int longestCycle(int[] edges) {
+        int n = edges.length;
+        boolean[] visited = new boolean[n];
+
+        for(int i=0;i<n;i++){
+            if(!visited[i]){
+                HashMap<Integer, Integer> mp = new HashMap<>();
+                mp.put(i, 1);
+                dfs(i, edges, mp, visited);
+            }
+        }
+
+        return res;
+    }
+    private void dfs(int src, int[] edges, HashMap<Integer, Integer> mp, boolean[] visited){
+        visited[src] = true;
+        int ngbr = edges[src];
+
+        if(ngbr != -1 && !visited[ngbr]){
+            mp.put(ngbr, mp.get(src)+1);
+            dfs(ngbr, edges, mp, visited);
+        }
+        else if(ngbr != -1 && mp.containsKey(ngbr)){
+            res = Math.max(res, mp.get(src) - mp.get(ngbr) + 1);
+        }
+    }
+}
