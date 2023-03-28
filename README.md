@@ -350,3 +350,4 @@
 344. https://leetcode.com/problems/count-unreachable-pairs-of-nodes-in-an-undirected-graph/description/
 345. https://leetcode.com/problems/longest-cycle-in-a-graph/description/
 346. https://leetcode.com/problems/minimum-path-sum/description/
+347. https://leetcode.com/problems/minimum-cost-for-tickets/description/
