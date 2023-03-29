@@ -351,3 +351,4 @@
 345. https://leetcode.com/problems/longest-cycle-in-a-graph/description/
 346. https://leetcode.com/problems/minimum-path-sum/description/
 347. https://leetcode.com/problems/minimum-cost-for-tickets/description/
+348. https://leetcode.com/problems/reducing-dishes/description/
