@@ -353,3 +353,4 @@
 347. https://leetcode.com/problems/minimum-cost-for-tickets/description/
 348. https://leetcode.com/problems/reducing-dishes/description/
 349. https://leetcode.com/problems/minimize-malware-spread/description/
+350. https://codeforces.com/problemset/problem/1242/B
