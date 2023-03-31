@@ -1,0 +1,47 @@
+class Solution {
+    public int ways(String[] pizza, int k) {
+        int n = pizza.length;
+        int m = pizza[0].length();
+
+        Integer[][][] dp = new Integer[k][n][m];
+
+        int[][] preSum = new int[n+1][m+1];
+
+        for(int i=n-1; i>=0; i--){
+            for(int j=m-1; j>=0; j--){
+                preSum[i][j] = preSum[i][j+1] + preSum[i+1][j] - preSum[i+1][j+1] + (pizza[i].charAt(j)=='A' ? 1 : 0);
+            }
+        }
+
+        return dfs(n, m, k-1, 0, 0, dp, preSum);
+    }
+
+    private static int dfs(int n, int m, int k, int row, int col, Integer[][][] dp, int[][] preSum){
+        if(preSum[row][col]==0){
+            return 0;
+        }
+        if(k==0){
+            return 1;
+        }
+
+        if(dp[k][row][col] != null){
+            return dp[k][row][col];
+        }
+
+        int res = 0;
+
+        for(int r = row+1; r<n; r++){
+            if(preSum[row][col] - preSum[r][col] > 0){
+                res = (res + dfs(n, m, k-1, r, col, dp, preSum)) % 1000000007 ;
+            }
+        }
+
+        for(int c = col+1; c<m; c++){
+            if(preSum[row][col] - preSum[row][c] > 0){
+                res = (res + dfs(n, m, k-1, row, c, dp, preSum)) % 1000000007;
+            }
+        }
+
+        return dp[k][row][col] = res;
+    } 
+}
