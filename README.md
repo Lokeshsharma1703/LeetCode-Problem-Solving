@@ -357,3 +357,4 @@
 351. https://www.spoj.com/problems/MST/
 352. https://leetcode.com/problems/scramble-string/description/
 353. https://leetcode.com/problems/number-of-ways-of-cutting-a-pizza/description/
+354. https://leetcode.com/problems/successful-pairs-of-spells-and-potions/description/
