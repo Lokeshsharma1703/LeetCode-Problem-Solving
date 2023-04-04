@@ -359,3 +359,4 @@
 353. https://leetcode.com/problems/number-of-ways-of-cutting-a-pizza/description/
 354. https://leetcode.com/problems/successful-pairs-of-spells-and-potions/description/
 355. https://leetcode.com/problems/boats-to-save-people/description/
+356. https://leetcode.com/problems/optimal-partition-of-string/description/
