@@ -363,3 +363,4 @@
 357. https://leetcode.com/problems/minimize-maximum-of-array/description/
 358. https://leetcode.com/problems/min-cost-climbing-stairs/description/
 359. https://leetcode.com/problems/longest-increasing-subsequence/description/
+360. https://leetcode.com/problems/divisor-game/
