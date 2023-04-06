@@ -361,3 +361,4 @@
 355. https://leetcode.com/problems/boats-to-save-people/description/
 356. https://leetcode.com/problems/optimal-partition-of-string/description/
 357. https://leetcode.com/problems/minimize-maximum-of-array/description/
+358. https://leetcode.com/problems/min-cost-climbing-stairs/description/
