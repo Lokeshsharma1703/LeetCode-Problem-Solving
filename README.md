@@ -365,3 +365,4 @@
 359. https://leetcode.com/problems/longest-increasing-subsequence/description/
 360. https://leetcode.com/problems/divisor-game/
 361. https://leetcode.com/problems/house-robber/
+362. https://leetcode.com/problems/number-of-closed-islands/description/
