@@ -366,3 +366,4 @@
 360. https://leetcode.com/problems/divisor-game/
 361. https://leetcode.com/problems/house-robber/
 362. https://leetcode.com/problems/number-of-closed-islands/description/
+363. https://leetcode.com/problems/number-of-enclaves/description/
