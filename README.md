@@ -368,3 +368,4 @@
 362. https://leetcode.com/problems/number-of-closed-islands/description/
 363. https://leetcode.com/problems/number-of-enclaves/description/
 364. https://leetcode.com/problems/clone-graph/description/
+365. https://leetcode.com/problems/largest-color-value-in-a-directed-graph/description/
