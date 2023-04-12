@@ -370,3 +370,4 @@
 364. https://leetcode.com/problems/clone-graph/description/
 365. https://leetcode.com/problems/largest-color-value-in-a-directed-graph/description/
 366. https://leetcode.com/problems/removing-stars-from-a-string/description/
+367. https://leetcode.com/problems/simplify-path/description/
