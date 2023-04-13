@@ -372,3 +372,4 @@
 366. https://leetcode.com/problems/removing-stars-from-a-string/description/
 367. https://leetcode.com/problems/simplify-path/description/
 368. https://leetcode.com/problems/longest-common-subsequence/
+369. https://leetcode.com/problems/uncrossed-lines/
