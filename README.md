@@ -373,3 +373,4 @@
 367. https://leetcode.com/problems/simplify-path/description/
 368. https://leetcode.com/problems/longest-common-subsequence/
 369. https://leetcode.com/problems/uncrossed-lines/
+370. https://leetcode.com/problems/max-dot-product-of-two-subsequences/
