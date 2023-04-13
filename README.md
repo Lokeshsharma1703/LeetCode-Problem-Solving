@@ -377,3 +377,4 @@
 371. https://leetcode.com/problems/coin-change-ii/
 372. https://leetcode.com/problems/distinct-subsequences/
 373. https://leetcode.com/problems/coin-change/description/
+374. https://leetcode.com/problems/validate-stack-sequences/description/
