@@ -379,3 +379,4 @@
 373. https://leetcode.com/problems/coin-change/description/
 374. https://leetcode.com/problems/validate-stack-sequences/description/
 375. https://leetcode.com/problems/longest-palindromic-subsequence/description/
+376. https://leetcode.com/problems/maximum-value-of-k-coins-from-piles/description/
