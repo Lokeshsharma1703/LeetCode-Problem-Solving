@@ -382,3 +382,4 @@
 376. https://leetcode.com/problems/maximum-value-of-k-coins-from-piles/description/
 377. https://leetcode.com/problems/number-of-ways-to-form-a-target-string-given-a-dictionary/description/
 378. https://leetcode.com/problems/kids-with-the-greatest-number-of-candies/description/
+379. https://leetcode.com/problems/remove-duplicates-from-sorted-list/description/
