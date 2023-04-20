@@ -384,3 +384,4 @@
 378. https://leetcode.com/problems/kids-with-the-greatest-number-of-candies/description/
 379. https://leetcode.com/problems/remove-duplicates-from-sorted-list/description/
 380. https://leetcode.com/problems/longest-zigzag-path-in-a-binary-tree/description/
+381. https://leetcode.com/problems/maximum-width-of-binary-tree/description/
