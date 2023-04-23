@@ -387,3 +387,4 @@
 381. https://leetcode.com/problems/maximum-width-of-binary-tree/description/
 382. https://leetcode.com/problems/profitable-schemes/description/
 383. https://leetcode.com/problems/minimum-insertion-steps-to-make-a-string-palindrome/description/
+384. https://leetcode.com/problems/restore-the-array/description/
