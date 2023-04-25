@@ -389,3 +389,4 @@
 383. https://leetcode.com/problems/minimum-insertion-steps-to-make-a-string-palindrome/description/
 384. https://leetcode.com/problems/restore-the-array/description/
 385. https://leetcode.com/problems/last-stone-weight/description/
+386. https://leetcode.com/problems/smallest-number-in-infinite-set/description/
