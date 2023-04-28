@@ -392,3 +392,4 @@
 386. https://leetcode.com/problems/smallest-number-in-infinite-set/description/
 387. https://leetcode.com/problems/add-digits/description/
 388. https://leetcode.com/problems/bulb-switcher/description/
+389. https://leetcode.com/problems/similar-string-groups/description/
