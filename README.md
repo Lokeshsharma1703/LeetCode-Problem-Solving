@@ -396,3 +396,4 @@
 390. https://leetcode.com/problems/checking-existence-of-edge-length-limited-paths/description/
 391. https://leetcode.com/problems/remove-max-number-of-edges-to-keep-graph-fully-traversable/description/
 392. https://leetcode.com/problems/average-salary-excluding-the-minimum-and-maximum-salary/description/
+393. https://leetcode.com/problems/sign-of-the-product-of-an-array/description/
