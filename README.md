@@ -398,3 +398,4 @@
 392. https://leetcode.com/problems/average-salary-excluding-the-minimum-and-maximum-salary/description/
 393. https://leetcode.com/problems/sign-of-the-product-of-an-array/description/
 394. https://leetcode.com/problems/find-the-difference-of-two-arrays/description/
+395. https://leetcode.com/problems/dota2-senate/
