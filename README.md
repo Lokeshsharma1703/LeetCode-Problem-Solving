@@ -399,3 +399,4 @@
 393. https://leetcode.com/problems/sign-of-the-product-of-an-array/description/
 394. https://leetcode.com/problems/find-the-difference-of-two-arrays/description/
 395. https://leetcode.com/problems/dota2-senate/
+396. https://leetcode.com/problems/maximum-number-of-vowels-in-a-substring-of-given-length/description/
