@@ -403,3 +403,4 @@
 397. https://leetcode.com/problems/number-of-subsequences-that-satisfy-the-given-sum-condition/description/
 398. https://leetcode.com/problems/find-the-longest-valid-obstacle-course-at-each-position/description/
 399. https://leetcode.com/problems/matrix-diagonal-sum/description/
+400. https://leetcode.com/problems/solving-questions-with-brainpower/description/
