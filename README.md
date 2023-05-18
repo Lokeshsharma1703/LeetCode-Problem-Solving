@@ -408,3 +408,4 @@
 402. https://leetcode.com/problems/swapping-nodes-in-a-linked-list/description/
 403. https://leetcode.com/problems/swap-nodes-in-pairs/description/
 404. https://leetcode.com/problems/maximum-twin-sum-of-a-linked-list/description/
+405. https://leetcode.com/problems/minimum-number-of-vertices-to-reach-all-nodes/description/
