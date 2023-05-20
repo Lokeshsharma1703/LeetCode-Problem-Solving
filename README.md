@@ -409,3 +409,4 @@
 403. https://leetcode.com/problems/swap-nodes-in-pairs/description/
 404. https://leetcode.com/problems/maximum-twin-sum-of-a-linked-list/description/
 405. https://leetcode.com/problems/minimum-number-of-vertices-to-reach-all-nodes/description/
+406. https://leetcode.com/problems/evaluate-division/
