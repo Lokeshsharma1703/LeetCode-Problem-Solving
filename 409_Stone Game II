@@ -1,0 +1,46 @@
+class Solution {
+    public int stoneGameII(int[] piles) {
+        int[][][] dp = new int[piles.length+1][piles.length][2];
+        for(int[][] twoD : dp){
+            for(int[] oneD : twoD){
+                Arrays.fill(oneD, -1);
+            }
+        }
+        return getStones(piles, 1, 0, 0, dp);
+    }
+
+    private static int getStones(int[] piles, int m, int idx, int turn, int[][][] dp){
+
+        if(idx == piles.length){
+            return 0;
+        }
+
+        if(dp[m][idx][turn] != -1){
+            return dp[m][idx][turn];
+        }
+
+        int count = 0;
+        int res = turn==0 ? 0 : Integer.MAX_VALUE;
+
+        for(int i=1; i<= 2*m; i++){
+            int index = idx + i - 1;
+            if(index >= piles.length){
+                break;
+            }
+
+            count += piles[index];
+
+            if(turn == 0){
+                int next = getStones(piles, Math.max(m, i), index+1, 1, dp);
+                int total = count + next;
+                res = Math.max(res, total);
+            }
+            else{
+                int next = getStones(piles, Math.max(m, i), index+1, 0, dp);
+                res = Math.min(res, next);
+            }
+        }
+
+        return dp[m][idx][turn] = res;
+    }
+}
