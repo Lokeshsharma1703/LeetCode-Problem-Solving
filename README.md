@@ -414,3 +414,4 @@
 408. https://leetcode.com/problems/maximum-subsequence-score/description/
 409. https://leetcode.com/problems/stone-game-ii/description/
 410. https://leetcode.com/problems/stone-game-iii/description/
+411. https://leetcode.com/problems/minimum-cost-to-cut-a-stick/description/
