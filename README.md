@@ -416,3 +416,4 @@
 410. https://leetcode.com/problems/stone-game-iii/description/
 411. https://leetcode.com/problems/minimum-cost-to-cut-a-stick/description/
 412. https://leetcode.com/problems/design-parking-system/description/
+413. https://leetcode.com/problems/design-hashset/description/
