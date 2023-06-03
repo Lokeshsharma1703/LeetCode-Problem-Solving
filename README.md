@@ -420,3 +420,4 @@
 414. https://leetcode.com/problems/design-underground-system/description/
 415. https://leetcode.com/problems/shortest-path-in-binary-matrix/description/
 416. https://leetcode.com/problems/detonate-the-maximum-bombs/description/
+417. https://leetcode.com/problems/time-needed-to-inform-all-employees/description/
