@@ -1,0 +1,23 @@
+class Solution {
+    public int numOfMinutes(int n, int headID, int[] manager, int[] informTime) {
+        Map<Integer, List<Integer>> mp = new HashMap<>();
+        for(int i=0; i<n;i++){
+            if(manager[i] != -1){
+                mp.computeIfAbsent(manager[i], k -> new ArrayList<>()).add(i);
+            }
+        }
+
+        return dfs(headID, informTime, mp);
+    }
+
+    private static int dfs(int manager, int[] informTime, Map<Integer, List<Integer>> mp){
+        int max = 0;
+        if(mp.containsKey(manager)){
+            for(int sub : mp.get(manager)){
+                max = Math.max(max, dfs(sub, informTime, mp));
+            }
+        }
+
+        return max + informTime[manager];
+    }
+}
