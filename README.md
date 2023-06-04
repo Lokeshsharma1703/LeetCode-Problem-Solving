@@ -421,3 +421,4 @@
 415. https://leetcode.com/problems/shortest-path-in-binary-matrix/description/
 416. https://leetcode.com/problems/detonate-the-maximum-bombs/description/
 417. https://leetcode.com/problems/time-needed-to-inform-all-employees/description/
+418. https://leetcode.com/problems/number-of-provinces/description/
