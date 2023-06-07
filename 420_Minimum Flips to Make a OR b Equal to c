@@ -1,0 +1,25 @@
+class Solution {
+    public int minFlips(int a, int b, int c) {
+        int flip = 0;
+        while(a > 0 || b > 0 || c > 0){
+            int ba = a & 1;
+            int bb = b & 1;
+            int bc = c & 1;
+
+            if(bc == 0){
+                flip += (ba + bb);
+            }
+            else{
+                if(ba == 0 && bb == 0){
+                    flip += 1;
+                }
+            }
+
+            a >>= 1;
+            b >>= 1;
+            c >>= 1;
+        }
+
+        return flip;
+    }
+}
