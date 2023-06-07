@@ -423,3 +423,4 @@
 417. https://leetcode.com/problems/time-needed-to-inform-all-employees/description/
 418. https://leetcode.com/problems/number-of-provinces/description/
 419. https://leetcode.com/problems/can-make-arithmetic-progression-from-sequence/description/
+420. https://leetcode.com/problems/minimum-flips-to-make-a-or-b-equal-to-c/description/
