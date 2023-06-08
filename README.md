@@ -425,3 +425,4 @@
 419. https://leetcode.com/problems/can-make-arithmetic-progression-from-sequence/description/
 420. https://leetcode.com/problems/minimum-flips-to-make-a-or-b-equal-to-c/description/
 421. https://leetcode.com/problems/dungeon-game/
+422. https://leetcode.com/problems/burst-balloons/
