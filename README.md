@@ -430,3 +430,4 @@
 424. https://leetcode.com/problems/knight-dialer/
 425. https://codeskiller.codingblocks.com/problems/546
 426. https://leetcode.com/problems/maximum-value-at-a-given-index-in-a-bounded-array/description/
+427. https://leetcode.com/problems/snapshot-array/description/
