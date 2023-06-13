@@ -431,3 +431,4 @@
 425. https://codeskiller.codingblocks.com/problems/546
 426. https://leetcode.com/problems/maximum-value-at-a-given-index-in-a-bounded-array/description/
 427. https://leetcode.com/problems/snapshot-array/description/
+428. https://leetcode.com/problems/equal-row-and-column-pairs/description/
