@@ -434,3 +434,9 @@
 428. https://leetcode.com/problems/equal-row-and-column-pairs/description/
 429. https://leetcode.com/problems/minimum-absolute-difference-in-bst/description/
 430. https://leetcode.com/problems/maximum-level-sum-of-a-binary-tree/description/
+431. https://www.spoj.com/problems/NAJPF/
+432. https://leetcode.com/problems/longest-duplicate-substring/
+433. https://leetcode.com/problems/missing-number/
+434. https://leetcode.com/problems/single-number/
+435. https://leetcode.com/problems/single-number-iii/
+436. https://codeforces.com/problemset/problem/535/B
