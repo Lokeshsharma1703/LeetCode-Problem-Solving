@@ -441,3 +441,4 @@
 435. https://leetcode.com/problems/single-number-iii/
 436. https://codeforces.com/problemset/problem/535/B
 437. https://leetcode.com/problems/number-of-ways-to-reorder-array-to-get-same-bst/description/
+438. https://leetcode.com/problems/make-array-strictly-increasing/description/
