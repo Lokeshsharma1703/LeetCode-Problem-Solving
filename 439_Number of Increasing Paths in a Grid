@@ -1,0 +1,39 @@
+class Solution {
+    int mod = 1000000007;
+    public int countPaths(int[][] grid) {
+        int n = grid.length;
+        int m = grid[0].length;
+
+        int[][] dp = new int[n][m];
+
+        for(int[] arr : dp){
+            Arrays.fill(arr, -1);
+        }
+
+        int path = 0;
+        for(int i=0;i<n;i++){
+            for(int j=0;j<m;j++){
+                path = (path + helper(grid, i, j, -1, dp)) % mod;
+            }
+        }
+
+        return path;
+    }
+
+    private int helper(int[][] grid, int i, int j, int prev, int[][] dp){
+        if(i<0 || j<0 || i>=grid.length || j>=grid[0].length || grid[i][j]<=prev){
+            return 0;
+        }
+
+        if(dp[i][j] != -1){
+            return dp[i][j];
+        }
+
+        int lft = helper(grid, i, j-1, grid[i][j], dp);
+        int rgt = helper(grid, i, j+1, grid[i][j], dp);
+        int up = helper(grid, i-1, j, grid[i][j], dp);
+        int dwn = helper(grid, i+1, j, grid[i][j], dp);
+
+        return dp[i][j] = (1 + lft + rgt + up + dwn) % mod;
+    }
+}
