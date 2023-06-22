@@ -445,3 +445,4 @@
 439. https://leetcode.com/problems/number-of-increasing-paths-in-a-grid/description/
 440. https://leetcode.com/problems/k-radius-subarray-averages/description/
 441. https://leetcode.com/problems/minimum-cost-to-make-array-equal/description/
+442. https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/description/
