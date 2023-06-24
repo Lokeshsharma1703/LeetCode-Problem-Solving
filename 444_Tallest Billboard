@@ -1,0 +1,29 @@
+class Solution {
+    public int tallestBillboard(int[] rods) {
+        int sum = 0;
+
+        for(int i : rods){
+            sum += i;
+        }
+
+        int[] dp = new int[sum+1];
+        Arrays.fill(dp, -1);
+
+        dp[0] = 0;
+
+        for(int ele : rods){
+            int[] copy = dp.clone();
+
+            for(int i=0; i<=sum-ele; i++){
+                if(copy[i] < 0){
+                    continue;
+                }
+
+                dp[i + ele] = Math.max(dp[i + ele], copy[i]);
+                dp[Math.abs(i - ele)] = Math.max(dp[Math.abs(i - ele)], copy[i] + Math.min(i, ele));
+            }
+        }
+
+        return dp[0];
+    }
+}
