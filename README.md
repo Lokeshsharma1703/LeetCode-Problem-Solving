@@ -452,3 +452,9 @@
 446. https://leetcode.com/problems/total-cost-to-hire-k-workers/description/
 447. https://leetcode.com/problems/find-k-pairs-with-smallest-sums/description/
 448. https://leetcode.com/problems/path-with-maximum-probability/description/
+449. https://www.spoj.com/problems/BUSYMAN/
+450. https://codeforces.com/problemset/problem/1325/D
+451. https://atcoder.jp/contests/dp/tasks/dp_i
+452. https://codeforces.com/problemset/problem/550/B
+
+
