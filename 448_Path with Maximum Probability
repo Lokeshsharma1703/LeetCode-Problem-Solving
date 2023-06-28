@@ -1,0 +1,41 @@
+class Solution {
+    public double maxProbability(int n, int[][] edges, double[] succProb, int start, int end) {
+        
+        HashMap<Integer, HashMap<Integer, Double>> mp = new HashMap<>();
+
+        for(int i=0;i<n;i++){
+            mp.put(i, new HashMap<>());
+        }
+
+        for(int i=0; i<edges.length; i++){
+            int u = edges[i][0];
+            int v = edges[i][1];
+
+            mp.get(u).put(v, succProb[i]);
+            mp.get(v).put(u, succProb[i]);
+        }
+
+        double[] dis = new double[n];
+        dis[start] = 1.0;
+
+        Queue<Integer> q = new LinkedList<>();
+        q.add(start);
+
+        while(!q.isEmpty()){
+            int curr = q.poll();
+
+            for(int ngbr : mp.get(curr).keySet()){
+                double cost = mp.get(curr).get(ngbr);
+                double newCost = dis[curr] * cost;
+
+                if(newCost > dis[ngbr]){
+                    dis[ngbr] = newCost;
+                    q.add(ngbr);
+                }
+            }
+        }
+
+        return dis[end];
+
+    }
+}
