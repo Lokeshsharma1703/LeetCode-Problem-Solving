@@ -1,0 +1,81 @@
+class Solution {
+    public int shortestPathAllKeys(String[] grid) {
+        int n = grid.length;
+        int m = grid[0].length();
+
+        Map<Character, Integer> mp = new HashMap<>();
+        int temp = 0;
+
+        for(int i=0;i<n;i++){
+            for(int j=0;j<m;j++){
+                if(Character.isLowerCase(grid[i].charAt(j))){
+                    mp.put(grid[i].charAt(j), temp++);
+                }
+            }
+        }
+
+        int end = (1 << temp)-1;
+        int size = (1 << temp);
+
+        boolean[][][] dp = new boolean[n][m][size];
+        int[] start = new int[3];
+
+        for(int i=0;i<n;i++){
+            for(int j=0;j<m;j++){
+                if(grid[i].charAt(j) == '@'){
+                    start = new int[]{i, j, 0};
+                }
+            }
+        }
+
+        Queue<int[]> q = new LinkedList<>();
+        q.offer(start);
+        int steps = 0;
+
+        while(!q.isEmpty()){
+            int len = q.size();
+
+            for(int k=0; k<len; k++){
+                int[] curr = q.poll();
+                int r = curr[0];
+                int c = curr[1];
+                int msk = curr[2];
+
+                if(r<0 || r>=n || c<0 || c>=m){
+                    continue;
+                }
+
+                if(grid[r].charAt(c)=='#'){
+                    continue;
+                }
+
+                if(Character.isUpperCase(grid[r].charAt(c))){
+                    if((msk & (1 << mp.get(Character.toLowerCase(grid[r].charAt(c)))))==0){
+                        continue;
+                    }
+                }
+
+                if(Character.isLowerCase(grid[r].charAt(c))){
+                    msk |= (1 << mp.get(grid[r].charAt(c)));
+                }
+
+                if(msk == end){
+                    return steps;
+                }
+
+                if(dp[r][c][msk]){
+                    continue;
+                }
+
+                dp[r][c][msk] = true;
+
+                q.offer(new int[]{r+1, c, msk});
+                q.offer(new int[]{r-1, c, msk});
+                q.offer(new int[]{r, c+1, msk});
+                q.offer(new int[]{r, c-1, msk});
+            }
+            steps++;
+        }
+        return -1;   
+    }
+}
