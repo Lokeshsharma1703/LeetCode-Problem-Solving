@@ -456,5 +456,10 @@
 450. https://codeforces.com/problemset/problem/1325/D
 451. https://atcoder.jp/contests/dp/tasks/dp_i
 452. https://codeforces.com/problemset/problem/550/B
+453. https://leetcode.com/problems/shortest-path-to-get-all-keys/description/
+454. https://leetcode.com/problems/longest-happy-prefix/
+455. https://codeforces.com/problemset/problem/451/D
+456. https://www.spoj.com/problems/NHAY/
+457. https://www.spoj.com/problems/NAJPF/
 
 
