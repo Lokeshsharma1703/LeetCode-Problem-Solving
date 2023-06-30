@@ -1,0 +1,68 @@
+class Solution {
+    public int latestDayToCross(int row, int col, int[][] cells) {
+        int low = 0;
+        int high = cells.length;
+        int res = -1;
+
+        while(low <= high){
+            int mid = low + (high - low)/2;
+
+            if(isPossible(mid, row, col, cells)){
+                res = mid;
+                low = mid+1;
+            }
+            else{
+                high = mid-1;
+            }
+        }
+
+        return res;
+    }
+
+    private static boolean isPossible(int mid, int row, int col, int[][] cells){
+        int[][] grid = new int[row][col];
+        for(int i=0; i<mid; i++){
+            int r = cells[i][0]-1;
+            int c = cells[i][1]-1;
+
+            grid[r][c] = 1;
+        }
+
+        Set<Pair<Integer, Integer>> visited = new HashSet<>();
+        Deque<Pair<Integer, Integer>> st = new ArrayDeque<>();
+
+        for(int c = 0; c < col; c++){
+            if(grid[0][c]==0){
+                st.push(new Pair<>(0, c));
+            }
+        }
+
+        while(!st.isEmpty()){
+            Pair<Integer, Integer> curr = st.pop();
+            int r = curr.getKey();
+            int c = curr.getValue();
+
+            if(r==row-1){
+                return true;
+            }
+
+            if(visited.contains(curr)){
+                continue;
+            }
+
+            visited.add(curr);
+
+            int[][] dir = {{0,1}, {0,-1}, {1, 0}, {-1, 0}};
+            for(int[] d : dir){
+                int nrow = r + d[0];
+                int ncol = c + d[1];
+
+                if(nrow >= 0 && nrow < row && ncol >= 0 && ncol < col && grid[nrow][ncol]==0){
+                    st.push(new Pair<>(nrow, ncol));
+                }
+            }
+        }
+
+        return false;
+    }
+}
