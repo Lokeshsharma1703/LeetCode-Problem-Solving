@@ -466,5 +466,10 @@
 460. https://leetcode.com/problems/maximum-number-of-achievable-transfer-requests/description/
 461. https://leetcode.com/problems/buddy-strings/description/
 462. https://leetcode.com/problems/single-number-ii/description/
+463. https://leetcode.com/problems/longest-subarray-of-1s-after-deleting-one-element/description/
+464. https://leetcode.com/problems/maximum-xor-of-two-numbers-in-an-array/
+465. https://leetcode.com/problems/minimize-xor/
+466. https://leetcode.com/problems/implement-trie-prefix-tree/
+467. https://www.hackerrank.com/challenges/ctci-contacts/problem
 
 
