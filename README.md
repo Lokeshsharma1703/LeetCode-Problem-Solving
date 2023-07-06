@@ -471,5 +471,7 @@
 465. https://leetcode.com/problems/minimize-xor/
 466. https://leetcode.com/problems/implement-trie-prefix-tree/
 467. https://www.hackerrank.com/challenges/ctci-contacts/problem
+468. https://leetcode.com/problems/maximum-xor-with-an-element-from-array/
+469. https://leetcode.com/problems/different-ways-to-add-parentheses/
 
 
