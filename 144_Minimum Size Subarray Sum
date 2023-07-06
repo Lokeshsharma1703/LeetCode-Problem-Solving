@@ -1,5 +1,31 @@
 class Solution {
     public int minSubArrayLen(int target, int[] nums) {
+        int res = Integer.MAX_VALUE;
+        int si = 0;
+        int ei = 0;
+        while(ei < nums.length){
+            target -= nums[ei];
+
+            while(target <= 0){
+                res = Math.min(res, ei-si+1);
+                target += nums[si];
+                si++;
+            }
+
+            ei++;
+        }
+
+        return res==Integer.MAX_VALUE ? 0 : res;
+    }
+}
+
+----------------------------------------------------------------------------------------
+
+
+
+
+class Solution {
+    public int minSubArrayLen(int target, int[] nums) {
         int si = 0;
         int ei = nums.length;
         int res = ei+1;
