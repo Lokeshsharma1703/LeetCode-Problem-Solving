@@ -1,5 +1,95 @@
 class Solution {
     public boolean isMatch(String s, String p) {
+        int sn = s.length();
+        int pn = p.length();
+
+        // memoization
+
+        // int[][] dp = new int[sn][pn];
+        // for(int[] arr : dp){
+        //     Arrays.fill(arr, -1);
+        // }
+
+        // return find(s, p, 0, 0, sn, pn, dp)==1 ? true : false;
+
+
+        // tabulation
+        boolean[][] dp = new boolean[sn+1][pn+1];
+        dp[0][0] = true; // first base case
+
+        // if pidx gets exhausted then false
+        for(int i=1; i<=sn; i++){
+            dp[i][0] = false;      // second base case
+        }
+
+        // if sidx gets exhausted
+        // third base case
+        for(int i=1; i<=pn; i++){
+            if(p.charAt(i-1) !='*'){
+                dp[0][i] = false;
+            }
+            else{
+                dp[0][i] = dp[0][i-1];
+            }
+        }
+
+        for(int i=1; i<=sn; i++){
+            for(int j=1; j<=pn; j++){
+                boolean temp = false;
+                if(p.charAt(j-1)=='?' || s.charAt(i-1)==p.charAt(j-1)){
+                    temp = dp[i-1][j-1];
+                }
+                else if(p.charAt(j-1)=='*'){
+                    temp = dp[i-1][j] | dp[i][j-1];
+                }
+
+                dp[i][j] = temp;
+            }
+        }
+
+        return dp[sn][pn];
+    }
+
+    private static int find(String s, String p, int sidx, int pidx, int sn, int pn, int[][] dp){
+        if(sidx==sn && pidx==pn){
+            return 1;
+        }
+
+        if(pidx==pn){
+            return 0;
+        }
+
+        if(sidx==sn){
+            for( ;pidx < pn; pidx++){
+                if(p.charAt(pidx) != '*'){
+                    return 0;
+                }
+            }
+            return 1;
+        }
+
+        if(dp[sidx][pidx] != -1){
+            return dp[sidx][pidx];
+        }
+
+        if(s.charAt(sidx) == p.charAt(pidx) || p.charAt(pidx)=='?'){
+            return dp[sidx][pidx] = find(s, p, sidx+1, pidx+1, sn, pn, dp);
+        }
+        else if(p.charAt(pidx)=='*'){
+            return dp[sidx][pidx] = find(s, p, sidx, pidx+1, sn, pn, dp) | find(s, p, sidx+1, pidx, sn, pn, dp);
+        }
+        else{
+            return dp[sidx][pidx] = 0;
+        }
+    }
+}
+
+-----------------------------------------------------------------------------------------------------------------------------------
+
+
+
+class Solution {
+    public boolean isMatch(String s, String p) {
         int si = 0;
         int pi = 0;
         int count = 0;
