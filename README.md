@@ -475,5 +475,6 @@
 469. https://leetcode.com/problems/different-ways-to-add-parentheses/
 470. https://leetcode.com/problems/word-search-ii/description/
 471. https://leetcode.com/problems/maximize-the-confusion-of-an-exam/description/
+472. https://leetcode.com/problems/put-marbles-in-bags/description/
 
 
