@@ -1,0 +1,30 @@
+class Solution {
+    public long putMarbles(int[] weights, int k) {
+        PriorityQueue<Integer> min_pq = new PriorityQueue<>();
+        PriorityQueue<Integer> max_pq = new PriorityQueue<>(Collections.reverseOrder());
+        k--;
+
+        for(int i=0; i<weights.length-1; i++){
+            min_pq.add(weights[i]+weights[i+1]);
+            max_pq.add(weights[i]+weights[i+1]);
+
+            if(min_pq.size() > k){
+                min_pq.poll();
+                max_pq.poll();
+            }
+        }
+
+        long min = 0;
+        long max = 0;
+
+        while(!min_pq.isEmpty()){
+            min += min_pq.peek();
+            max += max_pq.peek();
+
+            min_pq.poll();
+            max_pq.poll();
+        }
+
+        return Math.abs(max - min);
+    }
+}
