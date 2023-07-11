@@ -477,5 +477,5 @@
 471. https://leetcode.com/problems/maximize-the-confusion-of-an-exam/description/
 472. https://leetcode.com/problems/put-marbles-in-bags/description/
 473. https://leetcode.com/problems/substring-with-largest-variance/description/
-
+474. https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/description/
 
