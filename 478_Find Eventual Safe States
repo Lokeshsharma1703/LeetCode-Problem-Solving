@@ -1,0 +1,48 @@
+class Solution {
+    public List<Integer> eventualSafeNodes(int[][] graph) {
+        int n = graph.length;
+
+        Map<Integer, List<Integer>> mp = new HashMap<>();
+
+        for(int i=0; i<n; i++){
+            mp.put(i, new ArrayList<>());
+            for(int j=0; j<graph[i].length; j++){
+                mp.get(i).add(graph[i][j]);
+            }
+        }
+
+        boolean[] visited = new boolean[n];
+        boolean[] temp = new boolean[n];
+
+        for(int i=0; i<n; i++){
+            if(!visited[i]){
+                dfs(mp, i, visited, temp);
+            }
+        }
+
+        List<Integer> res = new ArrayList<>();
+        for(int i=0; i<n; i++){
+            if(!temp[i]){
+                res.add(i);
+            }
+        }
+
+        return res;
+    }
+
+    private static boolean dfs(Map<Integer, List<Integer>> mp, int src, boolean[] visited, boolean[] temp){
+        visited[src] = true;
+        temp[src] = true;
+
+        for(int ngbr : mp.get(src)){
+            if(!visited[ngbr] && dfs(mp, ngbr, visited, temp)){
+                return true;
+            }
+            else if(temp[ngbr]){
+                return true;
+            }
+        }
+
+        return temp[src] = false;
+    }
+}
