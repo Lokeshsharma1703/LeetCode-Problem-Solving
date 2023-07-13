@@ -484,4 +484,5 @@
 478. https://leetcode.com/problems/find-eventual-safe-states/description/
 479. https://leetcode.com/problems/find-duplicate-subtrees/
 480. https://leetcode.com/problems/recover-binary-search-tree/
+481. https://codeforces.com/problemset/problem/599/C
 
