@@ -485,4 +485,5 @@
 479. https://leetcode.com/problems/find-duplicate-subtrees/
 480. https://leetcode.com/problems/recover-binary-search-tree/
 481. https://codeforces.com/problemset/problem/599/C
+482. https://leetcode.com/problems/longest-arithmetic-subsequence-of-given-difference/description/
 
