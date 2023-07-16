@@ -1,0 +1,54 @@
+class Solution {
+    public int[] smallestSufficientTeam(String[] req_skills, List<List<String>> people) {
+        int n = req_skills.length;
+        int m = people.size();
+
+        HashMap<String, Integer> skills = new HashMap<>();
+        for(int i=0;i<n;i++){
+            skills.put(req_skills[i], 1<<i);
+        }
+
+        HashMap<Integer, List<Integer>> dp = new HashMap<>();
+        dp.put(0, new ArrayList<>());
+
+        for(int i=0;i<m;i++){
+            List<String> sk = people.get(i);
+
+            int sum = 0;
+            for(String s : sk){
+                if(skills.containsKey(s)){
+                    sum |= skills.get(s);
+                }
+            }
+
+            List<Integer> keys = new ArrayList<>(dp.keySet());
+
+            for(int key : keys){
+                int newSkill = key | sum;
+
+                List<Integer> curr = dp.get(key);
+
+                if(!dp.containsKey(newSkill)){
+                    dp.put(newSkill, new ArrayList(curr));
+                    dp.get(newSkill).add(i);
+                }
+                else{
+                    int old = dp.get(newSkill).size();
+                    int ne = curr.size()+1;
+                    if(ne < old){
+                        dp.put(newSkill, new ArrayList(curr));
+                        dp.get(newSkill).add(i);
+                    }
+                }
+            }
+        }
+
+        List<Integer> temp = dp.get((1<<n)-1);
+        int[] res = new int[temp.size()];
+        for(int i=0; i<res.length; i++){
+            res[i] = temp.get(i);
+        }
+
+        return res;
+    }
+}
