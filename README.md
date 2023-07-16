@@ -487,4 +487,5 @@
 481. https://codeforces.com/problemset/problem/599/C
 482. https://leetcode.com/problems/longest-arithmetic-subsequence-of-given-difference/description/
 483. https://leetcode.com/problems/maximum-number-of-events-that-can-be-attended-ii/description/
+484. https://leetcode.com/problems/smallest-sufficient-team/description/
 
