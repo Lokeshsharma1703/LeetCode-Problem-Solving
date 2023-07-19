@@ -493,4 +493,5 @@
 487. https://leetcode.com/problems/additive-number/
 488. https://leetcode.com/problems/find-median-from-data-stream/
 489. https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/
+490. https://codeforces.com/contest/1420/problem/B
 
