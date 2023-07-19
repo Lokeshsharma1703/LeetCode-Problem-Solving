@@ -490,4 +490,5 @@
 484. https://leetcode.com/problems/smallest-sufficient-team/description/
 485. https://leetcode.com/problems/lru-cache/description/
 486. https://leetcode.com/problems/non-overlapping-intervals/description/
+487. https://leetcode.com/problems/additive-number/
 
