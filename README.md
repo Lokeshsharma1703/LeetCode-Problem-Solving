@@ -489,4 +489,5 @@
 483. https://leetcode.com/problems/maximum-number-of-events-that-can-be-attended-ii/description/
 484. https://leetcode.com/problems/smallest-sufficient-team/description/
 485. https://leetcode.com/problems/lru-cache/description/
+486. https://leetcode.com/problems/non-overlapping-intervals/description/
 
