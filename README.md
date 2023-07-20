@@ -495,4 +495,5 @@
 489. https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/
 490. https://codeforces.com/contest/1420/problem/B
 491. https://leetcode.com/problems/asteroid-collision/description/
+492. https://leetcode.com/problems/number-of-ways-to-divide-a-long-corridor/
 
