@@ -498,4 +498,5 @@
 492. https://leetcode.com/problems/number-of-ways-to-divide-a-long-corridor/
 493. https://leetcode.com/problems/number-of-longest-increasing-subsequence/description/
 494. https://leetcode.com/problems/knight-probability-in-chessboard/description/
+495. https://leetcode.com/problems/all-possible-full-binary-trees/description/
 
