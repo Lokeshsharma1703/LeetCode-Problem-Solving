@@ -500,4 +500,5 @@
 494. https://leetcode.com/problems/knight-probability-in-chessboard/description/
 495. https://leetcode.com/problems/all-possible-full-binary-trees/description/
 496. https://leetcode.com/problems/word-ladder/description/
+497. https://leetcode.com/problems/shortest-common-supersequence/
 
