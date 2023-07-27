@@ -503,4 +503,5 @@
 497. https://leetcode.com/problems/shortest-common-supersequence/
 498. https://leetcode.com/problems/minimum-speed-to-arrive-on-time/description/
 499. https://leetcode.com/problems/binary-tree-level-order-traversal-ii/description/
+500. https://leetcode.com/problems/maximum-running-time-of-n-computers/description/
 
