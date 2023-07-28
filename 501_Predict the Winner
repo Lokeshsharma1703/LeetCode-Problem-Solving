@@ -1,0 +1,18 @@
+class Solution {
+    public boolean PredictTheWinner(int[] nums) {
+        int player1 = helper(nums, 0, nums.length-1);
+
+        return player1 >= 0;
+    }
+    private static int helper(int[] nums, int si, int ei){
+        if(si==ei){
+            return nums[si];
+        }
+
+        int first = nums[si] - helper(nums, si+1, ei);
+        int last = nums[ei] - helper(nums, si, ei-1);
+
+        return Math.max(first, last);
+
+    }
+}
