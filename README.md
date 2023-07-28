@@ -504,4 +504,5 @@
 498. https://leetcode.com/problems/minimum-speed-to-arrive-on-time/description/
 499. https://leetcode.com/problems/binary-tree-level-order-traversal-ii/description/
 500. https://leetcode.com/problems/maximum-running-time-of-n-computers/description/
+501. https://leetcode.com/problems/predict-the-winner/description/
 
