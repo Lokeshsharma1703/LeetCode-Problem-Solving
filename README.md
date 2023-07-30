@@ -506,4 +506,5 @@
 500. https://leetcode.com/problems/maximum-running-time-of-n-computers/description/
 501. https://leetcode.com/problems/predict-the-winner/description/
 502. https://leetcode.com/problems/soup-servings/description/
+503. https://leetcode.com/problems/strange-printer/
 
