@@ -1,0 +1,40 @@
+class Solution {
+    public int strangePrinter(String s) {
+        int n = s.length();
+        int[][] dp = new int[n][n];
+        for(int[] arr : dp){
+            Arrays.fill(arr, -1);
+        }
+
+        return helper(0, n-1, s, dp);
+    }
+
+    private static int helper(int i, int j, String s, int[][] dp){
+        if(dp[i][j] != -1){
+            return dp[i][j];
+        }
+        if(i==j){
+            return dp[i][j] = 1;
+        }
+
+        int res = 0;
+
+        if(s.charAt(i)==s.charAt(j) || s.charAt(j-1)==s.charAt(j)){
+            res = helper(i, j-1, s, dp);
+        }
+        else if(s.charAt(i)==s.charAt(i+1)){
+            res = helper(i+1, j, s, dp);
+        }
+        else{
+            res = helper(i, j-1, s, dp)+1;
+
+            for(int k=i+1; k<j; k++){
+                if(s.charAt(k)==s.charAt(j)){
+                    res = Math.min(res, helper(i, k-1, s, dp) + helper(k, j-1, s, dp));
+                }
+            }
+        }
+
+        return dp[i][j] = res;
+    }
+}
