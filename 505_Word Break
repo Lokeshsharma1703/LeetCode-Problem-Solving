@@ -1,0 +1,36 @@
+class Solution {
+    public boolean wordBreak(String s, List<String> wordDict) {
+        HashMap<String, Boolean> mp = new HashMap<>();
+
+        return canBeBroken(s, wordDict, mp);
+    }
+
+    private static boolean canBeBroken(String s, List<String> wordDict, HashMap<String, Boolean> mp){
+        if(s.length()==0){
+            return true;
+        }
+
+        if(wordDict.contains(s)){
+            return true;
+        }
+
+        if(mp.containsKey(s)){
+            return mp.get(s);
+        }
+
+        boolean res = false;
+
+        for(int i=1; i<s.length(); i++){
+            String fs = s.substring(0, i);
+            String ls = s.substring(i);
+
+            if(wordDict.contains(fs) && canBeBroken(ls, wordDict, mp)){
+                res = true;
+                break;
+            }
+        }
+
+        mp.put(s, res);
+        return res;
+    }
+}
