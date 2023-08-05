@@ -1,0 +1,39 @@
+class Solution {
+    int[] arr;
+    public Solution(int[] w) {
+        this.arr = w;
+
+        for(int i=1; i<arr.length; i++){
+            arr[i] = arr[i] + arr[i-1];
+        }
+    }
+    
+    public int pickIndex() {
+        double random = Math.random() * arr[arr.length-1];
+        return search(random);
+    }
+
+    private int search(double random){
+        int lo = 0;
+        int hi = arr.length;
+
+        while(lo < hi){
+            int mid = lo + (hi - lo)/2;
+
+            if(arr[mid] > random){
+                hi = mid;
+            }
+            else{
+                lo = mid+1;
+            }
+        }
+
+        return lo;
+    }
+}
+
+/**
+ * Your Solution object will be instantiated and called as such:
+ * Solution obj = new Solution(w);
+ * int param_1 = obj.pickIndex();
+ */
