@@ -509,3 +509,4 @@
 503. https://leetcode.com/problems/strange-printer/
 504. https://leetcode.com/problems/minimum-ascii-delete-sum-for-two-strings/description/
 505. https://leetcode.com/problems/word-break/description/
+506. https://leetcode.com/problems/random-pick-with-weight/description/
