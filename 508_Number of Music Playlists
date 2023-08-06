@@ -1,0 +1,28 @@
+class Solution {
+    public int numMusicPlaylists(int n, int goal, int k) {
+        int[][] dp = new int[n+1][goal+1];
+        for(int[] arr : dp){
+            Arrays.fill(arr, -1);
+        }
+
+        return findPlaylists(n, goal, k, dp);
+    }
+
+    static int mod = 1000000007;
+
+    private static int findPlaylists(int n, int goal, int k, int[][] dp){
+        if(goal==0 && n==0){
+            return 1;
+        }
+        if(goal==0 || n==0){
+            return 0;
+        }
+        if(dp[n][goal] != -1){
+            return dp[n][goal];
+        }
+
+        int different = (int)((long)findPlaylists(n-1, goal-1, k, dp)*n%mod);
+        int replay = (int)((long)findPlaylists(n, goal-1, k, dp) * Math.max((n-k), 0)%mod);
+        return dp[n][goal] = ((different + replay) % mod);
+    }
+} 
