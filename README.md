@@ -512,3 +512,4 @@
 506. https://leetcode.com/problems/random-pick-with-weight/description/
 507. https://leetcode.com/problems/unique-binary-search-trees-ii/description/
 508. https://leetcode.com/problems/number-of-music-playlists/
+509. https://leetcode.com/problems/minimize-the-maximum-difference-of-pairs/description/
