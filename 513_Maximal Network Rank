@@ -1,0 +1,31 @@
+class Solution {
+    public int maximalNetworkRank(int n, int[][] roads) {
+        HashMap<Integer, List> mp = new HashMap<>();
+        for (int i = 0; i < n; i++) {
+            mp.put(i, new ArrayList());
+        }
+        for(int[] edge : roads){
+            mp.get(edge[0]).add(edge[1]);
+            mp.get(edge[1]).add(edge[0]);
+        }
+
+        int max = 0;
+        for(int i=0; i<n-1; i++){
+            for(int j=i+1; j<n; j++) {
+                int count = 0;
+                count += mp.get(i).size();
+                count += mp.get(j).size();
+
+                if (mp.get(i).contains(j)) {
+                    count--;
+                }
+
+                if (count > max) {
+                    max = count;
+                }
+            }
+        }
+
+        return max;
+    }
+}
