@@ -517,3 +517,4 @@
 511. https://leetcode.com/problems/check-if-there-is-a-valid-partition-for-the-array/description/
 512. https://leetcode.com/problems/partition-list/description/
 513. https://leetcode.com/problems/maximal-network-rank/description/
+514. https://leetcode.com/problems/find-critical-and-pseudo-critical-edges-in-minimum-spanning-tree/
