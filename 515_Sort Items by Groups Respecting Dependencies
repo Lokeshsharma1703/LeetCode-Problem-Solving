@@ -1,0 +1,60 @@
+class Solution {
+    public int[] sortItems(int n, int m, int[] group, List<List<Integer>> beforeItems) {
+        List<Integer>[] graph = new List[n+m];
+        int[] indegree = new int[n+m];
+
+        for(int i=0; i<graph.length; i++){
+            graph[i] = new ArrayList<>();
+        }
+
+        for(int i=0; i<group.length; i++){
+            if(group[i] == -1){
+                continue;
+            }
+
+            graph[group[i]+n].add(i);
+            indegree[i]++;
+        }
+
+        for(int i=0; i<beforeItems.size(); i++){
+            for(int b : beforeItems.get(i)){
+                int u = group[b] == -1 ? b : group[b]+n;
+                int v = group[i] == -1 ? i : group[i]+n;
+
+                if(u==v){
+                    graph[b].add(i);
+                    indegree[i]++;
+                }
+                else{
+                    graph[u].add(v);
+                    indegree[v]++;
+                }
+            }
+        }
+
+
+        List<Integer> res = new ArrayList<>();
+
+        for(int i=0; i<n+m; i++){
+            if(indegree[i] == 0){
+                dfs(graph, i, indegree, n, res);
+            }
+        }
+
+        return res.size()==n ? res.stream().mapToInt(Integer::intValue).toArray() : new int[]{};
+    }
+
+    private void dfs(List<Integer>[] graph, int u, int[] indegree, int n, List<Integer> res){
+        if(u<n){
+            res.add(u);
+        }
+
+        indegree[u] = -1;
+
+        for(int v : graph[u]){
+            if(--indegree[v] == 0){
+                dfs(graph, v, indegree, n, res);
+            }
+        }
+    }
+}
