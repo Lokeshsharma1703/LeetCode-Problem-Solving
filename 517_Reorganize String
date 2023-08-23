@@ -1,0 +1,59 @@
+class Solution {
+    public String reorganizeString(String s) {
+        HashMap<Character, Integer> mp = new HashMap<>();
+        
+        for(int i=0; i<s.length(); i++){
+            char ch = s.charAt(i);
+            mp.put(ch, mp.getOrDefault(ch, 0)+1);
+        }
+
+        PriorityQueue<Pair> pq = new PriorityQueue<>(new Comparator<Pair>(){
+            @Override
+            public int compare(Pair p1, Pair p2){
+                return p2.freq - p1.freq;
+            }
+        });
+        for(Map.Entry<Character, Integer> entry : mp.entrySet()){
+            pq.add(new Pair(entry.getValue(), entry.getKey()));
+        }
+
+        StringBuilder sb = new StringBuilder();
+
+        while(pq.size() > 1){
+            Pair p1 = pq.poll();
+            Pair p2 = pq.poll();
+
+            sb.append(p1.ch);
+            sb.append(p2.ch);
+            p1.freq -= 1;
+            p2.freq -= 1;
+
+            if(p1.freq > 0){
+                pq.add(p1);
+            }
+            if(p2.freq > 0){
+                pq.add(p2);
+            }
+        }
+
+        if(!pq.isEmpty()){
+            if(pq.peek().freq > 1){
+                return "";
+            }
+            else{
+                sb.append(pq.peek().ch);
+            }
+        }
+
+        return sb.toString();
+    }
+
+    class Pair{
+        int freq;
+        char ch;
+        public Pair(int freq, char ch){
+            this.freq = freq;
+            this.ch = ch;
+        }
+    }
+}
