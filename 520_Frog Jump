@@ -1,0 +1,35 @@
+class Solution {
+    public boolean canCross(int[] stones) {
+        int n = stones.length;
+
+        Map<Pair<Integer, Integer>, Boolean> dp = new HashMap<>();
+
+        return dfs(0, 0, stones, n, dp);
+    }
+
+    private boolean dfs(int idx, int diff, int[] stones, int n, Map<Pair<Integer, Integer>, Boolean> dp){
+        if(idx==n-1){
+            return true;
+        }
+
+        if(dp.containsKey(new Pair(idx, diff))){
+            return dp.get(new Pair(idx, diff));
+        }
+
+        boolean res = false;
+        for(int i=idx+1; i<n; i++){
+            int curr = Math.abs(stones[idx]-stones[i]);
+            if(isValid(curr, diff)){
+                res = res || dfs(i, curr, stones, n, dp);
+            }
+        }
+
+        dp.put(new Pair(idx, diff), res);
+
+        return res;
+    }
+
+    private boolean isValid(int curr, int diff){
+        return curr==diff-1 || curr==diff || curr==diff+1;
+    }
+}
