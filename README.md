@@ -525,3 +525,4 @@
 519. https://leetcode.com/problems/maximum-length-of-pair-chain/description/
 520. https://leetcode.com/problems/frog-jump/description/
 521. https://leetcode.com/problems/implement-stack-using-queues/description/
+522. https://leetcode.com/problems/minimum-penalty-for-a-shop/description/
