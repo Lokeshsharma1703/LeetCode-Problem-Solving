@@ -1,0 +1,33 @@
+class Solution {
+    public int bestClosingTime(String customers) {
+        int n = customers.length();
+        int[] come = new int[n+1];
+        int[] notCome = new int[n+1];
+        
+        for(int i=n-1; i>=0; i--){
+            come[i] = come[i+1];
+            if(customers.charAt(i)=='Y'){
+                come[i]++;
+            }
+        }
+
+        for(int i=1; i<=n; i++){
+            notCome[i] = notCome[i-1];
+            if(customers.charAt(i-1)=='N'){
+                notCome[i]++;
+            }
+        }
+
+        int min = n;
+        int minIdx = -1;
+
+        for(int i=0; i<=n; i++){
+            if((come[i]+notCome[i]) < min){
+                min = come[i] + notCome[i];
+                minIdx = i;
+            }
+        }
+
+        return minIdx;
+    }
+}
