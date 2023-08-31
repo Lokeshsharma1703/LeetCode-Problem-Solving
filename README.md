@@ -527,3 +527,4 @@
 521. https://leetcode.com/problems/implement-stack-using-queues/description/
 522. https://leetcode.com/problems/minimum-penalty-for-a-shop/description/
 523. https://leetcode.com/problems/minimum-replacements-to-sort-the-array/description/
+524. https://leetcode.com/problems/minimum-number-of-taps-to-open-to-water-a-garden/description/
