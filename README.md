@@ -530,3 +530,4 @@
 524. https://leetcode.com/problems/minimum-number-of-taps-to-open-to-water-a-garden/description/
 525. https://leetcode.com/problems/counting-bits/description/
 526. https://leetcode.com/problems/extra-characters-in-a-string/description/
+527. https://leetcode.com/problems/copy-list-with-random-pointer/
