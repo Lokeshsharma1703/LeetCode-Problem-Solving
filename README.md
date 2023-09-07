@@ -532,3 +532,4 @@
 526. https://leetcode.com/problems/extra-characters-in-a-string/description/
 527. https://leetcode.com/problems/copy-list-with-random-pointer/
 528. https://leetcode.com/problems/split-linked-list-in-parts/
+529. https://leetcode.com/problems/reverse-linked-list-ii/
