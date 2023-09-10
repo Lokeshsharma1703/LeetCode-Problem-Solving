@@ -1,0 +1,13 @@
+class Solution {
+    public int countOrders(int n) {
+        long mod = 1000_000_007;
+        long res = 1;
+
+        for(int i=1; i<=n; i++){
+            res = (res * (2*i-1))%mod;
+            res = (res*i)%mod;
+        }
+
+        return (int)(res % mod);
+    }
+}
