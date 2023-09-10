@@ -534,3 +534,4 @@
 528. https://leetcode.com/problems/split-linked-list-in-parts/
 529. https://leetcode.com/problems/reverse-linked-list-ii/
 530. https://leetcode.com/problems/combination-sum-iv/
+531. https://leetcode.com/problems/count-all-valid-pickup-and-delivery-options/
