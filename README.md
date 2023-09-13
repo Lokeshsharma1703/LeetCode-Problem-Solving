@@ -537,3 +537,4 @@
 531. https://leetcode.com/problems/count-all-valid-pickup-and-delivery-options/
 532. https://leetcode.com/problems/group-the-people-given-the-group-size-they-belong-to/
 533. https://leetcode.com/problems/minimum-deletions-to-make-character-frequencies-unique/
+534. https://leetcode.com/problems/candy/description/
