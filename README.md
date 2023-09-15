@@ -539,3 +539,4 @@
 533. https://leetcode.com/problems/minimum-deletions-to-make-character-frequencies-unique/
 534. https://leetcode.com/problems/candy/description/
 535. https://leetcode.com/problems/reconstruct-itinerary/
+536. https://leetcode.com/problems/min-cost-to-connect-all-points/
