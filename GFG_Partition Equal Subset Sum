@@ -1,0 +1,80 @@
+Given an array arr[] of size N, check if it can be partitioned into two parts such that the sum of elements in both parts is the same.
+
+Example 1:
+
+Input: N = 4
+arr = {1, 5, 11, 5}
+Output: YES
+Explanation: 
+The two parts are {1, 5, 5} and {11}.
+Example 2:
+
+Input: N = 3
+arr = {1, 3, 5}
+Output: NO
+Explanation: This array can never be 
+partitioned into two such parts.
+Your Task:
+You do not need to read input or print anything. Your task is to complete the function equalPartition() which takes the value N and the array as input parameters and returns 1 if the partition is possible. Otherwise, returns 0.
+
+Expected Time Complexity: O(N*sum of elements)
+Expected Auxiliary Space: O(N*sum of elements)
+
+Constraints:
+1 ≤ N ≤ 100
+1 ≤ arr[i] ≤ 1000
+N*sum of elements ≤ 5*106
+
+
+link - https://practice.geeksforgeeks.org/problems/subset-sum-problem2014/1
+
+-----------------------------------------------------------------------------------------------------------------------------------
+
+class Solution{
+    static int equalPartition(int N, int arr[])
+    {
+        int sum = 0;
+        for(int i : arr){
+            sum += i;
+        }
+        
+        if(sum % 2 != 0){
+            return 0;
+        }
+        
+        int target = sum/2;
+        
+        int[][] dp = new int[N][target+1];
+        
+        for(int[] row : dp){
+            Arrays.fill(row, -1);
+        }
+        
+        return split(0, arr, N, target, dp)==1 ? 1 : 0;
+    }
+    
+    private static int split(int idx, int[] arr, int n, int target, int[][] dp){
+        if(idx >= n){
+            return 0;
+        }
+        
+        if(target < 0){
+            return 0;
+        }
+        
+        if(target == 0){
+            return 1;
+        }
+        
+        if(dp[idx][target] != -1){
+            return dp[idx][target];
+        }
+        
+        int take = split(idx+1, arr, n, target-arr[idx], dp);
+        int nottake = split(idx+1, arr, n, target, dp);
+        
+        int res = take + nottake;
+        
+        return dp[idx][target] = res>=1 ? 1 : 0;
+    }
+}
