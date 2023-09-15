@@ -1,0 +1,89 @@
+class Solution {
+
+    int[] root;
+    int[] size;
+
+    public int minCostConnectPoints(int[][] points) {
+        List<int[]> edges = new ArrayList<>();
+
+        for(int i=0; i<points.length-1; i++){
+            for(int j=i+1; j<points.length; j++){
+                int dis = Math.abs(points[i][0] - points[j][0]) + Math.abs(points[i][1] - points[j][1]);
+
+                edges.add(new int[]{i, j, dis});
+            }
+        }
+
+        int n = points.length;
+        root = new int[n];
+        size = new int[n];
+
+        for(int i=0; i<n; i++){
+            root[i] = i;
+        }
+
+        Arrays.fill(size, 1);
+
+        Collections.sort(edges, new Comparator<int[]>(){
+            @Override
+            public int compare(int[] a, int[] b){
+                return a[2] - b[2];
+            }
+        });
+
+        int cost = 0;
+
+        for(int[] edge : edges){
+            int u = edge[0];
+            int v = edge[1];
+
+            if(isConnected(u, v)){
+                continue;
+            }
+
+            union(u, v);
+            cost += edge[2];
+        }
+
+        return cost;
+
+    }
+
+
+    private void union(int x, int y){
+        int rx = find(x);
+        int ry = find(y);
+
+        if(rx == ry){
+            return;
+        }
+
+        if(size[rx] > size[ry]){
+            size[rx] += size[ry];
+            root[ry] = rx;
+        }
+        else{
+            size[ry] += size[rx];
+            root[rx] = ry;
+        }
+    }
+
+    private boolean isConnected(int x, int y){
+        int rx = find(x);
+        int ry = find(y);
+
+        return rx == ry;
+    }
+
+    private int find(int x){
+        while(root[x] != x){
+            int fa = root[x];
+            int ga = root[fa];
+
+            root[x] = ga;
+            x = fa;
+        }
+
+        return x;
+    }
+}
