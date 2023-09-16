@@ -540,3 +540,4 @@
 534. https://leetcode.com/problems/candy/description/
 535. https://leetcode.com/problems/reconstruct-itinerary/
 536. https://leetcode.com/problems/min-cost-to-connect-all-points/
+537. https://leetcode.com/problems/path-with-minimum-effort/
