@@ -541,3 +541,4 @@
 535. https://leetcode.com/problems/reconstruct-itinerary/
 536. https://leetcode.com/problems/min-cost-to-connect-all-points/
 537. https://leetcode.com/problems/path-with-minimum-effort/
+538. https://leetcode.com/problems/shortest-path-visiting-all-nodes/
