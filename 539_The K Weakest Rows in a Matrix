@@ -1,0 +1,37 @@
+class Solution {
+    public int[] kWeakestRows(int[][] mat, int k) {
+        PriorityQueue<Pair<Integer, Integer>> pq = new PriorityQueue<>(new Comparator<Pair<Integer, Integer>>(){
+            @Override
+            public int compare(Pair<Integer, Integer> p1, Pair<Integer, Integer> p2){
+                if(p1.getValue() == p2.getValue()){
+                    return p1.getKey() - p2.getKey();
+                }
+                else{
+                    return p1.getValue() - p2.getValue();
+                }
+            }
+        });
+        for(int i=0; i<mat.length; i++){
+            int count = countOnes(mat[i]);
+            pq.add(new Pair<>(i, count));
+        }
+
+        int[] res = new int[k];
+        for(int i=0; i<k; i++){
+            res[i] = pq.poll().getKey();
+        }
+
+        return res;
+    }
+
+    private int countOnes(int[] arr){
+        int count = 0;
+        for(int i=0; i<arr.length; i++){
+            if(arr[i] == 1){
+                count++;
+            }
+        }
+
+        return count;
+    }
+}
