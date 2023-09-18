@@ -542,3 +542,4 @@
 536. https://leetcode.com/problems/min-cost-to-connect-all-points/
 537. https://leetcode.com/problems/path-with-minimum-effort/
 538. https://leetcode.com/problems/shortest-path-visiting-all-nodes/
+539. https://leetcode.com/problems/the-k-weakest-rows-in-a-matrix/
