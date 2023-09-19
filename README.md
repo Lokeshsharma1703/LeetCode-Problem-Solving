@@ -543,3 +543,4 @@
 537. https://leetcode.com/problems/path-with-minimum-effort/
 538. https://leetcode.com/problems/shortest-path-visiting-all-nodes/
 539. https://leetcode.com/problems/the-k-weakest-rows-in-a-matrix/
+540. https://leetcode.com/problems/find-the-duplicate-number/description/
