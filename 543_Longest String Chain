@@ -1,0 +1,24 @@
+class Solution {
+    public int longestStrChain(String[] words) {
+        Arrays.sort(words, (a,b) -> a.length() - b.length());
+
+        Map<String, Integer> mp = new HashMap<>();
+        int res = 0;
+
+        for(String s : words){
+            mp.put(s, 1);
+
+            for(int i=0; i<s.length(); i++){
+                String str = s.substring(0, i) + s.substring(i+1);
+
+                if(mp.containsKey(str)){
+                    mp.put(s, Math.max(mp.get(s), mp.get(str)+1));
+                }
+            }
+
+            res = Math.max(res, mp.get(s));
+        }
+
+        return res;
+    }
+}
