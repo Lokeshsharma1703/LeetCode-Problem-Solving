@@ -547,3 +547,4 @@
 541. https://leetcode.com/problems/minimum-operations-to-reduce-x-to-zero/
 542. https://leetcode.com/problems/is-subsequence/description/
 543. https://leetcode.com/problems/longest-string-chain/
+544. https://leetcode.com/problems/champagne-tower/description/
