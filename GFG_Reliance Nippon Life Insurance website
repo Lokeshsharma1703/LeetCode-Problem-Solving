@@ -1,0 +1,60 @@
+link - https://practice.geeksforgeeks.org/problems/find-all-four-sum-numbers1732/1
+
+
+class Solution {
+    public ArrayList<ArrayList<Integer>> fourSum(int[] arr, int k) {
+        Arrays.sort(arr);
+        
+        int n = arr.length;
+        ArrayList<ArrayList<Integer>> res = new ArrayList<>();
+        
+        for(int i=0; i<n-3; i++){
+            if(i > 0 && arr[i] == arr[i-1]){
+                continue;
+            }
+            
+            for(int j=i+1; j<n-2; j++){
+                if(j>i+1 && arr[j] == arr[j-1]){
+                    continue;
+                }
+                
+                int lo = j+1;
+                int hi = n-1;
+                
+                while(lo < hi){
+                    int sum = arr[i] + arr[j] + arr[lo] + arr[hi];
+                    
+                    if(sum == k){
+                        ArrayList<Integer> list = new ArrayList<>();
+                        
+                        list.add(arr[i]);
+                        list.add(arr[j]);
+                        list.add(arr[lo]);
+                        list.add(arr[hi]);
+                        
+                        res.add(list);
+                        lo++;
+                        hi--;
+                        
+                        
+                        while(lo < hi && arr[lo] == arr[lo-1]){
+                            lo++;
+                        }
+                        
+                        while(lo < hi && arr[hi] == arr[hi+1]){
+                            hi--;
+                        }
+                    }
+                    else if(sum < k){
+                        lo++;
+                    }
+                    else{
+                        hi--;
+                    }
+                }
+            }
+        }
+        
+        return res;
+    }
+}
