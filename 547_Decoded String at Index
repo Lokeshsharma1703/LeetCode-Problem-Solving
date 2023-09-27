@@ -1,0 +1,39 @@
+class Solution {
+    public String decodeAtIndex(String s, int k) {
+        long len = 0;
+        int i;
+
+        for(i=0; i<s.length(); i++){
+            char ch = s.charAt(i);
+            if(Character.isDigit(ch)){
+                int d = ch-'0';
+                len *= d;
+            }
+            else{
+                len++;
+            }
+
+            if(len >= k){
+                break;
+            }
+        }
+
+        for(int j=i; j>=0; j--){
+            char ch = s.charAt(j);
+
+            if(Character.isDigit(ch)){
+                int d = ch-'0';
+                len /= d;
+                k %= len;
+            }
+            else{
+                if(k==0 || k==len){
+                    return ch+"";
+                }
+                len--;
+            }
+        }
+
+        return "";
+    }
+}
