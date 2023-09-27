@@ -1,0 +1,34 @@
+https://practice.geeksforgeeks.org/problems/find-the-closest-pair-from-two-arrays4215/1
+
+class Solution{
+    
+    public static ArrayList<Integer> printClosest (int arr[], int brr[], int n, int m, int x) {
+        ArrayList<Integer> res = new ArrayList<>();
+        
+        res.add(-1);
+        res.add(-1);
+        
+        int i=0; 
+        int j=m-1;
+        
+        int diff = Integer.MAX_VALUE;
+        
+        while(i<n && j>=0){
+            int sum = arr[i] + brr[j];
+            
+            if(diff > Math.abs(x - sum)){
+                diff = Math.abs(x - sum);
+                res.set(0, arr[i]);
+                res.set(1, brr[j]);
+            }
+            if(sum > x){
+                j--;
+            }
+            else{
+                i++;
+            }
+        }
+        
+        return res;
+    }
+}
