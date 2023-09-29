@@ -1,0 +1,17 @@
+class Solution {
+    public boolean isMonotonic(int[] nums) {
+        boolean asc = true;
+        boolean des = true;
+
+        for(int i=1; i<nums.length; i++){
+            if(nums[i] > nums[i-1]){
+                des = false;
+            }
+            else if(nums[i] < nums[i-1]){
+                asc = false;
+            }
+        }
+
+        return asc || des;
+    }
+}
