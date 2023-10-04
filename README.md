@@ -554,3 +554,4 @@
 548. https://leetcode.com/problems/sort-array-by-parity/
 549. https://leetcode.com/problems/monotonic-array/
 550. https://leetcode.com/problems/remove-colored-pieces-if-both-neighbors-are-the-same-color/
+551. https://leetcode.com/problems/design-hashmap/
