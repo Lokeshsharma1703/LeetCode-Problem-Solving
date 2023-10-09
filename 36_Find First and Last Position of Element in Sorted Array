@@ -30,3 +30,41 @@ class Solution {
         return ans;
     }
 }
+
+----------------------------------------------------------------------------------------------------------------
+
+class Solution {
+    public int[] searchRange(int[] nums, int target) {
+        int[] res = new int[2];
+        Arrays.fill(res, -1);
+
+        int lo = 0;
+        int hi = nums.length-1;
+        while(lo <= hi){
+            int mid = (lo + hi)/2;
+            if(nums[mid] == target){
+                int i = mid;
+                while(i>=0 && nums[i] == target){
+                    i--;
+                }
+                res[0] = i+1;
+
+                i = mid;
+                while(i<nums.length && nums[i] == target){
+                    i++;
+                }
+                res[1] = i-1;
+
+                return res;
+            }
+            else if(nums[mid] < target){
+                lo = mid+1;
+            }
+            else{
+                hi = mid-1;
+            }
+        }
+
+        return res;
+    }
+}
