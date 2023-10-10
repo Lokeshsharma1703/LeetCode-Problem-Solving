@@ -559,3 +559,4 @@
 553. https://leetcode.com/problems/majority-element-ii/
 554. https://leetcode.com/problems/integer-break/
 555. https://leetcode.com/problems/build-array-where-you-can-find-the-maximum-exactly-k-comparisons/
+556. https://leetcode.com/problems/minimum-number-of-operations-to-make-array-continuous/
