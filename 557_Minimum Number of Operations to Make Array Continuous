@@ -1,0 +1,47 @@
+class Solution {
+    public int minOperations(int[] nums) {
+        int n = nums.length;
+        int un = 1;
+        Arrays.sort(nums);
+
+        for(int i=1; i<n; i++){
+            if(nums[i] != nums[i-1]){
+                nums[un++] = nums[i];
+            }
+        }
+
+        int res = 0;
+        int lo = 1;
+        int hi = un;
+
+        while(lo <= hi){
+            int mid = (lo + hi)/2;
+
+            if(isPossible(mid, nums, un)){
+                res = Math.max(res, mid);
+                lo = mid+1;
+            }
+            else{
+                hi = mid-1;
+            }
+        }
+
+        return n-res;
+    }
+
+    public static boolean isPossible(int mid, int[] nums, int un){
+        int fast = mid-1;
+        int slow = 0;
+
+        while(fast < un){
+            if(nums[fast] - nums[slow] <= nums.length-1){
+                return true;
+            }
+
+            fast++;
+            slow++;
+        }
+
+        return false;
+    }
+}
