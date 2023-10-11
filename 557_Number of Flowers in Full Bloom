@@ -1,0 +1,60 @@
+class Solution {
+    public int[] fullBloomFlowers(int[][] flowers, int[] people) {
+        List<Integer> start = new ArrayList<>();
+        List<Integer> end = new ArrayList<>();
+        int[] res = new int[people.length];
+
+        for(int[] flower : flowers){
+            start.add(flower[0]);
+            end.add(flower[1]);
+        }
+
+        Collections.sort(start);
+        Collections.sort(end);
+
+        for(int i=0; i<people.length; i++){
+            int upper = upperBound(start, people[i]);
+            int lower = lowerBound(end, people[i]);
+
+            res[i] = upper-lower;
+        }
+
+        return res;
+    }
+
+    public int upperBound(List<Integer> start, int target){
+        int lo = 0;
+        int hi = start.size();
+
+        while(lo < hi){
+            int mid = lo + (hi - lo)/2;
+
+            if(start.get(mid) <= target){
+                lo = mid+1;
+            }
+            else{
+                hi = mid;
+            }
+        }
+
+        return lo;
+    }
+
+    public int lowerBound(List<Integer> end, int target){
+        int lo = 0;
+        int hi = end.size();
+
+        while(lo < hi){
+            int mid = lo + (hi - lo)/2;
+
+            if(end.get(mid) < target){
+                lo = mid+1;
+            }
+            else{
+                hi = mid;
+            }
+        }
+
+        return lo;
+    }
+}
