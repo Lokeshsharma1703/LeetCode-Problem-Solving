@@ -563,3 +563,4 @@
 557. https://leetcode.com/problems/number-of-flowers-in-full-bloom/
 558. https://leetcode.com/problems/find-in-mountain-array/
 559. https://leetcode.com/problems/painting-the-walls/
+560. https://leetcode.com/problems/number-of-ways-to-stay-in-the-same-place-after-some-steps/
