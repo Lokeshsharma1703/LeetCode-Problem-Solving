@@ -1,0 +1,29 @@
+class Solution {
+    int mod = 1000_000_007;
+    public int numWays(int steps, int arrLen) {
+        return getSteps(0, steps, Math.min(steps, arrLen), new Integer[steps+1][steps+1]);
+    }
+
+    public int getSteps(int idx, int s, int len, Integer[][] dp){
+        if(idx < 0 || idx == len){
+            return 0;
+        }
+        if(idx == 0 && s == 0){
+            return 1;
+        }
+        if(s == 0 || s-idx < 0){
+            return 0;
+        }
+        if(dp[idx][s] != null){
+            return dp[idx][s];
+        }
+
+        int res = getSteps(idx, s-1, len, dp);
+        res += getSteps(idx+1, s-1, len, dp);
+        res %= mod;
+        res += getSteps(idx-1, s-1, len, dp);
+        res %= mod;
+        
+        return dp[idx][s] = res;
+    }
+}
