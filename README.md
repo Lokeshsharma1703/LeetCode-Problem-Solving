@@ -566,3 +566,4 @@
 560. https://leetcode.com/problems/number-of-ways-to-stay-in-the-same-place-after-some-steps/
 561. https://leetcode.com/problems/validate-binary-tree-nodes/
 562. https://leetcode.com/problems/parallel-courses-iii/
+563. https://leetcode.com/problems/flatten-nested-list-iterator/
