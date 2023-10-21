@@ -1,0 +1,31 @@
+class Solution {
+    public int constrainedSubsetSum(int[] nums, int k) {
+        int n = nums.length;
+        int[] arr = new int[n];
+        for(int i=0; i<n; i++){
+            arr[i] = nums[i];
+        }
+
+        PriorityQueue<int[]> pq = new PriorityQueue<>(new Comparator<int[]>(){
+            @Override
+            public int compare(int[] a, int[] b){
+                return b[0] - a[0];
+            }
+        });
+
+        pq.add(new int[]{nums[0], 0});
+        int res = arr[0];
+
+        for(int i=1; i<n; i++){
+            while(!pq.isEmpty() && i-pq.peek()[1] > k){
+                pq.poll();
+            }
+
+            arr[i] = Math.max(arr[i], nums[i]+pq.peek()[0]);
+            pq.add(new int[]{arr[i], i});
+            res = Math.max(res, arr[i]);
+        }
+
+        return res;
+    }
+}
