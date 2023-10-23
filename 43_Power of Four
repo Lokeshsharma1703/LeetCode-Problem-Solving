@@ -1,10 +1,23 @@
-/*
- * @lc app=leetcode id=342 lang=java
- *
- * [342] Power of Four
- */
+class Solution {
+    public boolean isPowerOfFour(int n) {
+        int place = -1;
+        int count = 0;
 
-// @lc code=start
+        while(n != 0){
+            if((n&1) == 1){
+                count++;
+            }
+
+            n >>>= 1;
+            place++;
+        }
+
+        return place%2==0 && count==1;
+    }
+}
+
+================================================================================================================
+
 class Solution {
     public boolean isPowerOfFour(int n) {
         int low = 0;
