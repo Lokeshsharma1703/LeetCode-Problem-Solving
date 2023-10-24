@@ -1,0 +1,53 @@
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode() {}
+ *     TreeNode(int val) { this.val = val; }
+ *     TreeNode(int val, TreeNode left, TreeNode right) {
+ *         this.val = val;
+ *         this.left = left;
+ *         this.right = right;
+ *     }
+ * }
+ */
+class Solution {
+    public List<Integer> largestValues(TreeNode root) {
+        if(root == null){
+            return new ArrayList<>();
+        }
+
+        List<Integer> res = new ArrayList<>();
+        Queue<TreeNode> q = new LinkedList<>();
+        Queue<TreeNode> child = new LinkedList<>();
+
+        q.offer(root);
+        int max = Integer.MIN_VALUE;
+
+        while(!q.isEmpty()){
+            TreeNode rem = q.poll();
+
+            if(rem.val > max){
+                max = rem.val;
+            }
+
+            if(rem.left != null){
+                child.offer(rem.left);
+            }
+            if(rem.right != null){
+                child.offer(rem.right);
+            }
+
+            if(q.isEmpty()){
+                q = child;
+                child = new LinkedList<>();
+                res.add(max);
+                max = Integer.MIN_VALUE;
+            }
+        }
+
+        return res;
+    }
+}
