@@ -1,0 +1,45 @@
+class Solution {
+    int mod = 1000_000_007;
+
+    public int numFactoredBinaryTrees(int[] arr) {
+        HashSet<Integer> set = new HashSet<>();
+        for(int i : arr){
+            set.add(i);
+        }
+
+        HashMap<Integer, Long> mp = new HashMap<>();
+        long count = 0;
+        for(int i : arr){
+            count += helper(i, set, mp);
+            count = count % mod;
+        }
+
+        return (int)count;
+    }
+
+    public long helper(int root, HashSet<Integer> set, HashMap<Integer, Long> mp){
+        if(mp.containsKey(root)){
+            return mp.get(root);
+        }
+
+        long count = 1;
+
+        for(int i : set){
+            if(root % i == 0){
+                int f1 = i;
+                int f2 = root/f1;
+
+                if(set.contains(f2)){
+                    count += helper(f1, set, mp) * helper(f2, set, mp);
+                    count %= mod;
+                }
+            }
+            else{
+                continue;
+            }
+        }
+
+        mp.put(root, count);
+        return count;
+    }
+}
