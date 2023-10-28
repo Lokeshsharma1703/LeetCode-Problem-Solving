@@ -571,3 +571,4 @@
 565. https://leetcode.com/problems/find-largest-value-in-each-tree-row/description/
 566. https://leetcode.com/problems/k-th-symbol-in-grammar/
 567. https://leetcode.com/problems/binary-trees-with-factors/
+568. https://leetcode.com/problems/count-vowels-permutation/
