@@ -572,3 +572,4 @@
 566. https://leetcode.com/problems/k-th-symbol-in-grammar/
 567. https://leetcode.com/problems/binary-trees-with-factors/
 568. https://leetcode.com/problems/count-vowels-permutation/
+569. https://leetcode.com/problems/poor-pigs/
