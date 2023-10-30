@@ -1,0 +1,54 @@
+class Solution {
+    class Pair{
+        int n;
+        public Pair(int n){
+            this.n = n;
+        }
+    }
+
+    public int[] sortByBits(int[] arr) {
+        PriorityQueue<Pair> pq = new PriorityQueue<>(new Comparator<Pair>(){
+            @Override
+            public int compare(Pair a, Pair b){
+                int fir = countSetBits(a.n);
+                int sec = countSetBits(b.n);
+
+                if(fir < sec){
+                    return -1;
+                }
+                else if(sec < fir){
+                    return 1;
+                }
+                else{
+                    if(a.n < b.n){
+                        return -1;
+                    }
+                    else{
+                        return 1;
+                    }
+                }
+            }
+        });
+
+        for(int i : arr){
+            pq.offer(new Pair(i));
+        }
+
+        for(int i=0; i<arr.length; i++){
+            arr[i] = pq.poll().n;
+        }
+
+        return arr;
+    }
+
+    public int countSetBits(int n){
+        int count = 0;
+
+        while(n > 0){
+            count += (n&1);
+            n >>= 1;
+        }
+
+        return count;
+    }
+}
