@@ -574,3 +574,4 @@
 568. https://leetcode.com/problems/count-vowels-permutation/
 569. https://leetcode.com/problems/poor-pigs/
 570. https://leetcode.com/problems/sort-integers-by-the-number-of-1-bits/
+571. https://leetcode.com/problems/find-the-original-array-of-prefix-xor/
