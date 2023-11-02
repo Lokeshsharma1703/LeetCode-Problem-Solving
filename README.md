@@ -576,3 +576,4 @@
 570. https://leetcode.com/problems/sort-integers-by-the-number-of-1-bits/
 571. https://leetcode.com/problems/find-the-original-array-of-prefix-xor/
 572. https://leetcode.com/problems/find-mode-in-binary-search-tree/
+573. https://leetcode.com/problems/count-nodes-equal-to-average-of-subtree/
