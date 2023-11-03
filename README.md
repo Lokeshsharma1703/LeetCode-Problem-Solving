@@ -577,3 +577,4 @@
 571. https://leetcode.com/problems/find-the-original-array-of-prefix-xor/
 572. https://leetcode.com/problems/find-mode-in-binary-search-tree/
 573. https://leetcode.com/problems/count-nodes-equal-to-average-of-subtree/
+574. https://leetcode.com/problems/build-an-array-with-stack-operations/
