@@ -579,3 +579,4 @@
 573. https://leetcode.com/problems/count-nodes-equal-to-average-of-subtree/
 574. https://leetcode.com/problems/build-an-array-with-stack-operations/
 575. https://leetcode.com/problems/last-moment-before-all-ants-fall-out-of-a-plank/
+576. https://leetcode.com/problems/find-the-winner-of-an-array-game/
