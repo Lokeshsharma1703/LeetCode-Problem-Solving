@@ -581,3 +581,4 @@
 575. https://leetcode.com/problems/last-moment-before-all-ants-fall-out-of-a-plank/
 576. https://leetcode.com/problems/find-the-winner-of-an-array-game/
 577. https://leetcode.com/problems/seat-reservation-manager/
+578. https://leetcode.com/problems/eliminate-maximum-number-of-monsters/
