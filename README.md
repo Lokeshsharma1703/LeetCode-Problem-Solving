@@ -583,3 +583,4 @@
 577. https://leetcode.com/problems/seat-reservation-manager/
 578. https://leetcode.com/problems/eliminate-maximum-number-of-monsters/
 579. https://leetcode.com/problems/determine-if-a-cell-is-reachable-at-a-given-time/
+580. https://leetcode.com/problems/count-number-of-homogenous-substrings/
