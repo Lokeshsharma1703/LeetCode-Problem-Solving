@@ -1,0 +1,26 @@
+class Solution {
+    public int countHomogenous(String s) {
+        int len = 1;
+        int mod = 1000_000_007;
+        long res = 0;
+        int n = s.length();
+
+        for(int i=1; i<n; i++){
+            char ch = s.charAt(i-1);
+
+            if(ch != s.charAt(i)){
+                long temp = ((long)len * (len+1)/2) % mod;
+                res = (res + temp) % mod;
+                len = 0;
+            }
+
+            len++;
+        }
+
+        if(len > 0){
+            res = (res + ((long)len * (len+1)/2)) % mod;
+        }
+
+        return (int)res;
+    }
+}
