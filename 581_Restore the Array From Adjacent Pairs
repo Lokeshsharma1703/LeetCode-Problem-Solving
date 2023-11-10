@@ -1,0 +1,36 @@
+class Solution {
+    public int[] restoreArray(int[][] adjacentPairs) {
+        Map<Integer, List<Integer>> mp = new HashMap<>();
+        Set<Integer> visited = new HashSet<>();
+
+        List<Integer> res = new ArrayList<>();
+
+        int start = 0;
+        for(int[] arr : adjacentPairs){
+            mp.putIfAbsent(arr[0], new ArrayList<>());
+            mp.putIfAbsent(arr[1], new ArrayList<>());
+            mp.get(arr[0]).add(arr[1]);
+            mp.get(arr[1]).add(arr[0]);
+        }
+
+        for(Map.Entry<Integer, List<Integer>> en : mp.entrySet()){
+            if(en.getValue().size()==1){
+                start = en.getKey();
+                break;
+            }
+        }
+
+        while(!visited.contains(start)){
+            visited.add(start);
+            res.add(start);
+
+            for(int ngbr : mp.get(start)){
+                if(!visited.contains(ngbr)){
+                    start = ngbr;
+                }
+            }
+        }
+
+        return res.stream().mapToInt(i -> i).toArray();
+    }
+}
