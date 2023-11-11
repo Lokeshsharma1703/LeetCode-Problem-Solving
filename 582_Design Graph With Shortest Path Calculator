@@ -1,0 +1,55 @@
+class Graph {
+    private Map<Integer, List<int[]>> graph;
+
+    public Graph(int n, int[][] edges) {
+        graph = new HashMap<>();
+        for(int[] edge : edges){
+            graph.computeIfAbsent(edge[0], k -> new ArrayList<>()).add(new int[]{edge[1], edge[2]});
+        }
+    }
+    
+    public void addEdge(int[] edge) {
+        graph.computeIfAbsent(edge[0], k -> new ArrayList<>()).add(new int[]{edge[1], edge[2]});
+    }
+    
+    public int shortestPath(int node1, int node2) {
+        PriorityQueue<int[]> pq = new PriorityQueue<>(Comparator.comparingInt(a -> a[1]));
+
+        Map<Integer, Integer> dis = new HashMap<>();
+        
+        pq.offer(new int[]{node1, 0});
+
+        while(!pq.isEmpty()){
+            int[] curr = pq.poll();
+            int cn = curr[0];
+            int cd = curr[1];
+
+            if(dis.containsKey(cn)){
+                continue;
+            }
+
+            dis.put(cn, cd);
+
+            if(cn == node2){
+                return cd;
+            }
+
+            if(graph.containsKey(cn)){
+                for(int[] ngbr : graph.get(cn)){
+                    int next = ngbr[0];
+                    int nextDis = cd + ngbr[1];
+                    pq.offer(new int[]{next, nextDis});
+                }
+            }
+        }
+
+        return -1;
+    }
+}
+
+/**
+ * Your Graph object will be instantiated and called as such:
+ * Graph obj = new Graph(n, edges);
+ * obj.addEdge(edge);
+ * int param_2 = obj.shortestPath(node1,node2);
+ */
