@@ -586,3 +586,4 @@
 580. https://leetcode.com/problems/count-number-of-homogenous-substrings/
 581. https://leetcode.com/problems/restore-the-array-from-adjacent-pairs/
 582. https://leetcode.com/problems/design-graph-with-shortest-path-calculator/
+583. https://leetcode.com/problems/bus-routes/
