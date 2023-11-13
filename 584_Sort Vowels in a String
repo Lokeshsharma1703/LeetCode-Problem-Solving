@@ -1,0 +1,32 @@
+class Solution {
+    public String sortVowels(String s) {
+        List<Character> ls = new ArrayList<>();
+        for(int i=0; i<s.length(); i++){
+            char ch = s.charAt(i);
+
+            if(isVowel(ch)){
+                ls.add(ch);
+            }
+        }
+
+        Collections.sort(ls);
+        StringBuilder sb = new StringBuilder();
+        int j=0;
+        for(int i=0; i<s.length(); i++){
+            char ch = s.charAt(i);
+
+            if(isVowel(ch)){
+                sb.append(ls.get(j++));
+            }
+            else{
+                sb.append(ch);
+            }
+        }
+
+        return sb.toString();
+    }
+
+    public boolean isVowel(char ch){
+        return (ch=='A' || ch=='E' || ch=='I' || ch=='O' || ch=='U' || ch=='a' || ch=='e' || ch=='i' || ch=='o' || ch=='u');
+    }
+}
