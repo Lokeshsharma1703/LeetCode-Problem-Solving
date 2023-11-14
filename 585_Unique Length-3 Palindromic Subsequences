@@ -1,0 +1,27 @@
+class Solution {
+    public int countPalindromicSubsequence(String s) {
+        int[] lft = new int[26];
+        int[] rgt = new int[26];
+
+        for(char ch = 'a'; ch<='z'; ch++){
+            lft[ch-'a'] = s.indexOf(ch);
+            rgt[ch-'a'] = s.lastIndexOf(ch);
+        }
+
+        int[][] vis = new int[26][26];
+        int res = 0;
+
+        for(int i=0; i<s.length(); i++){
+            char ch = s.charAt(i);
+
+            for(char j='a'; j<='z'; j++){
+                if(lft[j-'a'] != -1 && lft[j-'a']<i && i<rgt[j-'a'] && vis[ch-'a'][j-'a'] == 0){
+                    vis[ch-'a'][j-'a'] = 1;
+                    res += 1;
+                }
+            }
+        }
+
+        return res;
+    }
+}
