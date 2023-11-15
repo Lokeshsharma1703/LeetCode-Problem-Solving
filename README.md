@@ -589,3 +589,4 @@
 583. https://leetcode.com/problems/bus-routes/
 584. https://leetcode.com/problems/sort-vowels-in-a-string/
 585. https://leetcode.com/problems/unique-length-3-palindromic-subsequences/
+586. https://leetcode.com/problems/maximum-element-after-decreasing-and-rearranging/
