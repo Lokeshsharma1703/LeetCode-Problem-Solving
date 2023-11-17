@@ -591,3 +591,4 @@
 585. https://leetcode.com/problems/unique-length-3-palindromic-subsequences/
 586. https://leetcode.com/problems/maximum-element-after-decreasing-and-rearranging/
 587. https://leetcode.com/problems/find-unique-binary-string/
+588. https://leetcode.com/problems/minimize-maximum-pair-sum-in-array/
