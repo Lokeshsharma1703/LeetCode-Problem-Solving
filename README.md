@@ -594,3 +594,4 @@
 588. https://leetcode.com/problems/minimize-maximum-pair-sum-in-array/
 589. https://leetcode.com/problems/frequency-of-the-most-frequent-element/
 590. https://leetcode.com/problems/reduction-operations-to-make-the-array-elements-equal/
+591. https://leetcode.com/problems/minimum-amount-of-time-to-collect-garbage/
