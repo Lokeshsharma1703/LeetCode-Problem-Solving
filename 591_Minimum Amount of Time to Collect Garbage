@@ -1,0 +1,43 @@
+class Solution {
+    public int garbageCollection(String[] garbage, int[] travel) {
+        int m = getRange(garbage, "M");
+        int p = getRange(garbage, "P");
+        int g = getRange(garbage, "G");
+
+        return getSum(garbage, travel, "M", m) + getSum(garbage, travel, "P", p) + getSum(garbage, travel, "G", g);
+    }
+
+    public int getSum(String[] garbage, int[] travel, String ch, int range){
+        int sum = 0;
+
+        for(int i=0; i<=range; i++){
+            if(i>0){
+                sum += travel[i-1];
+            }
+
+            if(garbage[i].contains(ch)){
+                for(int j=0; j<garbage[i].length(); j++){
+                    char c = garbage[i].charAt(j);
+
+                    if(ch.charAt(0) == c){
+                        sum++;
+                    }
+                }
+            }
+        }
+
+        return sum;
+    }
+
+    public int getRange(String[] garbage, String ch){
+        int res = 0;
+
+        for(int i=0; i<garbage.length; i++){
+            if(garbage[i].contains(ch)){
+                res = i;
+            }
+        }
+
+        return res;
+    }
+}
