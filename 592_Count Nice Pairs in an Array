@@ -1,0 +1,39 @@
+class Solution {
+    public int countNicePairs(int[] nums) {
+        int mod = 1000_000_007;
+        int count = 0;
+
+        Map<Integer, Integer> mp = new HashMap<>();
+
+        for(int i=0; i<nums.length; i++){
+            nums[i] = nums[i] - rev(nums[i]);
+
+            if(mp.containsKey(nums[i])){
+                count += mp.get(nums[i]);
+                count %= mod;
+            }
+
+            mp.put(nums[i], mp.getOrDefault(nums[i], 0)+1);
+        }
+
+        return count;
+    }
+
+    public int rev(int n){
+        int res = 0;
+
+        while(n > 0){
+            int rem = n%10;
+
+            if(rem == 0 && res==0){
+                n/=10;
+                continue;
+            }
+
+            res = (res*10) + rem;
+            n/=10;
+        }
+
+        return res;
+    }
+}
