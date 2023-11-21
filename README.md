@@ -595,3 +595,4 @@
 589. https://leetcode.com/problems/frequency-of-the-most-frequent-element/
 590. https://leetcode.com/problems/reduction-operations-to-make-the-array-elements-equal/
 591. https://leetcode.com/problems/minimum-amount-of-time-to-collect-garbage/
+592. https://leetcode.com/problems/count-nice-pairs-in-an-array/
