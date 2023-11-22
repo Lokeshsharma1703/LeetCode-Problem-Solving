@@ -1,0 +1,27 @@
+class Solution {
+    public int[] findDiagonalOrder(List<List<Integer>> nums) {
+        PriorityQueue<int[]> pq = new PriorityQueue<>((a, b) -> {
+            if(a[0] == b[0]){
+                return b[2] - a[2];
+            }
+
+            return a[0] - b[0];
+        });
+
+        int total = 0;
+        for(int i=0; i<nums.size(); i++){
+            for(int j=0; j<nums.get(i).size(); j++){
+                total++;
+                int sum = i+j;
+                pq.add(new int[]{sum, nums.get(i).get(j), total});
+            }
+        }
+
+        int[] res = new int[total];
+        for(int i=0; i<res.length; i++){
+            res[i] = pq.poll()[1];
+        }
+
+        return res;
+    }
+}
