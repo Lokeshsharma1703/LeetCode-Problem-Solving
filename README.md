@@ -598,3 +598,4 @@
 592. https://leetcode.com/problems/count-nice-pairs-in-an-array/
 593. https://leetcode.com/problems/diagonal-traverse-ii/
 594. https://leetcode.com/problems/arithmetic-subarrays/
+595. https://leetcode.com/problems/maximum-number-of-coins-you-can-get/
