@@ -1,0 +1,15 @@
+class Solution {
+    public int[] getSumAbsoluteDifferences(int[] nums) {
+        int ssum = 0;
+        for(var n:nums) ssum += n;
+        int psum = 0;
+        int n = nums.length;
+        int ans[] = new int[n];
+        for(int i = 0;i < n;i++){
+            ssum -= nums[i];
+            ans[i] = (2 * i + 1 - n) * nums[i] - psum + ssum;
+            psum += nums[i];
+        }
+        return ans;
+    }
+}
