@@ -604,3 +604,4 @@
 598. https://leetcode.com/problems/set-matrix-zeroes/
 599. https://leetcode.com/problems/minimum-one-bit-operations-to-make-integers-zero/
 600. https://leetcode.com/problems/find-words-that-can-be-formed-by-characters/
+601. https://leetcode.com/problems/minimum-time-visiting-all-points/
