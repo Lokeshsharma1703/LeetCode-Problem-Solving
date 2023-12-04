@@ -1,0 +1,26 @@
+class Solution {
+    public String largestGoodInteger(String num) {
+        String res = "";
+        int digit = -1;
+
+        int count = 1;
+        for(int i=1; i<num.length(); i++){
+            if(num.charAt(i) == num.charAt(i-1)){
+                count++;
+            }
+            else{
+                count=1;
+            }           
+
+            if(count==3){
+                count = 1;
+                if(num.charAt(i)-'0' > digit){
+                    digit = num.charAt(i)-'0';
+                    res = num.substring(i-2, i+1);
+                }
+            } 
+        }
+
+        return res;
+    }
+}
