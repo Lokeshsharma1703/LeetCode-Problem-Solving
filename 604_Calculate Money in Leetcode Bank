@@ -1,0 +1,16 @@
+class Solution {
+    public int totalMoney(int n) {
+        int i=1;
+        int ele = 0;
+        int sum = 0;
+        while(ele < n){
+            for(int j=i; j<i+7 && ele<n; j++){
+                sum += j;
+                ele++;
+            }
+            i++;
+        }
+
+        return sum;
+    }
+}
