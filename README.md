@@ -607,3 +607,4 @@
 601. https://leetcode.com/problems/minimum-time-visiting-all-points/
 602. https://leetcode.com/problems/largest-3-same-digit-number-in-string/
 603. https://leetcode.com/problems/count-of-matches-in-tournament/
+604. https://leetcode.com/problems/calculate-money-in-leetcode-bank/
