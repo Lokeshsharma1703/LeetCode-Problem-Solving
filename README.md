@@ -613,3 +613,4 @@
 607. https://leetcode.com/problems/transpose-matrix/
 608. https://leetcode.com/problems/element-appearing-more-than-25-in-sorted-array/
 609. https://leetcode.com/problems/maximum-product-of-two-elements-in-an-array/
+610. https://leetcode.com/problems/special-positions-in-a-binary-matrix/
