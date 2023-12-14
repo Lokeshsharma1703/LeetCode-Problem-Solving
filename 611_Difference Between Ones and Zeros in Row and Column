@@ -1,0 +1,56 @@
+class Solution {
+    public int[][] onesMinusZeros(int[][] grid) {
+        int n = grid.length;
+        int m = grid[0].length;
+        pair[] row = new pair[n];
+        pair[] col = new pair[m];
+
+        for(int i=0; i<n; i++){
+            row[i] = new pair();
+            int ones = 0;
+            int zeros = 0;
+            for(int j=0; j<m; j++){
+                if(grid[i][j]==0){
+                    zeros++;
+                }
+                else{
+                    ones++;
+                }
+            }
+
+            row[i].one = ones;
+            row[i].zero = zeros;
+        }
+
+        for(int i=0; i<m; i++){
+            col[i] = new pair();
+            int ones = 0;
+            int zeros = 0;
+            for(int j=0; j<n; j++){
+                if(grid[j][i]==0){
+                    zeros++;
+                }
+                else{
+                    ones++;
+                }
+            }
+
+            col[i].one = ones;
+            col[i].zero = zeros;
+        }
+
+        int[][] res = new int[n][m];
+        for(int i=0; i<n; i++){
+            for(int j=0; j<m; j++){
+                res[i][j] = row[i].one + col[j].one - row[i].zero - col[j].zero;
+            }
+        }
+
+        return res;
+    }
+
+    class pair{
+        int one;
+        int zero;
+    }
+}
