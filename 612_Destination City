@@ -1,0 +1,19 @@
+class Solution {
+    public String destCity(List<List<String>> paths) {
+        HashMap<String, Integer> mp = new HashMap<>();
+        HashSet<String> hs = new HashSet<>();
+        for(List<String> edge : paths){
+            mp.put(edge.get(0), mp.getOrDefault(edge.get(0), 0)+1);
+            hs.add(edge.get(0));
+            hs.add(edge.get(1));
+        }
+
+        for(String s : hs){
+            if(!mp.containsKey(s)){
+                return s;
+            }
+        }
+
+        return "";
+    }
+}
