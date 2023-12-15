@@ -615,3 +615,4 @@
 609. https://leetcode.com/problems/maximum-product-of-two-elements-in-an-array/
 610. https://leetcode.com/problems/special-positions-in-a-binary-matrix/
 611. https://leetcode.com/problems/difference-between-ones-and-zeros-in-row-and-column/
+612. https://leetcode.com/problems/destination-city/
