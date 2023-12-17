@@ -616,3 +616,4 @@
 610. https://leetcode.com/problems/special-positions-in-a-binary-matrix/
 611. https://leetcode.com/problems/difference-between-ones-and-zeros-in-row-and-column/
 612. https://leetcode.com/problems/destination-city/
+613. https://leetcode.com/problems/design-a-food-rating-system/
