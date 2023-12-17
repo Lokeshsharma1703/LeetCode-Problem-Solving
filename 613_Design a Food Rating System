@@ -1,0 +1,66 @@
+class FoodRatings {
+
+    class Food implements Comparable<Food>{
+        String food;
+        String cuisine;
+        int rating;
+
+        public Food(String cuisine, String food, int rating){
+            this.cuisine = cuisine;
+            this.food = food;
+            this.rating = rating;
+        }
+
+        @Override
+        public int compareTo(Food f){
+            if(this.rating != f.rating){
+                return f.rating - this.rating;
+            }
+            return this.food.compareTo(f.food);
+        }
+    }
+
+    Map<String, Food> foodEntry;
+    Map<String, TreeSet<Food>> cuisineEntry;
+
+    public FoodRatings(String[] foods, String[] cuisines, int[] ratings) {
+        this.foodEntry = new HashMap<>();
+        this.cuisineEntry = new HashMap<>();
+
+        for(int i=0; i<foods.length; i++){
+            String food = foods[i];
+            String cuisine = cuisines[i];
+            int rating = ratings[i];
+
+            Food f = new Food(cuisine, food, rating);
+
+            if(!foodEntry.containsKey(food)){
+                foodEntry.put(food, f);
+            }
+            if(!cuisineEntry.containsKey(cuisine)){
+                cuisineEntry.put(cuisine, new TreeSet<>());
+            }
+
+            cuisineEntry.get(cuisine).add(f);
+        }
+    }
+    
+    public void changeRating(String food, int newRating) {
+        Food f = foodEntry.get(food);
+        TreeSet<Food> set = cuisineEntry.get(f.cuisine);
+        set.remove(f);
+        f.rating = newRating;
+        set.add(f);
+    }
+    
+    public String highestRated(String cuisine) {
+        return cuisineEntry.get(cuisine).first().food;
+    }
+}
+
+/**
+ * Your FoodRatings object will be instantiated and called as such:
+ * FoodRatings obj = new FoodRatings(foods, cuisines, ratings);
+ * obj.changeRating(food,newRating);
+ * String param_2 = obj.highestRated(cuisine);
+ */
