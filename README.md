@@ -619,3 +619,4 @@
 613. https://leetcode.com/problems/design-a-food-rating-system/
 614. https://leetcode.com/problems/maximum-product-difference-between-two-pairs/
 615. https://leetcode.com/problems/image-smoother/
+616. https://leetcode.com/problems/buy-two-chocolates/
