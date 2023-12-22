@@ -621,3 +621,4 @@
 615. https://leetcode.com/problems/image-smoother/
 616. https://leetcode.com/problems/buy-two-chocolates/
 617. https://leetcode.com/problems/widest-vertical-area-between-two-points-containing-no-points/
+618. https://leetcode.com/problems/maximum-score-after-splitting-a-string/
