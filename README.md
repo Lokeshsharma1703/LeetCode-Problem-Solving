@@ -623,3 +623,4 @@
 617. https://leetcode.com/problems/widest-vertical-area-between-two-points-containing-no-points/
 618. https://leetcode.com/problems/maximum-score-after-splitting-a-string/
 619. https://leetcode.com/problems/path-crossing/
+620. https://leetcode.com/problems/minimum-changes-to-make-alternating-binary-string/
