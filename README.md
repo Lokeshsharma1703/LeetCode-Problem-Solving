@@ -624,3 +624,4 @@
 618. https://leetcode.com/problems/maximum-score-after-splitting-a-string/
 619. https://leetcode.com/problems/path-crossing/
 620. https://leetcode.com/problems/minimum-changes-to-make-alternating-binary-string/
+621. https://leetcode.com/problems/number-of-dice-rolls-with-target-sum/
