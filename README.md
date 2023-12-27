@@ -625,3 +625,4 @@
 619. https://leetcode.com/problems/path-crossing/
 620. https://leetcode.com/problems/minimum-changes-to-make-alternating-binary-string/
 621. https://leetcode.com/problems/number-of-dice-rolls-with-target-sum/
+622. https://leetcode.com/problems/minimum-time-to-make-rope-colorful/
