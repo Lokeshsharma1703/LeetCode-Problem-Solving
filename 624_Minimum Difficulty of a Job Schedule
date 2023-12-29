@@ -1,0 +1,29 @@
+class Solution {
+    public int minDifficulty(int[] jobDifficulty, int d) {
+        int jobs = jobDifficulty.length;
+
+        if(jobs < d){
+            return -1;
+        }
+
+        int[][] dp = new int[d][jobs];
+        dp[0][0] = jobDifficulty[0];
+        for(int i=1; i<jobs; i++){
+            dp[0][i] = Math.max(dp[0][i-1], jobDifficulty[i]);
+        }
+
+        for(int day=1; day<d; day++){
+            for(int i=day; i<jobs; i++){
+                int max = jobDifficulty[i];
+                dp[day][i] = Integer.MAX_VALUE;
+
+                for(int j=i; j>=day; j--){
+                    max = Math.max(max, jobDifficulty[j]);
+                    dp[day][i] = Math.min(dp[day][i], dp[day-1][j-1]+max);
+                }
+            }
+        }
+
+        return dp[d-1][jobs-1];
+    }
+}
