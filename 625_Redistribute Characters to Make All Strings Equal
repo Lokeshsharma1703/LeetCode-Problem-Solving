@@ -1,0 +1,21 @@
+class Solution {
+    public boolean makeEqual(String[] words) {
+        HashMap<Character, Integer> mp = new HashMap<>();
+
+        for(String s : words){
+            for(int i=0; i<s.length(); i++){
+                mp.put(s.charAt(i), mp.getOrDefault(s.charAt(i), 0)+1);
+            }
+        }
+
+        int n = words.length;
+
+        for(Map.Entry<Character, Integer> en : mp.entrySet()){
+            if(en.getValue()%n != 0){
+                return false;
+            }
+        }
+
+        return true;
+    }
+}
